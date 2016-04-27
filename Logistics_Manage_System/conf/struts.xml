@@ -10,6 +10,7 @@
 
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.excludePattern" value="/static/.*?" />
 	
 
     <package name="default" namespace="/" extends="struts-default">
@@ -31,7 +32,7 @@
 		<action name="user-*" class="userAction"
         	method="{1}">
 			
-			<result name="list">/index.jsp</result>
+			<result name="list">WEB-INF/index.jsp</result>
 			
 		</action>
 		
