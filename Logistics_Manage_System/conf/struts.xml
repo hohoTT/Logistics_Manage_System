@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<!-- 配置 Struts2 可以受理的请求的扩展名 -->
+	<constant name="struts.action.extension" value="action,do,"></constant> 
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+	
+
+    <package name="default" namespace="/" extends="struts-default">
+    
+    	
+    	<!-- 定义新的拦截器栈, 配置 prepare 拦截器栈的 alwaysInvokePrepare 参数值为 false -->
+		<interceptors>
+			<interceptor-stack name="sshStack">
+				<interceptor-ref name="paramsPrepareParamsStack">
+					<param name="prepare.alwaysInvokePrepare">false</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 使用新的拦截器栈 -->
+		<default-interceptor-ref name="sshStack"></default-interceptor-ref>
+		
+		
+		<action name="user-*" class="userAction"
+        	method="{1}">
+			
+			<result name="list">/index.jsp</result>
+			
+		</action>
+		
+    </package>
+
+</struts>

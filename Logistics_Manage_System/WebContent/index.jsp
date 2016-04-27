@@ -8,7 +8,9 @@
 </head>
 <body>
 
-	<h1>Index Page</h1>
+	<h1>Index Page</h1><hr>
+	
+	<a href="user-list">user-list</a>
 
 </body>
 </html>
