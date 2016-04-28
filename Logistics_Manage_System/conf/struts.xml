@@ -32,9 +32,21 @@
 		<action name="user-*" class="userAction"
         	method="{1}">
 			
-			<result name="list">WEB-INF/index.jsp</result>
+			<result></result>
 			
 		</action>
+		
+		<!-- 用户登录跳转链接 -->		
+		<action name="userLogin">
+			<result>/WEB-INF/user/login.jsp</result>
+		</action>
+		
+		<!-- 用户注册跳转链接 -->		
+		<action name="userRegister">
+			<result>/WEB-INF/user/register.jsp</result>
+		</action>
+		
+		
 		
     </package>
 

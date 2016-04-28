@@ -9,12 +9,12 @@
 <body>
 
 	<div id="login">
-		<a href="login.jsp">
+		<a href="userLogin">
 			<button class="btn btn-success btn-lg">
 			登录
 			</button> 
 		</a> 
-		<a href="register.jsp">
+		<a href="userRegister">
 			<button class="btn btn-warning btn-lg">
 			注册
 			</button>

@@ -1,0 +1,8 @@
+$(function () {
+	
+	$("#login-form").validate({
+		
+		
+	});
+	
+});

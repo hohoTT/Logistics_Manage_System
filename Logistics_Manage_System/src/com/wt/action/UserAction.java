@@ -1,9 +1,5 @@
 package com.wt.action;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -41,6 +37,16 @@ ModelDriven<User>, Preparable{
 		}
 		
 		return "list";
+	}
+	
+	// login
+	public String login(){
+		
+		String name = "";
+		
+		String password = "";
+		
+		return "login";
 	}
 
 	@Override

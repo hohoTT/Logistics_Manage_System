@@ -12,6 +12,7 @@ contentType="text/html; charset=utf-8"%>
 
 <script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="static/js/carousel.js"></script>
+<script type="text/javascript" src="static/js/validator.js"></script>
 
 </head>
 <body>
