@@ -25,11 +25,9 @@
 }
 
 /*--footer--*/
-.footer{
-	background: #001C32;
-	padding:3% 0;
-	margin-top: 20px;
+.footer {
     left: 0;
     right: 0;
-    height: 80px
+    height: 80px;
+    margin-top: 20px;
 }

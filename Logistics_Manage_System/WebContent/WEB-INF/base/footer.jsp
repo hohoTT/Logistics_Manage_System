@@ -23,11 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 
 	<!-- footer -->
-
+	
 	<div class="footer" style="background: rgba(0, 28, 50, 0)">
 		<p class="text-muted text-center">Copyright © 2016 &nbsp; 王涛
 			&nbsp; Team WANG</p>
 	</div>
-
+	
 </body>
 </html>

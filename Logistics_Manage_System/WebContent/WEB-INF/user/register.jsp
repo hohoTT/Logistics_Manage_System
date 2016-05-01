@@ -28,10 +28,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <script type="text/javascript" src="static/js/account/register.js"></script>
 
+</head>
+
 <style type="text/css">
-div {
-	top: 100px;
+
+#register-form{
+	margin-top: 50px;
 }
+
 #title {
 	position: fixed;
 	top: 50px;
@@ -46,8 +50,8 @@ div {
 	font-size: 20px;
 }
 
-a{
-	color: #428bca;
+#register-div{
+	margin-top: 50px;
 }
 
 h2{
@@ -55,16 +59,19 @@ h2{
 	font-family: source_code_pro,"PingFangSC-Regular",
 	"Heiti SC","Microsoft Yahei",monospace;
 }
-</style>
 
-</head>
+a{
+	color: #428bca;
+}
+</style>
 
 <body>
 	<a href="/Logistics_Manage_System/">
 		<p id="title">物流中心</p>
 		<p id="title-tail">join &nbsp;us</p>
 	</a>
-	 <div class="container main">
+
+	 <div id="register-div" class="container main">
         <div class="col-md-6 col-md-offset-3">
             <h2 class="text-center">用户注册</h2>
 
