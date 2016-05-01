@@ -12,12 +12,19 @@ import org.json.JSONObject;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.wt.entity.User;
+import com.wt.service.UserService;
 
 public class LoginJsonHandle extends ActionSupport{
 
 	private static final long serialVersionUID = 1L;
 	
 	private Map<String, Object> dataMap;
+	
+	private UserService userService;
+	
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
 
 	public String jsonLogin() {
 		
@@ -31,24 +38,26 @@ public class LoginJsonHandle extends ActionSupport{
 		
 		String password = request.getParameter("password");
 		
+		// 测试时使用
 		System.out.println("username ---- " + username);
 		System.out.println("password ---- " + password);
 		System.out.println("-----------------------------");
 		
-		User user = new User();
-		user.setUser_name(username);
-		user.setUser_password(password);
+		User user = userService.userCheck(username, password);
 		
-		if(username.equals("aaa")){
-			dataMap.put("data", "exists");
+		// 测试时使用 
+//		System.out.println("user **** " + user);
+//		System.out.println("user ------- " + user.getUser_name() + " --- " + user.getUser_password());
+		
+		if(user == null){
+			dataMap.put("data", "用户名或密码错误");
 			dataMap.put("code", 1);
 		}
 		else{
 			dataMap.put("user", user);
 			dataMap.put("code", 0);
 		}
-		
-		
+
 		return SUCCESS;
 	}
 	

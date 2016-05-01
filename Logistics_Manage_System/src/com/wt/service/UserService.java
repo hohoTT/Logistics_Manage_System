@@ -21,4 +21,10 @@ public class UserService {
 		
 	}
 	
+	public User userCheck(String username, String password) {
+		
+		return userDao.userCheck(username, password);
+		
+	}
+	
 }
