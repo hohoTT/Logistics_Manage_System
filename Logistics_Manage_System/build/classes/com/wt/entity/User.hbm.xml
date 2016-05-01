@@ -14,6 +14,10 @@
             <column name="USER_NAME" />
         </property>
         
+        <property name="user_email" type="java.lang.String">
+            <column name="USER_EMAIL" />
+        </property>
+        
         <property name="user_password" type="java.lang.String">
             <column name="USER_PASSWORD" />
         </property>
