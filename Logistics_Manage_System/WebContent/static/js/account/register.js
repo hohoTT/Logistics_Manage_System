@@ -1,4 +1,4 @@
-require(["jquery", "bsAlert", "validator"], function ($, bsAlert) {
+require(["jquery", "bsAlert",  "validator"], function ($, bsAlert) {
     $("#stu_id").hide();
     $('form').validator().on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
@@ -29,19 +29,4 @@ require(["jquery", "bsAlert", "validator"], function ($, bsAlert) {
         }
     });
     
-    $("#school").blur(function () {
-        var school = $("#school").val().trim(school).toLowerCase();
-        if (school == "青岛大学" || school == "qdu" || school == "青大") {
-            $("#stu_id").show();
-            $("#school").val("青岛大学");
-        }
-    });
-    function refresh_captcha() {
-        $("#captcha-img")[0].src = "/captcha/?" + Math.random();
-        $("#captcha")[0].value = "";
-    }
-
-    $("#captcha-img").click(function () {
-        refresh_captcha();
-    });
 });

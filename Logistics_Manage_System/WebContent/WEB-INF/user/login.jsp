@@ -7,12 +7,10 @@
 
 <title>用户登录</title>
 
-<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
-
 <script type="text/javascript" src="static/js/config.js"></script>
 <script type="text/javascript" src="static/js/require.js"></script>
 
-<script type="text/javascript" src="static/js/account/login.js"></script>
+<link rel="stylesheet" href="static/css/bootstrap/bootstrap.css"/>
 
 <style type="text/css">
 
@@ -34,7 +32,7 @@
 	font-size: 20px;
 }
 
-#login-form{
+#login-div{
 	margin-top: 50px;
 }
 </style>
@@ -47,11 +45,11 @@
 		<p id="title-tail">join &nbsp;us</p>
 	</a>
 	
-	<div id="login-form" class="container main">
+	<div id="login-div" class="container main">
 	    <div class="col-md-6 col-md-offset-3">
 	        <h2 class="text-center">用户登录</h2>
 	
-	        <form id="login-form">
+	        <form id="login-form" method="post">
 	            <div class="form-group">
 	                <label for="username">用户名</label>
 	                <input type="text" class="form-control input-lg" id="username" name="username" maxlength="30"
@@ -78,5 +76,8 @@
 	</div>
 		
 </body>
+
+<script type="text/javascript" src="static/js/account/login.js"></script>
+
 
 </html>

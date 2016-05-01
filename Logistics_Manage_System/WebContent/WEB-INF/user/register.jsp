@@ -53,47 +53,39 @@ div {
 		<p id="title">物流中心</p>
 		<p id="title-tail">join &nbsp;us</p>
 	</a>
-	<div class="container main">
-		<div class="col-md-6 col-md-offset-3">
-			<h2 class="text-center">用户注册</h2>
+	 <div class="container main">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="text-center">用户注册</h2>
 
-			<form id="register-form" action="servlet/Register" method="post">
-				<div class="form-group">
-					<label for="username">用户名</label> <input type="text"
-						class="form-control input-lg" id="username" name="username"
-						placeholder="用户名" data-error="请填写用户名" required
-						autofocus>
-					<div class="help-block with-errors"></div>
-				</div>
-				<div class="form-group">
-					<label for="email">邮箱地址</label> <input type="email"
-						class="form-control input-lg" id="email" name="email"
-						placeholder="邮箱地址" data-error="请填写正确的邮箱地址" required>
-					<div class="help-block with-errors"></div>
-				</div>
-				<div class="form-group">
-					<label for="password">密码</label> <input type="password"
-						class="form-control input-lg" id="password" name="password"
-						data-error="请填写密码" placeholder="密码" data-minlength="6"
-						data-minlength-error="密码不得少于6位" required>
-					<div class="help-block with-errors"></div>
-				</div>
-				<div class="form-group">
-					<label for="confirm_password">确认密码</label> <input type="password"
-						class="form-control input-lg" id="confirm_password"
-						name="confirm_password" placeholder="确认密码" data-match="#password"
-						data-match-error="两个密码不一致" data-error="请填写确认密码" required>
-					<div class="help-block with-errors"></div>
-				</div>
-
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary">提交</button>
-				</div>
-
-				<input type="hidden" name="action" value="register">
-			</form>
-		</div>
-	</div>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" class="form-control input-lg" id="username" name="username" placeholder="用户名" 
+                    data-remote="user-login" data-remote-error="该用户名已被注册！" data-error="请填写用户名" required autofocus>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱地址</label>
+                    <input type="email" class="form-control input-lg" id="email" name="email" placeholder="邮箱地址" data-remote="/api/email_check/" data-remote-error="该邮箱已被注册！" data-error="请填写正确的邮箱地址" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" class="form-control input-lg" id="password" name="password" data-error="请填写密码" placeholder="密码" data-minlength="6" data-minlength-error="密码不得少于6位" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">确认密码</label>
+                    <input type="password" class="form-control input-lg" id="confirm_password" name="confirm_password"
+                           placeholder="确认密码" data-match="#password" data-match-error="两个密码不一致" data-error="请填写确认密码" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

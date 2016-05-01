@@ -12,10 +12,18 @@
     <constant name="struts.devMode" value="true" />
     <constant name="struts.action.excludePattern" value="/static/.*?" />
 	
+	
+	<!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
+    <constant name="struts.serve.static.browserCache" value="false" />
+    
+    <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+    <constant name="struts.configuration.xml.reload" value="true" />
+    
+    <!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->
+    <constant name="struts.devMode" value="true" />
 
     <package name="default" namespace="/" extends="struts-default">
     
-    	
     	<!-- 定义新的拦截器栈, 配置 prepare 拦截器栈的 alwaysInvokePrepare 参数值为 false -->
 		<interceptors>
 			<interceptor-stack name="sshStack">
@@ -31,11 +39,21 @@
 		
 		<action name="user-*" class="userAction"
         	method="{1}">
+        	
+        	<result name="login">/index.jsp</result>
 			
 			<result name="list">/index.jsp</result>
 			
 		</action>
 		
+		<!-- 
+			<action name="json-login" class="com.wt.jsonHandle.LoginJsonHandle"
+					method="jsonLogin">
+				<result type="json">
+					<param name="data">dataMap</param>
+				</result>
+			</action>
+		 -->
 		<!-- 用户登录跳转链接 -->		
 		<action name="userLogin">
 			<result>/WEB-INF/user/login.jsp</result>
@@ -46,8 +64,19 @@
 			<result>/WEB-INF/user/register.jsp</result>
 		</action>
 		
-		
-		
+    </package>
+    
+    <package name="json" extends="json-default" namespace="/">
+    
+    	<action name="jsonLogin" class="com.wt.jsonHandle.LoginJsonHandle"
+				method="jsonLogin">
+            <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                                                   注意：root为固定写法，否则不会把result的值返回给客户端 -->
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+    
     </package>
 
 </struts>

@@ -3,8 +3,14 @@ package com.wt.action;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.struts2.interceptor.RequestAware;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.RequestAware;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
@@ -42,9 +48,24 @@ ModelDriven<User>, Preparable{
 	// login
 	public String login(){
 		
-		String name = "";
+		ActionContext context = ActionContext.getContext();
 		
-		String password = "";
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		
+//		String username = request.getParameter("username");
+//		
+//		System.out.println("username ---- " + username);
+//		
+//		if(username.equals("aaa")){
+//			
+//			JSONObject jsonObject = new JSONObject();
+//			
+//			JSONArray jsonArray = new JSONArray();
+//			
+//			
+//			
+//		}
+		
 		
 		return "login";
 	}

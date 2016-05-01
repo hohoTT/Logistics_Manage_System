@@ -1,14 +1,16 @@
-require(["jquery", "bsAlert", "validator"], function ($, bsAlert) {
+require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, csrfTokenHeader) {
 	
 	$('form').validator().on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
-            var username = $("#username").val();
-            var password = $("#password").val();
+            //var username = $("#username").val();
+            //var password = $("#password").val();
+        	
+        	var params = $("input").serialize();
 
             $.ajax({
                 beforeSend: csrfTokenHeader,
-                url: "/api/login/",
-                data: {username: username, password: password},
+                url: "jsonLogin",
+                data: params,
                 dataType: "json",
                 method: "post",
                 success: function (data) {
@@ -23,11 +25,11 @@ require(["jquery", "bsAlert", "validator"], function ($, bsAlert) {
                             window.location.href = from;
                         }
                         else{
-                            location.href = "/";
+                            location.href = "/Logistics_Manage_System";
                         }
                     }
                     else {
-                        refresh_captcha();
+                        //refresh_captcha();
                         bsAlert(data.data);
                     }
                 },

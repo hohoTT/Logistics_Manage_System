@@ -1,6 +1,8 @@
 package com.wt.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 
 	private Integer user_id;
 	private String user_name;
