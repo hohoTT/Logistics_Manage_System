@@ -19,10 +19,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="description" content="This is my page">
 
 <link rel="stylesheet" href="static/css/global.css" media="all">
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
 
-<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="static/js/validator.js"></script>
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+
+<script type="text/javascript" src="static/js/config.js"></script>
+<script type="text/javascript" src="static/js/require.js"></script>
+
+<script type="text/javascript" src="static/js/account/register.js"></script>
 
 <style type="text/css">
 div {
@@ -47,7 +50,7 @@ div {
 
 <body>
 	<a href="/Logistics_Manage_System/">
-		<p id="title">Swim_Bar</p>
+		<p id="title">物流中心</p>
 		<p id="title-tail">join &nbsp;us</p>
 	</a>
 	<div class="container main">

@@ -8,11 +8,10 @@ contentType="text/html; charset=utf-8"%>
 
 
 <link rel="stylesheet" href="static/css/global.css" media="all">
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
 
-<script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="static/js/carousel.js"></script>
-<script type="text/javascript" src="static/js/validator.js"></script>
+<script type="text/javascript" src="static/js/config.js"></script>
+<script type="text/javascript" src="static/js/require.js"></script>
 
 </head>
 <body>

@@ -1,8 +1,0 @@
-$(function () {
-	
-	$("#login-form").validate({
-		
-		
-	});
-	
-});

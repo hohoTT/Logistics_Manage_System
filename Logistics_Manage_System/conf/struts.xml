@@ -32,7 +32,7 @@
 		<action name="user-*" class="userAction"
         	method="{1}">
 			
-			<result></result>
+			<result name="list">/index.jsp</result>
 			
 		</action>
 		
