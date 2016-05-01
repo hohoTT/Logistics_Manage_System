@@ -1,5 +1,5 @@
 /*--index--*/
-#carousel-generic, #carousel{
+#carousel-generic, #carousel, .item{
 	height: 400px;	
 }
 

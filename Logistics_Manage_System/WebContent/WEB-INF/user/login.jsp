@@ -10,7 +10,9 @@
 <script type="text/javascript" src="static/js/config.js"></script>
 <script type="text/javascript" src="static/js/require.js"></script>
 
-<link rel="stylesheet" href="static/css/bootstrap/bootstrap.css"/>
+<link rel="stylesheet" href="static/css/global.css" media="all">
+<link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css"/>
+<link rel="stylesheet" href="static/css/bootstrap/todc-bootstrap.min.css"/>
 
 <style type="text/css">
 
@@ -34,6 +36,16 @@
 
 #login-div{
 	margin-top: 50px;
+}
+
+h2{
+	font-size: 30px;
+	font-family: source_code_pro,"PingFangSC-Regular",
+	"Heiti SC","Microsoft Yahei",monospace;
+}
+
+a{
+	color: #428bca;
 }
 </style>
 
@@ -74,7 +86,9 @@
 	        </form>
 	    </div>
 	</div>
-		
+	
+	<jsp:include page="../base/footer.jsp"></jsp:include>
+	
 </body>
 
 <script type="text/javascript" src="static/js/account/login.js"></script>

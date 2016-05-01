@@ -7,10 +7,12 @@ var require = {
         csrfToken: "util/csrfToken",
         bootstrap: "lib/bootstrap/bootstrap",
         validator: "lib/validator/validator",
+        carousel : "carousel",
     },
     
     // 控制js的加载顺序，避免加载时发生的异常，指定模块之间的依赖关系
     shim: {
     	"bootstrap": ["jquery"],
+    	"carousel" : ["jquery"],
     }
 };

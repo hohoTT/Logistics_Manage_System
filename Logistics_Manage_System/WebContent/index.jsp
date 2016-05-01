@@ -10,14 +10,13 @@ contentType="text/html; charset=utf-8"%>
 <link rel="stylesheet" href="static/css/global.css" media="all">
 <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
 
-<script type="text/javascript" src="static/js/config.js"></script>
-<script type="text/javascript" src="static/js/require.js"></script>
-
+<script type="text/javascript" src="static/js/lib/jQuery/jquery.js"></script>
+<script type="text/javascript" src="static/js/carousel.js"></script>
 </head>
 <body>
 	
 	<div id="carousel-generic" class="carousel slide" data-ride="carousel"
-		data-interval="2000">
+		data-interval="3000">
 		<!-- Wrapper for slides -->
 		<div id="carousel" class="carousel-inner">
 			<div class="item active">
