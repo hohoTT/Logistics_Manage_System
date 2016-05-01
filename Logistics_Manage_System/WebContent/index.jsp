@@ -94,18 +94,27 @@ contentType="text/html; charset=utf-8"%>
 				<h4>Claritas est etiam</h4>
 			</div>
 		</a>
-		<div class="header-bottom-grid2">
-			<span class="glyphicon glyphicon-certificate"></span>
-			<h4>Claritas est etiam</h4>
-		</div>
-		<div class="header-bottom-grid3">
-			<span class="glyphicon glyphicon-tree-deciduous"></span>
-			<h4>Claritas est etiam</h4>
-		</div>
-		<div class="header-bottom-grid4">
-			<span class="glyphicon glyphicon-screenshot"></span>
-			<h4>Claritas est etiam</h4>
-		</div>
+		
+		<a href="#">
+			<div class="header-bottom-grid2">
+				<span class="glyphicon glyphicon-certificate"></span>
+				<h4>Claritas est etiam</h4>
+			</div>
+		</a>
+		
+		<a href="#">
+			<div class="header-bottom-grid3">
+				<span class="glyphicon glyphicon-tree-deciduous"></span>
+				<h4>Claritas est etiam</h4>
+			</div>
+		</a>
+		
+		<a href="#">
+			<div class="header-bottom-grid4">
+				<span class="glyphicon glyphicon-screenshot"></span>
+				<h4>Claritas est etiam</h4>
+			</div>
+		</a>
 		<div class="clearfix"></div>
 	</div>
 
