@@ -1,0 +1,23 @@
+ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+
+.divSetting{
+	float: left;
+}
+
+.span_1_of_4 {
+    margin-right: 10%;
+}
+
+.span_1_of_4 {
+    width: 20.8%;
+    padding: 1.5%;
+}
+
+#divC{
+	margin-left: 10%;
+	margin-right: 10%;
+}

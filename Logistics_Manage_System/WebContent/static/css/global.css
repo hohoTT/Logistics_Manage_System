@@ -3,6 +3,13 @@
 	height: 400px;	
 }
 
+/*--div ²¿·Ö--*/
+.left {
+	margin-right: 17px;
+	height: 362px;
+	width: 222px;
+	float: left 
+}
 /*--index_content--*/
 #login {
 	position: fixed;
@@ -10,47 +17,19 @@
 	right: 100px;
 	font-size: 50px;
 }
+.span_1_of_4{
+	margin-right: 15px;
+}
+.cao{
+	float: left;	
+}
 
 /*--footer--*/
 .footer{
 	background: #001C32;
 	padding:3% 0;
-	margin-top: 150px;
-}
-.footer-grid h3 {
-	color: #fff;
-	font-family: 'Open Sans', sans-serif;
-	margin-bottom:20px;
-	text-transform: uppercase;
-	font-size: 1.1em;
-	font-weight: normal;
-}
-.footer-grid p {
-	font-size: 0.875em;
-	color: #97C3D9;
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.8em;
-}
-.footer-lastgrid {
-	margin: 0;
-}
-.footer-grid {
-	float: left;
-	width: 23%;
-	margin-right: 2%;
-}
-.footer-grid ul li a {
-	display: block;
-	padding: 10px 0px;
-	border-bottom: 1px dotted #1A3347;
-	font-size: 0.725em;
-	color: #97C3D9;
-	font-family: Arial, Helvetica, sans-serif;
-	transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	text-transform: uppercase;
-}
-.footer-grid ul li a:hover {
-	color: #fff;
+	margin-top: 20px;
+    left: 0;
+    right: 0;
+    height: 80px
 }

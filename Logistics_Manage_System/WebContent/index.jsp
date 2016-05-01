@@ -7,11 +7,17 @@ contentType="text/html; charset=utf-8"%>
 <title>物流配送管理系统</title>
 
 
+<!-- CSS 样式 -->
+<link rel="stylesheet" href="static/css/shopping/style2.css" media="all">
+
+<!-- CSS 样式部分引用 -->
 <link rel="stylesheet" href="static/css/global.css" media="all">
 <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
 
+<!-- JS 部分引用 -->
 <script type="text/javascript" src="static/js/lib/jQuery/jquery.js"></script>
 <script type="text/javascript" src="static/js/carousel.js"></script>
+
 </head>
 <body>
 	
@@ -80,10 +86,29 @@ contentType="text/html; charset=utf-8"%>
 		</div>
 	</div>
 	
-	<div>
-		<h1>hoho</h1>
+	<!-- 以下为链接部分 -->
+	<div class="header-bottom-grids text-center">
+		<a href="#">
+			<div class="header-bottom-grid1">
+				<span class="glyphicon glyphicon-leaf"></span>					
+				<h4>Claritas est etiam</h4>
+			</div>
+		</a>
+		<div class="header-bottom-grid2">
+			<span class="glyphicon glyphicon-certificate"></span>
+			<h4>Claritas est etiam</h4>
+		</div>
+		<div class="header-bottom-grid3">
+			<span class="glyphicon glyphicon-tree-deciduous"></span>
+			<h4>Claritas est etiam</h4>
+		</div>
+		<div class="header-bottom-grid4">
+			<span class="glyphicon glyphicon-screenshot"></span>
+			<h4>Claritas est etiam</h4>
+		</div>
+		<div class="clearfix"></div>
 	</div>
 
-	<jsp:include page="WEB-INF/base/footer.jsp"></jsp:include>
 </body>
+	<jsp:include page="WEB-INF/base/footer.jsp"></jsp:include>
 </html>
