@@ -64,10 +64,37 @@
 			<result>/WEB-INF/user/register.jsp</result>
 		</action>
 		
+		<!-- 用户名验证 -->
+		<action name="usernameCheck" class="userValidate"
+				method="usernameCheck">
+	    	<result name="usernameSuccess" type="httpheader">  
+		    	<param name="status">200</param>
+		    </result>
+		    
+		    <result name="usernameError" type="httpheader">  
+		    	<param name="status">400</param>
+		    </result>
+        </action>
+        
+        <!-- 邮箱验证 -->
+		<action name="emailCheck" class="userValidate"
+				method="emailCheck">
+	    	<result name="emailSuccess" type="httpheader">  
+		    	<param name="status">200</param>
+		    </result>
+		    
+		    <result name="emailError" type="httpheader">  
+		    	<param name="status">400</param>
+		    </result>
+        </action>
+		
     </package>
+    
+    
     
     <package name="json" extends="json-default" namespace="/">
     
+    	<!-- 以下为用户登录时的json数据的配置 -->
     	<action name="jsonLogin" class="com.wt.jsonHandle.LoginJsonHandle"
 				method="jsonLogin">
             <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
@@ -76,7 +103,18 @@
 				<param name="root">dataMap</param>
 			</result>
 		</action>
+		
+		<!-- 以下为用户注册时的json数据的配置 -->
+		<action name="save" class="com.wt.jsonHandle.RegisterJsonHandle"
+				method="save">
+            <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                                                   注意：root为固定写法，否则不会把result的值返回给客户端 -->
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
     
     </package>
+    
 
 </struts>

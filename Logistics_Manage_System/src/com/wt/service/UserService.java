@@ -13,6 +13,7 @@ public class UserService {
 		this.userDao = userDao;
 	}
 	
+	// 返回用户列表
 	public List<User> getAll(){
 		
 		List<User> users = userDao.getAll();
@@ -21,10 +22,24 @@ public class UserService {
 		
 	}
 	
+	// 用户登录的验证
 	public User userCheck(String username, String password) {
-		
 		return userDao.userCheck(username, password);
-		
+	}
+	
+	// 用户注册，向数据库中插入一条用户数据
+	public void saveOrUpdate(User user) {
+		userDao.saveOrUpdate(user);
+	}
+	
+	// 邮箱是否被注册的检验
+	public User emailCheck(String email){
+		return userDao.emailCheck(email);
+	}
+
+	// 用户名是否被注册的检验
+	public User usernameCheck(String username){
+		return userDao.usernameCheck(username);
 	}
 	
 }
