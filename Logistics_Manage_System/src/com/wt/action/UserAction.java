@@ -20,9 +20,6 @@ import com.wt.service.UserService;
 public class UserAction extends ActionSupport implements RequestAware,
 ModelDriven<User>, Preparable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	private UserService userService;

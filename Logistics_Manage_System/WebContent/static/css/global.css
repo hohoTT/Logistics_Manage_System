@@ -3,6 +3,22 @@
 	height: 400px;	
 }
 
+#title {
+	position: fixed;
+	top: 50px;
+	left: 100px;
+	font-size: 50px;
+	color: #fff;
+}
+
+#title-tail {
+	position: fixed;
+	top: 130px;
+	left: 210px;
+	font-size: 25px;
+	color: #fff;
+}
+
 /*--div ²¿·Ö--*/
 .left {
 	margin-right: 17px;

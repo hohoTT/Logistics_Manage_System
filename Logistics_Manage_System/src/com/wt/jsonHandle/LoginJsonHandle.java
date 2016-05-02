@@ -22,6 +22,8 @@ public class LoginJsonHandle extends ActionSupport{
 	
 	private UserService userService;
 	
+	private Map<String, Object> session;
+	
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
@@ -54,6 +56,14 @@ public class LoginJsonHandle extends ActionSupport{
 			dataMap.put("code", 1);
 		}
 		else{
+			
+			session = ActionContext.getContext().getSession();
+			
+			session.put("username", user.getUser_name());
+			
+			// ≤‚ ‘ ± π”√
+			//System.out.println("session.put ---- " + user.getUser_name());
+			
 			dataMap.put("user", user);
 			dataMap.put("code", 0);
 		}
