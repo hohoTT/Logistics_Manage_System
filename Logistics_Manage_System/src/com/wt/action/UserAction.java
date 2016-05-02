@@ -49,7 +49,8 @@ ModelDriven<User>, Preparable{
 		
 		session.clear();
 		
-		System.out.println("111111");
+		// ≤‚ ‘ ± π”√
+		//System.out.println("111111");
 		
 		return "exit";
 	}

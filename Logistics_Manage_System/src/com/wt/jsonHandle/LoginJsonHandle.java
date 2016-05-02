@@ -41,9 +41,9 @@ public class LoginJsonHandle extends ActionSupport{
 		String password = request.getParameter("password");
 		
 		// ≤‚ ‘ ± π”√
-		System.out.println("username ---- " + username);
-		System.out.println("password ---- " + password);
-		System.out.println("-----------------------------");
+//		System.out.println("username ---- " + username);
+//		System.out.println("password ---- " + password);
+//		System.out.println("-----------------------------");
 		
 		User user = userService.userCheck(username, password);
 		
