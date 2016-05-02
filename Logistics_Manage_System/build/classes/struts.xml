@@ -40,20 +40,12 @@
 		<action name="user-*" class="userAction"
         	method="{1}">
         	
-        	<result name="login">/index.jsp</result>
-			
 			<result name="list">/index.jsp</result>
 			
+			<result name="exit">/index.jsp</result>
+			
 		</action>
-		
-		<!-- 
-			<action name="json-login" class="com.wt.jsonHandle.LoginJsonHandle"
-					method="jsonLogin">
-				<result type="json">
-					<param name="data">dataMap</param>
-				</result>
-			</action>
-		 -->
+
 		<!-- 用户登录跳转链接 -->		
 		<action name="userLogin">
 			<result>/WEB-INF/user/login.jsp</result>

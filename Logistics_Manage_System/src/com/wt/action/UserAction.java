@@ -42,29 +42,16 @@ ModelDriven<User>, Preparable{
 		return "list";
 	}
 	
-	// login
-	public String login(){
+	// ÓÃ»§µÇ³ö
+	public String exit(){
 		
-		ActionContext context = ActionContext.getContext();
+		Map<String, Object> session = ActionContext.getContext().getSession();
 		
-		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+		session.clear();
 		
-//		String username = request.getParameter("username");
-//		
-//		System.out.println("username ---- " + username);
-//		
-//		if(username.equals("aaa")){
-//			
-//			JSONObject jsonObject = new JSONObject();
-//			
-//			JSONArray jsonArray = new JSONArray();
-//			
-//			
-//			
-//		}
+		System.out.println("111111");
 		
-		
-		return "login";
+		return "exit";
 	}
 
 	@Override

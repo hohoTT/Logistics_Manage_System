@@ -91,21 +91,21 @@ contentType="text/html; charset=utf-8"%>
 		<a href="#">
 			<div class="header-bottom-grid1">
 				<span class="glyphicon glyphicon-leaf"></span>					
-				<h4>Claritas est etiam</h4>
+				<h4>客服中心</h4>
 			</div>
 		</a>
 		
 		<a href="#">
 			<div class="header-bottom-grid2">
 				<span class="glyphicon glyphicon-certificate"></span>
-				<h4>Claritas est etiam</h4>
+				<h4>商城</h4>
 			</div>
 		</a>
 		
 		<a href="#">
 			<div class="header-bottom-grid3">
 				<span class="glyphicon glyphicon-tree-deciduous"></span>
-				<h4>Claritas est etiam</h4>
+				<h4>订单配送中心</h4>
 			</div>
 		</a>
 		

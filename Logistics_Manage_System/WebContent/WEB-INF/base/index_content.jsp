@@ -5,6 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+	#title {
+		color: #fff;
+	}
+
+	#title-tail {
+		color: #fff;
+	}
+</style>
+
 </head>
 <body>
 
@@ -45,7 +56,7 @@
 				<%=username%>
 			</button> 
 		</a>
-		<a href="exit.jsp">
+		<a href="user-exit">
 			<button class="btn btn-warning btn-lg">
 				退出登录
 			</button> 
