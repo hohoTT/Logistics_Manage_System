@@ -11,13 +11,11 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.wt.entity.User;
 import com.wt.service.UserService;
 
-public class UserValidate extends ActionSupport implements ServletResponseAware{
+public class UserValidate extends ActionSupport{
 
 	private static final long serialVersionUID = 1L;
 
 	private UserService userService;
-	
-	HttpServletResponse response;
 	
 	ActionContext context = ActionContext.getContext();
 	
@@ -27,6 +25,7 @@ public class UserValidate extends ActionSupport implements ServletResponseAware{
 		this.userService = userService;
 	}
 	
+	// 用户名验证
 	public String usernameCheck(){
 		
 		String username = request.getParameter("username");
@@ -43,6 +42,7 @@ public class UserValidate extends ActionSupport implements ServletResponseAware{
 		}
 	}
 	
+	// 邮箱验证
 	public String emailCheck(){
 		
 		String email = request.getParameter("email");
@@ -57,11 +57,6 @@ public class UserValidate extends ActionSupport implements ServletResponseAware{
 		else{
 			return "emailSuccess";
 		}
-	}
-
-	@Override
-	public void setServletResponse(HttpServletResponse arg0) {
-		this.response = response;
 	}
 	
 }

@@ -17,7 +17,7 @@ import com.wt.entity.User;
 import com.wt.service.UserService;
 
 public class RegisterJsonHandle extends ActionSupport implements 
-	ModelDriven<User>, Preparable, ServletResponseAware{
+	ModelDriven<User>, Preparable{
 
 	private static final long serialVersionUID = 1L;
 
@@ -26,8 +26,6 @@ public class RegisterJsonHandle extends ActionSupport implements
 	private UserService userService;
 	
 	private User model;
-	
-	HttpServletResponse response;
 	
 	public void setUserService(UserService userService) {
 		this.userService = userService;
@@ -52,28 +50,23 @@ public class RegisterJsonHandle extends ActionSupport implements
 		
 		String email = request.getParameter("email");
 
-		System.out.println("username --- " + username + " password --- " + password + " email--- " + email);
-		
 		// 向数据库中插入一条用户数据
 		if(username != null && password != null && email != null){
 			System.out.println("username --- " + username + " password --- " + password + " email--- " + email);
-			System.out.println("model " + model);
 			
-			userService.saveOrUpdate(model);
-			System.out.println("11111");
+			User user = new User();
+			
+			user.setUser_name(username);
+			user.setUser_password(password);
+			user.setUser_email(email);
+			
+			userService.saveOrUpdate(user);
 			
 			dataMap.put("user", model);
 			dataMap.put("code", 0);
 		}
 			
 		return SUCCESS;
-	}
-	
-	
-	public void prepareSave(){
-		
-		model = new User();
-				
 	}
 
 	@Override
@@ -83,11 +76,5 @@ public class RegisterJsonHandle extends ActionSupport implements
 	public User getModel() {
 		return model;
 	}
-
-	@Override
-	public void setServletResponse(HttpServletResponse response) {
-		this.response = response;
-	}
-	
 	
 }

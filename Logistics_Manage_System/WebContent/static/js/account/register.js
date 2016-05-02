@@ -21,7 +21,7 @@ require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, c
 	                    window.location.href = from;
 	                }
 	                else{
-	                    location.href = "/Logistics_Manage_System";
+	                    location.href = "userLogin";
 	                }
                 },
                 error: function(){
