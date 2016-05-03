@@ -3,6 +3,7 @@ package com.wt.jsonHandle;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.persistence.criteria.CriteriaBuilder.In;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -49,16 +50,26 @@ public class RegisterJsonHandle extends ActionSupport implements
 		String password = request.getParameter("password");
 		
 		String email = request.getParameter("email");
+		
+		String Str_userphone = request.getParameter("userphone");
+
+		long userphone = Long.parseLong(Str_userphone);
+		
+		System.out.println(userphone);
+		
+		String useraddress = request.getParameter("useraddress");
 
 		// 向数据库中插入一条用户数据
-		if(username != null && password != null && email != null){
-			System.out.println("username --- " + username + " password --- " + password + " email--- " + email);
+		if(username != null && password != null && email != null && Str_userphone != null && useraddress != null){
+			System.out.println("username --- " + username + " password --- " + password + " email--- " + email + " userphone --- " + userphone + "useraddress ---" + useraddress);
 			
 			User user = new User();
 			
 			user.setUser_name(username);
 			user.setUser_password(password);
 			user.setUser_email(email);
+			user.setUser_phone(userphone);
+			user.setUser_address(useraddress);
 			
 			userService.saveOrUpdate(user);
 			

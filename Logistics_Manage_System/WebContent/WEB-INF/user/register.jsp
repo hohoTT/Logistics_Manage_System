@@ -63,6 +63,12 @@ h2{
 a{
 	color: #428bca;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
 </style>
 
 <body>
@@ -76,32 +82,53 @@ a{
             <h2 class="text-center">用户注册</h2>
 
             <form id="register-form" method="post">
+            
                 <div class="form-group">
                     <label for="username">用户名</label>
                     <input type="text" class="form-control input-lg" id="username" name="username" placeholder="用户名" 
                     data-remote="usernameCheck" data-remote-error="该用户名已被注册！" data-error="请填写用户名" required autofocus>
                     <div class="help-block with-errors"></div>
                 </div>
+                
                 <div class="form-group">
                     <label for="email">邮箱地址</label>
                     <input type="email" class="form-control input-lg" id="email" name="email" placeholder="邮箱地址" 
                     data-remote="emailCheck" data-remote-error="该邮箱已被注册！" data-error="请填写正确的邮箱地址" required>
                     <div class="help-block with-errors"></div>
                 </div>
+                
                 <div class="form-group">
-                    <label for="password">密码</label>
-                    <input type="password" class="form-control input-lg" id="password" name="password" data-error="请填写密码" placeholder="密码" data-minlength="6" data-minlength-error="密码不得少于6位" required>
+                    <label for="userphone">手机</label>
+                    <input type="number" class="form-control input-lg" id="userphone" name="userphone" placeholder="手机号码" 
+                    data-error="请填写手机号码" data-minlength="11" data-minlength-error="请添加正确的手机号码" required>
                     <div class="help-block with-errors"></div>
                 </div>
+                
+                <div class="form-group">
+                    <label for="useraddress">配送地址</label>
+                    <input type="text" class="form-control input-lg" id="useraddress" name="useraddress" placeholder="配送地址" 
+                    data-error="请填写配送地址" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" class="form-control input-lg" id="password" name="password" 
+                    data-error="请填写密码" placeholder="密码" data-minlength="6" data-minlength-error="密码不得少于6位" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
                 <div class="form-group">
                     <label for="confirm_password">确认密码</label>
                     <input type="password" class="form-control input-lg" id="confirm_password" name="confirm_password"
                            placeholder="确认密码" data-match="#password" data-match-error="两个密码不一致" data-error="请填写确认密码" required>
                     <div class="help-block with-errors"></div>
                 </div>
+                
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">提交</button>
                 </div>
+                
             </form>
         </div>
     </div>

@@ -18,6 +18,14 @@
             <column name="USER_EMAIL" />
         </property>
         
+        <property name="user_phone" type="java.lang.Long">
+            <column name="USER_PHONE" />
+        </property>
+        
+        <property name="user_address" type="java.lang.String">
+            <column name="USER_ADDRESS" />
+        </property>
+        
         <property name="user_password" type="java.lang.String">
             <column name="USER_PASSWORD" />
         </property>

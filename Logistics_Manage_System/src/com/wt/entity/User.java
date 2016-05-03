@@ -7,6 +7,8 @@ public class User implements Serializable{
 	private Integer user_id;
 	private String user_name;
 	private String user_email;
+	private long user_phone;
+	private String user_address;
 	private String user_password;
 
 	public Integer getUser_id() {
@@ -31,6 +33,22 @@ public class User implements Serializable{
 
 	public void setUser_email(String user_email) {
 		this.user_email = user_email;
+	}
+	
+	public long getUser_phone() {
+		return user_phone;
+	}
+
+	public void setUser_phone(long user_phone) {
+		this.user_phone = user_phone;
+	}
+
+	public String getUser_address() {
+		return user_address;
+	}
+
+	public void setUser_address(String user_address) {
+		this.user_address = user_address;
 	}
 
 	public String getUser_password() {
