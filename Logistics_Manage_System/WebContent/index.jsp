@@ -95,7 +95,7 @@ contentType="text/html; charset=utf-8"%>
 			</div>
 		</a>
 		
-		<a href="#">
+		<a href="userShopping">
 			<div class="header-bottom-grid2">
 				<span class="glyphicon glyphicon-certificate"></span>
 				<h4>商城</h4>

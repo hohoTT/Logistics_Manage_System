@@ -79,6 +79,12 @@
 		    	<param name="status">400</param>
 		    </result>
         </action>
+        
+        
+		<!-- 跳转到购物页面  -->
+		<action name="userShopping">
+			<result>/WEB-INF/shopping/shopping.jsp</result>
+		</action>
 		
     </package>
     
