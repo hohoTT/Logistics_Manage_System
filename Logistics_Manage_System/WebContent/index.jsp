@@ -105,14 +105,14 @@ contentType="text/html; charset=utf-8"%>
 		<a href="#">
 			<div class="header-bottom-grid3">
 				<span class="glyphicon glyphicon-tree-deciduous"></span>
-				<h4>订单配送中心</h4>
+				<h4>我的购物车</h4>
 			</div>
 		</a>
 		
 		<a href="#">
 			<div class="header-bottom-grid4">
 				<span class="glyphicon glyphicon-screenshot"></span>
-				<h4>Claritas est etiam</h4>
+				<h4>订单配送中心</h4>
 			</div>
 		</a>
 		<div class="clearfix"></div>
