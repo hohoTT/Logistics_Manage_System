@@ -19,6 +19,12 @@
 <script type="text/javascript" src="static/js/shopping/jquery.lightbox.js"></script>
 <script type="text/javascript" src="static/js/shopping/shopping.js"></script>
 
+<style>
+.actGotop{position:fixed; _position:absolute; bottom:100px; right:50px; width:150px; height:195px; display:none;}
+.actGotop a,.actGotop a:link{width:150px; height:195px; display:inline-block; background:url(image/backToTop/blog7year_gotop.png) no-repeat; _background:url(image/backToTop/blog7year_gotop.gif) no-repeat; outline:none;}
+.actGotop a:hover{width:150px; height:195px; background:url(image/backToTop/blog7year_gotopd.gif) no-repeat; outline:none;}
+</style>
+
 </head>
 <body>
 	
@@ -176,6 +182,24 @@
 		</div>
 
 	</div>
+	
+	<!-- backToTop -->
+	<div style="position:fixed; top:50px; left:0px; width:100%;">
+	</div>
+	<div class="actGotop"><a href="javascript:;" title="Top"></a></div>
+	
+	<script type="text/javascript">
+	$(function(){	
+		$(window).scroll(function() {		
+			if($(window).scrollTop() >= 100){
+				$('.actGotop').fadeIn(300); 
+			}else{    
+				$('.actGotop').fadeOut(300);    
+			}  
+		});
+		$('.actGotop').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});	
+	});
+	</script>
 	
 	<jsp:include page="../base/footer.jsp"></jsp:include>
 </body>
