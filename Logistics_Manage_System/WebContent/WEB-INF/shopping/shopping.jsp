@@ -21,6 +21,8 @@
 
 </head>
 <body>
+	
+	<jsp:include page="../base/nav_content.jsp"></jsp:include>
 
 	<!--start-image-slider---->
 	<div class="image-slider">
