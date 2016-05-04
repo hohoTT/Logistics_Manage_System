@@ -32,6 +32,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <style type="text/css">
 
+body{
+	background:url("image/bg5.jpg") top center no-repeat; 
+	background-size:cover;
+}
+
 #register-form{
 	margin-top: 50px;
 }

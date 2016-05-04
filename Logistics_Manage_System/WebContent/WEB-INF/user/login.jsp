@@ -16,6 +16,11 @@
 
 <style type="text/css">
 
+body{
+	background:url("image/bg5.jpg") top center no-repeat; 
+	background-size:cover;
+}
+
 #login-form{
 	margin-top: 50px;
 }
@@ -48,6 +53,8 @@ a{
 	color: #428bca;
 }
 </style>
+
+<script type="text/javascript" src="static/js/account/login.js"></script>
 
 </head>
 
@@ -90,8 +97,6 @@ a{
 	<jsp:include page="../base/footer.jsp"></jsp:include>
 	
 </body>
-
-<script type="text/javascript" src="static/js/account/login.js"></script>
 
 
 </html>

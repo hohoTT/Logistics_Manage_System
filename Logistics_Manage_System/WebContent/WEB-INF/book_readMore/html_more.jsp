@@ -231,13 +231,14 @@
 <style>
 body{
 	background: #78D1FB;
-	}
-    .brand img{
-        width:100px;
-        height:100px;
-        float:left;
-        padding: 10px;
-    }
+}
+
+.brand img{
+    width:100px;
+    height:100px;
+    float:left;
+    padding: 10px;
+}
 </style>
 
 </head>
