@@ -91,6 +91,11 @@
 			<result>/WEB-INF/book_readMore/html_more.jsp</result>
 		</action>
 		
+		<!-- 跳转到java购物页面  -->
+		<action name="javaBuy">
+			<result>/WEB-INF/trolley/java_trolley.jsp</result>
+		</action>
+		
 		
     </package>
     

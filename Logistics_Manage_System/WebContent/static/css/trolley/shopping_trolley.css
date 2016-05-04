@@ -1,0 +1,169 @@
+html {
+	overflow-y: scroll;
+}
+
+#title {
+	background-color: rgb(255, 255, 255);
+	color: rgb(64, 64, 64);
+	display: block;
+	font-family: tahoma, arial, 宋体;
+	font-size: 12px;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 3783px;
+	line-height: 18px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+body {
+	margin: 0;
+	font: 12px "\5B8B\4F53", san-serif;
+	background: #ffffff;
+}
+
+div,ul,li {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0;
+}
+
+#computer {
+	float: left;
+	position: absolute;
+	margin-top: 10%;
+	margin-left: 55%; 
+	width : 400px;
+	height: 400px;
+	width: 400px;
+}
+
+#quantity {
+	width : 400px;
+	height: 100px;
+	padding-top: 35px;
+}
+
+#buy {
+	border: 1px solid #722A1B;
+    padding: 4px 14px;
+    background-color: #fff;
+    color: #722A1B;
+    text-transform: uppercase;
+    margin: 5px 0;
+    margin-left: 200px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* box */
+.box {
+	float: left;
+	width: 400px;
+	margin-top: 10%;
+	margin-left: 20%;
+}
+
+.tb-pic a {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.tb-pic a img {
+	vertical-align: middle;
+}
+
+.tb-pic a {
+	*display: block;
+	*font-family: Arial;
+	*line-height: 1;
+}
+
+.tb-thumb {
+	margin: 10px 0 0;
+	overflow: hidden;
+}
+
+.tb-thumb li {
+	background: none repeat scroll 0 0 transparent;
+	float: left;
+	height: 70px;
+	margin: 0 6px 0 0;
+	overflow: hidden;
+	padding: 1px;
+}
+
+.tb-s310,.tb-s310 a {
+	height: 310px;
+	width: 310px;
+}
+
+.tb-s310,.tb-s310 img {
+	max-height: 310px;
+	max-width: 310px;
+}
+
+.tb-s310 a {
+	*font-size: 271px;
+}
+
+.tb-s40 a {
+	*font-size: 35px;
+}
+
+.tb-s40,.tb-s40 a {
+	height: 60px;
+	width: 60px;
+}
+
+.tb-booth {
+	border: 1px solid #CDCDCD;
+	position: relative;
+	z-index: 1;
+}
+
+.tb-thumb .tb-selected {
+	background: none repeat scroll 0 0 #C30008;
+	height: 65px;
+	padding: 2px;
+}
+
+.tb-thumb .tb-selected div {
+	background-color: #FFFFFF;
+	border: medium none;
+}
+
+.tb-thumb li div {
+	border: 1px solid #CDCDCD;
+}
+
+div.zoomDiv {
+	z-index: 999;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 200px;
+	background: #ffffff;
+	border: 1px solid #CCCCCC;
+	display: none;
+	text-align: center;
+	overflow: hidden;
+}

@@ -47,7 +47,7 @@
 	
 			<div class="section group">
 				<div class="col_1_of_4 span_1_of_4">
-					<a href="shopping_trolley.jsp">
+					<a href="htmlBuy">
 						<div class="image_grid portfolio_4col">
 							<ul style="" id="list" class="portfolio_list da-thumbs">
 								<li><img src="image\book\html.jpg" alt="img">
@@ -62,7 +62,7 @@
 				</div>
 		
 				<div class="col_1_of_4 span_1_of_4">
-					<a href="java_trolley.jsp">
+					<a href="javaBuy">
 						<div class="image_grid portfolio_4col">
 							<ul style="" id="list" class="portfolio_list da-thumbs">
 								<li><img src="image\book\java.jpg" alt="img">
@@ -72,7 +72,7 @@
 					<h3>有关 JAVA 书籍</h3>
 					<br>
 					<div class="more">
-						<a href="java_content.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 		
@@ -89,7 +89,7 @@
 					<p></p>
 					<br>
 					<div class="more">
-						<a href="shopping.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 		
@@ -104,7 +104,7 @@
 					<h3>有关 JQUERY 书籍</h3>
 					<br>
 					<div class="more">
-						<a href="shopping.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -123,7 +123,7 @@
 					<h3>有关 PHP 书籍</h3>
 					<br>
 					<div class="more">
-						<a href="shopping.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 		
@@ -137,7 +137,7 @@
 					<h3>有关 ANDROID 书籍</h3>
 					<br>
 					<div class="more">
-						<a href="shopping.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 		
@@ -153,7 +153,7 @@
 					<p></p>
 					<br>
 					<div class="more">
-						<a href="shopping.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 		
@@ -167,7 +167,7 @@
 					<h3>有关 CSS 书籍</h3>
 					<br>
 					<div class="more">
-						<a href="shopping.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 				<div class="clear"></div>
