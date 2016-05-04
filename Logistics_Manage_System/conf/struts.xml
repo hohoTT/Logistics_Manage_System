@@ -86,6 +86,12 @@
 			<result>/WEB-INF/shopping/shopping.jsp</result>
 		</action>
 		
+		<!-- 跳转到html介绍页面  -->
+		<action name="htmlMore">
+			<result>/WEB-INF/book_readMore/html_more.jsp</result>
+		</action>
+		
+		
     </package>
     
     

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>书城</title>
 
 <!-- CSS 样式 -->
 <link rel="stylesheet" href="static/css/shopping/style.css" media="all">
@@ -57,7 +57,7 @@
 					<h3>有关 HTML 书籍</h3>
 					<br>
 					<div class="more">
-						<a href="html_intent.jsp" class="button">Read More</a>
+						<a href="htmlMore" class="button">Read More</a>
 					</div>
 				</div>
 		
