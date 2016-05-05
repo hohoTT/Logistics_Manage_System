@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wt.hibernate.n_to_n">
+
+    <class name="Item" table="ITEMS">
+    
+        <id name="itemId" type="java.lang.Integer">
+            <column name="ITEM_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="itemName" type="java.lang.String">
+            <column name="ITEM_NAME" />
+        </property>
+        
+        <!-- table: 指定中间表 -->
+        <set name="categories" table="CATEGORYS_ITEMS" inverse="true">
+        	<key>
+        		<column name="I_ID"></column>
+        	</key>
+            <!-- 使用 many-to-many 指定多对多的关联关系 -->
+            <!-- column 执行 Set 集合中的持久化类在中间表的外建列的名称 -->
+        	<many-to-many class="Category" column="C_ID"></many-to-many>
+        </set>
+        
+    </class>
+    
+</hibernate-mapping>

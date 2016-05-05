@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wt.hibernate.n_to_1.both">
+
+	<class name="Customer" table="CUSTOMERS">
+
+		<id name="customerId" type="java.lang.Integer">
+			<column name="CUSTOMER_ID" />
+			<generator class="native" />
+		</id>
+
+		<property name="customerName" type="java.lang.String">
+			<column name="CUSTOMER_NAME" />
+		</property>
+
+		<!-- 映射一对多的集合属性 -->
+		<!-- set: 映射 set 类型的属性 -->
+		<!-- table: set 中的元素对应的记录放在哪一个数据表中，该值需要和多对一的那个表的名字一致 -->
+		<!-- inverse: 指定由哪一方维护关联关系，通常设置为 true，由多的一端来维护关联关系 -->
+		<!-- cascade: 设定级联操作 在有记录的前提下 -->
+		<!-- 开发时不建议设定该属性，建议使用手工的方式来处理 -->
+		<!-- ①值为：delete时，将进行级联的删除操作， 一的一方和多的一方都将删除 -->
+		<!-- ②值为： delete-orphan时，将删除多的一方，而一的一方不会删除 -->
+		<!-- ③值为： save-update时，将进行级联的保存操作，一的一方和多的一方都将保存 -->
+		<!-- order-by：在查询时对集合中的元素进行排序  -->
+		<!-- order-by 中使用的时表的字段名，而不是持久化类的属性名 -->
+		<!-- order-by="ORDER_NAME DESC" 例子说明:对 order 按照ORDER_NAME进行降序排列 -->
+		<set name="orders" table="ORDERS" inverse="true" order-by="ORDER_NAME DESC">
+			<!-- 指定多的表中的外键列的名字 -->
+			<key column="CUSTOMER_ID"></key>
+			<!-- 指定映射类型 -->
+			<one-to-many class="Order" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

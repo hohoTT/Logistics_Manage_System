@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    
+    <session-factory>
+
+		<!-- Hibernate 连接数据库的基本信息 -->
+    	<property name="connection.username">root</property>
+    	<property name="connection.password">root</property>
+    	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql://localhost:3306/hohoTT</property>
+    
+    	<!-- Hibernate 的基本配置 -->
+    	<!-- hibernate 所使用的方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- 执行操作时是否在控制台打印 SQL -->		
+		<property name="show_sql">true</property>
+		
+		<!-- 是否对 SQL 进行格式化 -->
+		<property name="format_sql">true</property>
+		
+		<!-- 指定自动生成数据表的策略 -->
+		<property name="hbm2ddl.auto">update</property>
+		
+		<!-- 这是 Hibernate 的事务隔离级别 -->
+		<property name="connection.isolation">2</property>
+		
+		<!-- 删除对象后，使其 OID 置为 null -->
+		<property name="use_identifier_rollback">true</property>
+		
+		<!-- 配置 C3P0 数据源 -->
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="c3p0.acquire_increment">2</property>
+		
+		<property name="c3p0.idle_test_period">2000</property>
+		<property name="c3p0.timeout">2000</property>
+		
+		<property name="c3p0.max_statements">10</property>
+		
+		<!-- 设定 JDBC 的 Statement 读取数据的时候每次从数据库读取的记录条数 -->
+		<property name="hibernate.jdbc.fetch_size">100</property>
+		
+		<!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小 -->
+		<property name="hibernate.jdbc.batch_size">30</property>
+		
+		<!-- 指定关联的 Hibernate 映射文件  .hbm.xml文件 -->
+		
+		<!-- 以下是一对多，多对一的映射文件 -->
+		<!-- 
+		<mapping resource="com/wt/hibernate/n_to_1/Customer.hbm.xml"/>
+		<mapping resource="com/wt/hibernate/n_to_1/Order.hbm.xml"/>
+		 -->
+		 
+		<!-- 以下是一对一，针对外键的映射的文件 -->
+		<!-- 
+			<mapping resource="com/wt/hibernate/one_to_one/foreign/Manager.hbm.xml"/>
+			<mapping resource="com/wt/hibernate/one_to_one/foreign/Department.hbm.xml"/>
+    	 -->
+    	
+    	<!-- 以下是一对一，针对主键的映射的文件 
+		<mapping resource="com/wt/hibernate/one_to_one/primary/Manager.hbm.xml"/>
+		<mapping resource="com/wt/hibernate/one_to_one/primary/Department.hbm.xml"/>
+    -->
+    	<!-- 以下是多对多的映射文件 -->
+    	<mapping resource="com/wt/hibernate/n_to_n/Category.hbm.xml"/>
+		<mapping resource="com/wt/hibernate/n_to_n/Item.hbm.xml"/>
+		 
+		<!-- 以下是 使用 Subclass 的映射文件 -->
+		<!-- 
+			<mapping resource="com/wt/hibernate/subclass/Person.hbm.xml"/>
+		 -->
+		 
+		<!-- 以下是 使用 joined-Subclass 的映射文件 -->
+		<!-- 
+			<mapping resource="com/wt/hibernate/joined/subclass/Person.hbm.xml"/>
+		 -->
+		 
+		<!-- 以下是 使用 union-Subclass 的映射文件 
+		<mapping resource="com/wt/hibernate/union/subclass/Person.hbm.xml"/>
+		-->
+    
+    </session-factory>
+
+</hibernate-configuration>
