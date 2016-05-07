@@ -1,4 +1,4 @@
-package com.wt.entity;
+package com.wt.hibernate.n_to_n;
 
 import java.util.HashSet;
 import java.util.Set;

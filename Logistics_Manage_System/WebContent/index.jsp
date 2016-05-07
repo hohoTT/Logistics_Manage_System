@@ -20,7 +20,7 @@ contentType="text/html; charset=utf-8"%>
 
 </head>
 <body>
-	
+	<a href="order-save">order</a><br>
 	<div id="carousel-generic" class="carousel slide" data-ride="carousel"
 		data-interval="3000">
 		<!-- Wrapper for slides -->

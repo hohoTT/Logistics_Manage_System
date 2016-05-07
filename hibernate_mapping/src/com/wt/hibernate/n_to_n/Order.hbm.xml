@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2016-5-7 13:39:56 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping package="com.wt.entity">
+<!-- Generated 2016-5-5 21:28:22 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.wt.hibernate.n_to_n">
 
-    <class name="Order" table="ORDERS">
+    <class name="Order" table="ORDER">
     
         <id name="order_id" type="java.lang.Integer">
             <column name="ORDER_ID" />
@@ -15,16 +15,12 @@
             <column name="USER_NAME" />
         </property>
         
-        <!-- table: 指定中间表 -->
-        <set name="books" table="ORDERS_BOOKS">
+        <set name="books" table="ORDER_BOOK">
             <key>
                 <column name="O_ID" />
             </key>
-            <!-- 使用 many-to-many 指定多对多的关联关系 -->
-            <!-- column 执行 Set 集合中的持久化类在中间表的外建列的名称 -->
 			<many-to-many class="Book" column="B_ID"></many-to-many>
         </set>
-        
         
     </class>
 </hibernate-mapping>

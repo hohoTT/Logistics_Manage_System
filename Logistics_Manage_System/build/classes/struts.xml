@@ -45,6 +45,13 @@
 			<result name="exit">/index.jsp</result>
 			
 		</action>
+		
+		<action name="order-*" class="orderAction"
+        	method="{1}">
+        	
+			<result name="save">/index.jsp</result>
+			
+		</action>
 
 		<!-- 用户登录跳转链接 -->		
 		<action name="userLogin">

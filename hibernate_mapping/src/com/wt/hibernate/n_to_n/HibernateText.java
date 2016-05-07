@@ -61,18 +61,18 @@ public class HibernateText {
 		
 	}
 	
-	@Test
-	public void testGet() {
-		Category category = (Category) session.get(Category.class, 1);
-		System.out.println(category.getCategoryName());
-		
-		// 需要连接中间表
-		Set<Item> items = category.getItems();
-		System.out.println(items.size());
-	}
-	
 //	@Test
-//	public void testSave(){
+//	public void testGet() {
+//		Category category = (Category) session.get(Category.class, 1);
+//		System.out.println(category.getCategoryName());
+//		
+//		// 需要连接中间表
+//		Set<Item> items = category.getItems();
+//		System.out.println(items.size());
+//	}
+	
+	@Test
+	public void testSave(){
 //		Category category1 = new Category();
 //		category1.setCategoryName("category_AA");
 //
@@ -105,6 +105,38 @@ public class HibernateText {
 //		
 //		session.save(item1);
 //		session.save(item2);
-//	}
+
+		
+		Order order1 = new Order();
+		order1.setUser_name("u1");
+		
+		Order order2 = new Order();
+		order2.setUser_name("u2");
+		
+		Book book1 = new Book();
+		Book book2 = new Book();
+		
+		book1.setBook_name("java");
+		book1.setQuantity(10);
+		book1.setPrice(100);
+		
+		book2.setBook_name("SQL");
+		book2.setQuantity(20);
+		book2.setPrice(200);
+		
+		order1.getBooks().add(book1);
+		order1.getBooks().add(book2);
+		
+		order2.getBooks().add(book1);
+		order2.getBooks().add(book2);
+		
+		session.save(book1);
+		session.save(book2);
+		
+		session.save(order1);
+		session.save(order2);
+		
+		
+	}
 	
 }

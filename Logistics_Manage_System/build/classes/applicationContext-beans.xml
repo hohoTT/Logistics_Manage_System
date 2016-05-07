@@ -7,13 +7,26 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
+	<bean id="orderDao" class="com.wt.dao.OrderDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
 	<bean id="userService" class="com.wt.service.UserService">
 		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<bean id="orderService" class="com.wt.service.OrderService">
+		<property name="orderDao" ref="orderDao"></property>
 	</bean>
 
 	<bean id="userAction" class="com.wt.action.UserAction"
 		  scope="prototype">
 		  <property name="userService" ref="userService"></property>
+	</bean>
+	
+	<bean id="orderAction" class="com.wt.action.OrderAction"
+		  scope="prototype">
+		  <property name="orderService" ref="orderService"></property>
 	</bean>
 	
 	<bean id="loginJsonHandle" class="com.wt.jsonHandle.LoginJsonHandle"
