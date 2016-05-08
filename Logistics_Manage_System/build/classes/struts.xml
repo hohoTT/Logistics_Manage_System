@@ -56,6 +56,14 @@
 		<!-- 获取验证码 -->
 		<action name="captcha" class="com.wt.action.VerifyCodeAction"
 				method="captcha">
+			
+		</action>
+		
+		<action name="createImageAction" class="com.wt.action.CreateImageAction">
+			<result name="success" type="stream">
+                <param name="contentType">image/jpeg</param>
+                <param name="inputName">inputStream</param>
+            </result>
 		</action>
 
 		<!-- 用户登录跳转链接 -->		
