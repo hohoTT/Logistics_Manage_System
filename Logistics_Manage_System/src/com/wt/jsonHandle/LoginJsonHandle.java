@@ -41,9 +41,9 @@ public class LoginJsonHandle extends ActionSupport{
 		String password = request.getParameter("password");
 		
 		// 测试时使用
-//		System.out.println("username ---- " + username);
-//		System.out.println("password ---- " + password);
-//		System.out.println("-----------------------------");
+		System.out.println("username ---- " + username);
+		System.out.println("password ---- " + password);
+		System.out.println("-----------------------------");
 		
 		User user = userService.userCheck(username, password);
 		
@@ -54,6 +54,7 @@ public class LoginJsonHandle extends ActionSupport{
 		if(user == null){
 			dataMap.put("data", "用户名或密码错误");
 			dataMap.put("code", 1);
+//			System.out.println("error------");
 		}
 		else{
 			
@@ -61,8 +62,10 @@ public class LoginJsonHandle extends ActionSupport{
 			
 			session.put("username", user.getUser_name());
 			
+//			System.out.println("success------");
+			
 			// 测试时使用
-			//System.out.println("session.put ---- " + user.getUser_name());
+//			System.out.println("session.put ---- " + user.getUser_name());
 			
 			dataMap.put("user", user);
 			dataMap.put("code", 0);
