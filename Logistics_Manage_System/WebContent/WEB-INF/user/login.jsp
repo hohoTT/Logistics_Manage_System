@@ -59,6 +59,7 @@ a{
 </head>
 
 <body>
+
 	<a href="/Logistics_Manage_System/">
 		<p id="title">物流中心</p>
 		<p id="title-tail">join &nbsp;us</p>
@@ -82,6 +83,14 @@ a{
 	                <input type="password" class="form-control input-lg" id="password" name="password" maxlength="30"
 	                       data-error="请填写密码" placeholder="密码" required>
 	
+	                <div class="help-block with-errors"></div>
+	            </div>
+	            
+	            <div class="form-group" id="captcha-area">
+	                <label for="captcha">验证码</label>&nbsp;&nbsp;<img src="captcha" id="captcha-img"><small>
+	               <p></p></small>
+	               <input type="text" class="form-control input-lg" id="captcha" name="captcha"
+	                      placeholder="验证码" maxlength="4" data-error="请填写验证码" required>
 	                <div class="help-block with-errors"></div>
 	            </div>
 	            

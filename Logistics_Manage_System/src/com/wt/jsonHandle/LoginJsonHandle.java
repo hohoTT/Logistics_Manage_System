@@ -40,6 +40,7 @@ public class LoginJsonHandle extends ActionSupport{
 		
 		String password = request.getParameter("password");
 		
+		
 		// ≤‚ ‘ ± π”√
 		System.out.println("username ---- " + username);
 		System.out.println("password ---- " + password);

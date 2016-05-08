@@ -52,6 +52,11 @@
 			<result name="save">/index.jsp</result>
 			
 		</action>
+		
+		<!-- 获取验证码 -->
+		<action name="captcha" class="com.wt.action.VerifyCodeAction"
+				method="captcha">
+		</action>
 
 		<!-- 用户登录跳转链接 -->		
 		<action name="userLogin">
@@ -102,7 +107,6 @@
 		<action name="javaBuy">
 			<result>/WEB-INF/trolley/java_trolley.jsp</result>
 		</action>
-		
 		
     </package>
     
