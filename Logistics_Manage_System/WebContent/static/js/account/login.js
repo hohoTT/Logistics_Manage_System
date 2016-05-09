@@ -5,12 +5,16 @@ require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, c
             //var username = $("#username").val();
             //var password = $("#password").val();
         	
-        	var params = $("input").serialize();
+        	//var params = $("input").serialize();
+        	
+        	var username = $("#username").val();
+            var password = $("#password").val();
+            var captcha = $("#captcha").val();
 
             $.ajax({
                 beforeSend: csrfTokenHeader,
                 url: "jsonLogin",
-                data: params,
+                data: {username: username, password: password, captcha: captcha},
                 dataType: "json",
                 method: "post",
                 success: function (data) {
@@ -29,7 +33,7 @@ require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, c
                         }
                     }
                     else {
-                        //refresh_captcha();
+                        refresh_captcha();
                         bsAlert(data.data);
                     }
                 },
@@ -42,4 +46,13 @@ require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, c
         }
     });
 	
+	function refresh_captcha(){
+        $("#captcha-img")[0].src = "captcha?" + Math.random();
+        $("#captcha")[0].value = "";
+    }
+	
+    $("#captcha-img").click(function(){
+        refresh_captcha();
+    });
+    
 });

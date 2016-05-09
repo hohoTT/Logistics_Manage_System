@@ -87,9 +87,10 @@ a{
 	            </div>
 	            
 	            <div class="form-group" id="captcha-area">
-	                <label for="captcha">验证码</label>&nbsp;&nbsp;<img src="captcha" id="captcha-img"><small>
-	               <p></p></small>
-	               <input type="text" class="form-control input-lg" id="captcha" name="captcha"
+	                <label for="captcha">验证码</label>&nbsp;&nbsp;
+	                <img src="captcha" id="captcha-img">
+	                <small><p></p></small>
+	                <input type="text" class="form-control input-lg" id="captcha" name="captcha"
 	                      placeholder="验证码" maxlength="4" data-error="请填写验证码" required>
 	                <div class="help-block with-errors"></div>
 	            </div>

@@ -3,7 +3,9 @@ package com.wt.jsonHandle;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 import org.json.JSONArray;
@@ -31,6 +33,8 @@ public class LoginJsonHandle extends ActionSupport{
 	public String jsonLogin() {
 		
 		dataMap = new HashMap<String, Object>();
+
+		session = ActionContext.getContext().getSession();
 		
 		ActionContext context = ActionContext.getContext();
 		
@@ -40,10 +44,20 @@ public class LoginJsonHandle extends ActionSupport{
 		
 		String password = request.getParameter("password");
 		
+		String captcha = request.getParameter("captcha");
+		
+		HttpSession httpSession = request.getSession();
+		
+		String validateCode = (String) httpSession.getAttribute("validateCode");
+		
+		// 不区分大小写的操作，将获取的 captcha 参数转为大写字母 
+		captcha = captcha.toUpperCase();
 		
 		// 测试时使用
 		System.out.println("username ---- " + username);
 		System.out.println("password ---- " + password);
+		System.out.println("captcha ---- " + captcha);
+		System.out.println("validateCode ---- " + validateCode);
 		System.out.println("-----------------------------");
 		
 		User user = userService.userCheck(username, password);
@@ -55,21 +69,26 @@ public class LoginJsonHandle extends ActionSupport{
 		if(user == null){
 			dataMap.put("data", "用户名或密码错误");
 			dataMap.put("code", 1);
-//			System.out.println("error------");
+//			System.out.println("error------用户名或密码错误");
 		}
 		else{
+
+			if(!captcha.equals(validateCode)){
+				dataMap.put("data", "验证码错误");
+				dataMap.put("code", 1);
+//				System.out.println("error------验证码错误");
+			}
+			else{
+				session.put("username", user.getUser_name());
+				
+				// 测试时使用
+//				System.out.println("success------");
+//				System.out.println("session.put ---- " + user.getUser_name());
+				
+				dataMap.put("user", user);
+				dataMap.put("code", 0);
+			}
 			
-			session = ActionContext.getContext().getSession();
-			
-			session.put("username", user.getUser_name());
-			
-//			System.out.println("success------");
-			
-			// 测试时使用
-//			System.out.println("session.put ---- " + user.getUser_name());
-			
-			dataMap.put("user", user);
-			dataMap.put("code", 0);
 		}
 
 		return SUCCESS;
