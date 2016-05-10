@@ -1,6 +1,7 @@
 package com.wt.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable{
 
@@ -10,6 +11,9 @@ public class User implements Serializable{
 	private long user_phone;
 	private String user_address;
 	private String user_password;
+	
+	// 添加用户创建的时间，不能被修改
+	private Date createTime;
 
 	public Integer getUser_id() {
 		return user_id;
@@ -58,22 +62,36 @@ public class User implements Serializable{
 	public void setUser_password(String user_password) {
 		this.user_password = user_password;
 	}
+	
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-	public User(Integer user_id, String user_name, String user_password) {
-		super();
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public User(Integer user_id, String user_name, String user_email,
+			long user_phone, String user_address, String user_password,
+			Date createTime) {
 		this.user_id = user_id;
 		this.user_name = user_name;
+		this.user_email = user_email;
+		this.user_phone = user_phone;
+		this.user_address = user_address;
 		this.user_password = user_password;
+		this.createTime = createTime;
 	}
-	
+
 	public User() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
 		return "User [user_id=" + user_id + ", user_name=" + user_name
-				+ ", user_password=" + user_password + "]";
+				+ ", user_email=" + user_email + ", user_phone=" + user_phone
+				+ ", user_address=" + user_address + ", user_password="
+				+ user_password + ", createTime=" + createTime + "]";
 	}
 	
 }

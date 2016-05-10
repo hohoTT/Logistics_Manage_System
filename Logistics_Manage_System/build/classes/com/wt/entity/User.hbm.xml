@@ -30,6 +30,10 @@
             <column name="USER_PASSWORD" />
         </property>
         
+        <property name="createTime" type="java.util.Date">
+            <column name="CREATE_TIME" />
+        </property>
+        
     </class>
     
 </hibernate-mapping>

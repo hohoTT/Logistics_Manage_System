@@ -1,5 +1,6 @@
 package com.wt.jsonHandle;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -86,6 +87,10 @@ public class RegisterJsonHandle extends ActionSupport implements
 				user.setUser_email(email);
 				user.setUser_phone(userphone);
 				user.setUser_address(useraddress);
+				
+				// 添加用户创建的时间
+				Date createTime = new Date();
+				user.setCreateTime(createTime);
 				
 				userService.saveOrUpdate(user);
 				
