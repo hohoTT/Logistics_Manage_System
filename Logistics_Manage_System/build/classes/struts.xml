@@ -121,6 +121,11 @@
 			<result>/WEB-INF/admin/admin_index.jsp</result>
 		</action>
 		
+		<!-- 跳转到管理员登录页面  -->
+		<action name="adminLogin">
+			<result>/WEB-INF/admin/admin_login.jsp</result>
+		</action>
+		
     </package>
     
     
