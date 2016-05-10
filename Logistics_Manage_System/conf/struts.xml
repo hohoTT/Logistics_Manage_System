@@ -116,6 +116,11 @@
 			<result>/WEB-INF/trolley/java_trolley.jsp</result>
 		</action>
 		
+		<!-- 跳转到管理员页面  -->
+		<action name="adminPage">
+			<result>/WEB-INF/admin/admin_index.jsp</result>
+		</action>
+		
     </package>
     
     
