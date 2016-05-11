@@ -4,7 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>管理员登录界面</title>
+
+<title>管理员登录</title>
+
+<script type="text/javascript" src="static/js/config.js"></script>
+<script type="text/javascript" src="static/js/require.js"></script>
 
 <!-- The styles -->
 <link id="bs-css" href="static/css/admin/bootstrap-cerulean.min.css" rel="stylesheet">
@@ -42,58 +46,76 @@ a{
 }
 </style>
 
+<script type="text/javascript" src="static/js/account/adminLogins.js"></script>
+
 </head>
+
 <body>
 
 	<a href="/Logistics_Manage_System/">
 		<p id="title">物流中心</p>
 		<p id="title-tail">join &nbsp;us</p>
 	</a>
-
+	
 	<div class="ch-container">
 	    <div class="row">
-	        
-	    <div class="row">
-	        <div class="col-md-12 center login-header">
-	            <h2>管理员登录</h2>
-	        </div>
-	        <!--/span-->
-	    </div><!--/row-->
+	    
+	        <div class="row">
+		        <div class="col-md-12 center login-header">
+		            <h2>管理员登录</h2>
+		        </div>
+		        <!--/span-->
+		    </div><!--/row-->
 	
-	    <div class="row">
-	        <div class="well col-md-5 center login-box">
-	            <div class="alert alert-info">
-	                                                   请输入管理员的用户名及密码
-	            </div>
-	            <form class="form-horizontal" action="index.html" method="post">
-	                <fieldset>
-	                    <div class="input-group input-group-lg">
-	                        <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-	                        <input type="text" class="form-control" placeholder="用户名">
-	                    </div>
-	                    <div class="clearfix"></div><br>
+			<div class="row">
+				<div class="well col-md-5 center login-box">
+					<div class="alert alert-info">
+						请输入管理员名称及密码
+					</div>
+					
+			        <form class="form-horizontal" method="post">
+						<fieldset>
+							<div class="form-group">
+								<div class="input-group input-group-lg">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-user red"></i>
+									</span>
+									<input type="text" class="form-control" 
+										   id="adminName" name="adminName" placeholder="用户名">
+								</div>
+								<div class="clearfix"></div><br>
+							</div>
+		
+							<div class="form-group">
+								<div class="input-group input-group-lg">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-lock red"></i>
+									</span>
+									<input type="password" class="form-control" 
+										   id="adminPassword" name="adminPassword" placeholder="密码">
+								</div>
+								<div class="clearfix"></div>
+								<div class="clearfix"></div>
+							</div>
+					
+							<div class="form-group">
+								<p class="center col-md-5">
+									<button type="submit" class="btn btn-primary">Login</button>
+								</p>
+							</div>
+						</fieldset>
+			        </form>
+			        
+				</div>
+				<!--/span-->
+			</div><!--/row-->
+			
+	    </div>
+	</div>
 	
-	                    <div class="input-group input-group-lg">
-	                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-	                        <input type="password" class="form-control" placeholder="密码">
-	                    </div>
-	                    <div class="clearfix"></div>
-	                    <div class="clearfix"></div>
-	
-	                    <p class="center col-md-5">
-	                        <button type="submit" class="btn btn-primary">Login</button>
-	                    </p>
-	                </fieldset>
-	            </form>
-	        </div>
-	        <!--/span-->
-	    </div><!--/row-->
-	</div><!--/fluid-row-->
-	
-	</div><!--/.fluid-container-->
-
-</body>
-
 	<jsp:include page="../base/footer.jsp"></jsp:include>
 	
+</body>
+
+
 </html>

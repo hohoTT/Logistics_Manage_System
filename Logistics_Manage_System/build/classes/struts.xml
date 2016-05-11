@@ -152,6 +152,16 @@
 			</result>
 		</action>
     
+    	<!-- 以下为管理员登录时的json数据的配置 -->
+    	<action name="jsonAdminLogin" class="com.wt.jsonHandle.AdminLoginJsonHandle"
+				method="jsonAdminLogin">
+            <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                                                   注意：root为固定写法，否则不会把result的值返回给客户端 -->
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+    	
     </package>
     
 

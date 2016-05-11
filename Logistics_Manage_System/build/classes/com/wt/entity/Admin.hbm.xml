@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-10 19:51:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+
+    <class name="com.wt.entity.Admin" table="ADMIN">
+    
+        <id name="admin_id" type="java.lang.Integer">
+            <column name="ADMIN_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="admin_name" type="java.lang.String">
+            <column name="ADMIN_NAME" />
+        </property>
+        
+        <property name="admin_password" type="java.lang.String">
+            <column name="ADMIN_PASSWORD" />
+        </property>
+        
+        <property name="createTime" type="java.util.Date">
+            <column name="CREATETIME" />
+        </property>
+        
+    </class>
+    
+</hibernate-mapping>

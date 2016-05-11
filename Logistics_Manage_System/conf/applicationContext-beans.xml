@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<!-- Dao 层配置  -->
 	<bean id="userDao" class="com.wt.dao.UserDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
@@ -11,6 +12,11 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
+	<bean id="adminDao" class="com.wt.dao.AdminDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- Service 层配置  -->
 	<bean id="userService" class="com.wt.service.UserService">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
@@ -18,7 +24,12 @@
 	<bean id="orderService" class="com.wt.service.OrderService">
 		<property name="orderDao" ref="orderDao"></property>
 	</bean>
+	
+	<bean id="adminService" class="com.wt.service.AdminService">
+		<property name="adminDao" ref="adminDao"></property>
+	</bean>
 
+	<!-- Action 部分的配置  -->
 	<bean id="userAction" class="com.wt.action.UserAction"
 		  scope="prototype">
 		  <property name="userService" ref="userService"></property>
@@ -29,6 +40,12 @@
 		  <property name="orderService" ref="orderService"></property>
 	</bean>
 	
+	<bean id="adminAction" class="com.wt.action.AdminAction"
+		  scope="prototype">
+		  <property name="adminService" ref="adminService"></property>
+	</bean>
+	
+	<!-- json 数据管理的配置  -->
 	<bean id="loginJsonHandle" class="com.wt.jsonHandle.LoginJsonHandle"
 		  scope="prototype">
 		  <property name="userService" ref="userService"></property>
@@ -37,6 +54,11 @@
 	<bean id="registerJsonHandle" class="com.wt.jsonHandle.RegisterJsonHandle"
 		  scope="prototype">
 		  <property name="userService" ref="userService"></property>
+	</bean>
+	
+	<bean id="adminLoginJsonHandle" class="com.wt.jsonHandle.AdminLoginJsonHandle"
+		  scope="prototype">
+		  <property name="adminService" ref="adminService"></property>
 	</bean>
 	
 	<bean id="userValidate" class="com.wt.jsonHandle.UserValidate"
