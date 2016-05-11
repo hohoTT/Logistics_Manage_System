@@ -24,18 +24,29 @@
 
     <package name="default" namespace="/" extends="struts-default">
     
-    	<!-- 定义新的拦截器栈, 配置 prepare 拦截器栈的 alwaysInvokePrepare 参数值为 false -->
+    	<!-- 自定义拦截器栈  -->
 		<interceptors>
-			<interceptor-stack name="sshStack">
-				<interceptor-ref name="paramsPrepareParamsStack">
-					<param name="prepare.alwaysInvokePrepare">false</param>
-				</interceptor-ref>
+			
+			<!-- 自定义管理员需要登录的拦截器 -->
+			<interceptor name="adminLoginInterceptor" 
+				class="com.wt.interceptor.AdminLoginInterceptor">
+			</interceptor>
+			
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="defaultStack" />
+				
+				<!-- 自定义管理员需要登录的拦截器 -->
+				<interceptor-ref name="adminLoginInterceptor" />
 			</interceptor-stack>
+			
 		</interceptors>
 		
-		<!-- 使用新的拦截器栈 -->
-		<default-interceptor-ref name="sshStack"></default-interceptor-ref>
-		
+		<!-- 定义全局Result -->  
+        <global-results>  
+            <!-- 当返回adminLogin视图名时，转入管理员登录页面 -->  
+            <result name="adminLogin">/WEB-INF/admin/admin_login.jsp</result>  
+        </global-results>  
+        
 		
 		<action name="user-*" class="userAction"
         	method="{1}">
@@ -119,6 +130,8 @@
 		<!-- 跳转到管理员页面  -->
 		<action name="adminPage">
 			<result>/WEB-INF/admin/admin_index.jsp</result>
+			<!-- 使用自定义管理员需要登录的拦截器 -->  
+            <interceptor-ref name="loginStack" />  
 		</action>
 		
 		<!-- 跳转到管理员登录页面  -->

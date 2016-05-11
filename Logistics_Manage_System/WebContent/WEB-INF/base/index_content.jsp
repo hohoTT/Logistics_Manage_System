@@ -27,13 +27,29 @@
 	<%
 		String div_style = "block";
 		String is_online = "none";
-		String again_login = "none";
+		String admin_login = "none";
+		
+		// 获取普通的用户
 		Object user = session.getAttribute("username");
 		String username = (String) user;
 		
-		if (username != null) {
+		// 获取管理员
+		Object admin = session.getAttribute("adminName");
+		String adminName = (String) admin;
+		
+
+		if(username != null && adminName != null){
+			session.removeAttribute(username);
+			div_style = "none";
+			admin_login = "block";
+		}
+		else if (username != null) {
 			div_style = "none";
 			is_online = "block";
+		}
+		else if(adminName != null){
+			div_style = "none";
+			admin_login = "block";
 		}
 	%>
 	
@@ -54,6 +70,19 @@
 		<a href="index.jsp">
 			<button class="btn btn-success btn-lg">
 				<%=username%>
+			</button> 
+		</a>
+		<a href="user-exit">
+			<button class="btn btn-warning btn-lg">
+				退出登录
+			</button> 
+		</a>
+	</div>
+	
+	<div id="login" style="display: <%=admin_login%>">
+		<a href="index.jsp">
+			<button class="btn btn-success btn-lg">
+				<%=adminName%>
 			</button> 
 		</a>
 		<a href="user-exit">

@@ -87,10 +87,10 @@ contentType="text/html; charset=utf-8"%>
 	
 	<!-- 以下为链接部分 -->
 	<div class="header-bottom-grids text-center">
-		<a href="adminLogin">
+		<a href="adminPage">
 			<div class="header-bottom-grid1">
 				<span class="glyphicon glyphicon-leaf"></span>					
-				<h4>客服中心</h4>
+				<h4>管理中心</h4>
 			</div>
 		</a>
 		
