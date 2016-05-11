@@ -11,9 +11,9 @@
 <script type="text/javascript" src="static/js/require.js"></script>
 
 <!-- The styles -->
-<link id="bs-css" href="static/css/admin/bootstrap-cerulean.min.css" rel="stylesheet">
+<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
 
-<link href="static/css/admin/charisma-app.css" rel="stylesheet">
+<link href="css/charisma-app.css" rel="stylesheet">
 
 <style type="text/css">
 
