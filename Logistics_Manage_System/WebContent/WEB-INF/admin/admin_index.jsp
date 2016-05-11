@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,17 +35,20 @@
     <div class="navbar navbar-default" role="navigation">
 
         <div class="navbar-inner">
+        	<a class="navbar-brand" href="/Logistics_Manage_System/"> 
+				<span>Back</span>
+			</a>
 
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> ${ adminName }</span>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="login.html">Logout</a></li>
+                    <li><a href="user-exit">Logout</a></li>
                 </ul>
             </div>
             <!-- user dropdown ends -->
@@ -53,7 +57,7 @@
             <div class="btn-group pull-right theme-container animated tada">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     <i class="glyphicon glyphicon-tint"></i><span
-                        class="hidden-sm hidden-xs"> Change Theme / Skin</span>
+                        class="hidden-sm hidden-xs">  换个样式试试 ~~</span>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" id="themes">
@@ -88,8 +92,8 @@
                         <li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span> Gallery</span></a>
                         </li>
                         <li class="nav-header hidden-md">Sample Section</li>
-                        <li><a class="ajax-link" href="table.html"><i
-                                    class="glyphicon glyphicon-align-justify"></i><span> Tables</span></a></li>
+                        <li><a class="ajax-link" href="adminPage"><i
+                                    class="glyphicon glyphicon-align-justify"></i><span> 用户信息</span></a></li>
                         <li class="accordion">
                             <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
                             <ul class="nav nav-pills nav-stacked">
@@ -121,7 +125,7 @@
     <div class="box col-md-12">
     <div class="box-inner">
     <div class="box-header well" data-original-title="">
-        <h2><i class="glyphicon glyphicon-user"></i> Datatable + Responsive</h2>
+        <h2><i class="glyphicon glyphicon-user"></i> 用户信息</h2>
 
         <div class="box-icon">
             <a href="#" class="btn btn-minimize btn-round btn-default"><i
