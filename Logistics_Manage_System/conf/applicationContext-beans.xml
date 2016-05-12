@@ -46,6 +46,11 @@
 		  <property name="userService" ref="userService"></property>
 	</bean>
 	
+	<bean id="fileHandleAction" class="com.wt.fileHandle.FileHandle"
+		  scope="prototype">
+		  <property name="userService" ref="userService"></property>
+	</bean>
+	
 	<!-- json 数据管理的配置  -->
 	<bean id="loginJsonHandle" class="com.wt.jsonHandle.LoginJsonHandle"
 		  scope="prototype">

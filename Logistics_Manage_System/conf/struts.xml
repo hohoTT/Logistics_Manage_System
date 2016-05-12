@@ -145,9 +145,31 @@
             <interceptor-ref name="loginStack" />  
 		</action>
 		
-		<!-- 跳转到管理员页面  -->
+		<!-- 跳转到管理员图片管理页面  -->
 		<action name="adminGallery">
 			<result>/WEB-INF/admin/admin_gallery.jsp</result>
+			<!-- 使用自定义管理员需要登录的拦截器 -->  
+            <interceptor-ref name="loginStack" />  
+		</action>
+		
+		<!-- 跳转到管理员文件管理页面  -->
+		<!-- 显示文件列表 -->
+		<action name="adminFile" class="com.wt.fileHandle.FileHandle"
+			method="fileList" >
+			
+			<result name="fileList">/WEB-INF/admin/admin_file.jsp</result>
+			
+			<!-- 使用自定义管理员需要登录的拦截器 -->  
+            <interceptor-ref name="loginStack" />  
+		</action>
+		
+		<!-- 跳转到管理员文件管理页面  -->
+		<!-- 执行文件的下载 -->
+		<action name="adminDownLoadFile" class="com.wt.fileHandle.FileHandle"
+			method="downLoadFile" >
+			
+			<result>/WEB-INF/admin/admin_file.jsp</result>
+			
 			<!-- 使用自定义管理员需要登录的拦截器 -->  
             <interceptor-ref name="loginStack" />  
 		</action>

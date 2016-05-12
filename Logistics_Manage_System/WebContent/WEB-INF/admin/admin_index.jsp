@@ -139,8 +139,16 @@
 	                        <li><a class="ajax-link" href="adminGallery"><i class="glyphicon glyphicon-picture"></i><span> 图片整理</span></a>
 	                        </li>
 	                        <li class="nav-header hidden-md">Sample Section</li>
-	                        <li><a class="ajax-link" href="adminPage"><i
-	                                    class="glyphicon glyphicon-align-justify"></i><span> 用户信息</span></a></li>
+	                        <li><a class="ajax-link" href="adminPage">
+		                        	<i class="glyphicon glyphicon-align-justify"></i>
+		                        	<span> 用户信息</span>
+	                        	</a>
+	                        </li>
+	                        <li><a class="ajax-link" href="adminFile">
+		                        	<i class="glyphicon glyphicon-star"></i>
+		                        	<span> 文件管理</span>
+	                        	</a>
+	                        </li>
 	                        <li class="accordion">
 	                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
 	                            <ul class="nav nav-pills nav-stacked">

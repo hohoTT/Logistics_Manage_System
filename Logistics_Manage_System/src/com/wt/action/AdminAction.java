@@ -32,7 +32,7 @@ public class AdminAction extends ActionSupport{
 		session = ActionContext.getContext().getSession();
 
 		List<User> userLists = userService.getAll();
-			
+		
 		// 以下为测试时使用
 		for (User user : userLists) {
 			

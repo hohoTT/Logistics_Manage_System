@@ -27,6 +27,53 @@
 
 <!-- jQuery -->
 <script src="bower_components/jquery/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+
+		//1. 点击 delete 时, 弹出 确定是要删除 xx 的信息吗 ? 
+		// 若确定, 执行删除, 若不确定, 则取消
+		$(".delete").click(function(){
+			var user_name = $(this).next(":hidden").val();
+			
+			var flag = confirm("确定要删除  " + user_name + "  用户的信息吗?");
+			
+			if(flag){
+
+				// 获取这行的首项，即这一行
+				var $tr = $(this).parent().parent();
+				
+				//删除, 使用 ajax 的方式
+				var url = this.href;
+				var args = {"time" : new Date()};
+				
+				$.post(url, args, function(data){
+					
+					//若 data 的返回值为 1, 则提示 删除成功, 且把当前行删除
+					if(data == "1"){
+						alert("用户已成功删除!");
+
+						// 删除当前行
+						$tr.remove();
+					}
+					else{
+						//若 data 的返回值不是 1, 提示删除失败. 
+						alert("删除失败!");
+					}
+					
+				});	
+			}
+			
+			//取消超链接的默认行为
+			return false;
+		});		
+		
+		
+	})
+
+</script>
+
 </head>
 <body>
 	
@@ -92,7 +139,7 @@
 	                        <li><a class="ajax-link" href="adminGallery"><i class="glyphicon glyphicon-picture"></i><span> 图片整理</span></a>
 	                        </li>
 	                        <li class="nav-header hidden-md">Sample Section</li>
-							<li><a class="ajax-link" href="adminPage">
+	                        <li><a class="ajax-link" href="adminPage">
 		                        	<i class="glyphicon glyphicon-align-justify"></i>
 		                        	<span> 用户信息</span>
 	                        	</a>
@@ -119,80 +166,47 @@
 	        <!-- left menu ends -->
 	
         <div id="content" class="col-lg-10 col-sm-10">
-		
-			<div class="row">
-		        <div class="box col-md-12">
-		            <div class="box-inner">
-		                <div class="box-header well" data-original-title="">
-		                    <h2><i class="glyphicon glyphicon-picture"></i> 图片整理</h2>
-		
-		                    <div class="box-icon">
-		                        <a href="#" class="btn btn-setting btn-round btn-default"><i
-		                                class="glyphicon glyphicon-cog"></i></a>
-		                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
-		                                class="glyphicon glyphicon-chevron-up"></i></a>
-		                        <a href="#" class="btn btn-close btn-round btn-default"><i
-		                                class="glyphicon glyphicon-remove"></i></a>
-		                    </div>
-		                </div>
-		                <div class="box-content">
-		                    <br>
-		                    <ul class="thumbnails gallery">
-                                <li id="image-1" class="thumbnail">
-	                                <a style="background:url('image/gallery/1.jpg');"
-	                                   title="Sample Image 1" href="image/gallery/1.jpg"><img
-	                                        class="grayscale" src="image/gallery/1.jpg"
-	                                        alt="Image 1"></a>
-	                            </li>
-	                            
-	                            <li id="image-2" class="thumbnail">
-	                                <a style="background:url('image/gallery/2.jpg');"
-	                                   title="Sample Image 2" href="image/gallery/2.jpg"><img
-	                                        class="grayscale" src="image/gallery/2.jpg"
-	                                        alt="Image 2"></a>
-	                            </li>
-	                            
-	                            <li id="image-3" class="thumbnail">
-	                                <a style="background:url('image/gallery/3.jpg');"
-	                                   title="Sample Image 3" href="image/gallery/3.jpg"><img
-	                                        class="grayscale" src="image/gallery/3.jpg"
-	                                        alt="Image 3"></a>
-	                            </li>
-	                            
-	                            <li id="image-4" class="thumbnail">
-	                                <a style="background:url('image/gallery/4.jpg');"
-	                                   title="Sample Image 4" href="image/gallery/4.jpg"><img
-	                                        class="grayscale" src="image/gallery/4.jpg"
-	                                        alt="Image 4"></a>
-	                            </li>
-	                            
-	                            <li id="image-5" class="thumbnail">
-	                                <a style="background:url('image/gallery/5.jpg');"
-	                                   title="Sample Image 5" href="image/gallery/5.jpg"><img
-	                                        class="grayscale" src="image/gallery/5.jpg"
-	                                        alt="Image 5"></a>
-	                            </li>
-	                            
-	                            <li id="image-6" class="thumbnail">
-	                                <a style="background:url('image/gallery/6.jpg');"
-	                                   title="Sample Image 6" href="image/gallery/6.jpg"><img
-	                                        class="grayscale" src="image/gallery/6.jpg"
-	                                        alt="Image 6"></a>
-	                            </li>
-	                            
-	                            <li id="image-7" class="thumbnail">
-	                                <a style="background:url('image/gallery/7.jpg');"
-	                                   title="Sample Image 7" href="image/gallery/7.jpg"><img
-	                                        class="grayscale" src="image/gallery/7.jpg"
-	                                        alt="Image 7"></a>
-	                            </li>
-							</ul>
-		                </div>
-		            </div>
-		        </div>
-		        <!--/span-->
-		
-		    </div><!--/row-->
+	
+	    <div class="row">
+	    <div class="box col-md-12">
+	    <div class="box-inner">
+	    <div class="box-header well" data-original-title="">
+	        <h2><i class="glyphicon glyphicon-user"></i> 文件列表</h2>
+	
+	        <div class="box-icon">
+	            <a href="#" class="btn btn-minimize btn-round btn-default"><i
+	                    class="glyphicon glyphicon-chevron-up"></i></a>
+	            <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+	        </div>
+	    </div>
+	    <div class="box-content">
+	    <div class="alert alert-info"></a></div>
+	    <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+		    <thead>
+			    <tr>
+			        <th>文件名</th>
+			        <th>下载</th>
+			    </tr>
+		    </thead>
+		    <tbody>
+		    <s:iterator value="#session.fileNameMap">
+			    <tr>
+			        <td>${ key }</td>
+			        <td class="center">
+			        	<a href="adminDownLoadFile?fileName=${ key }">
+			            	<img alt="..." src="image/downloadImg.png">
+			            </a>
+			        </td>
+			    </tr>
+			</s:iterator>
+		    </tbody>
+	    </table>
+	    </div>
+	    </div>
+	    </div>
+	    <!--/span-->
+	
+	    </div><!--/row-->
 	
 	    <!-- content ends -->
 	    </div><!--/#content.col-md-0-->
