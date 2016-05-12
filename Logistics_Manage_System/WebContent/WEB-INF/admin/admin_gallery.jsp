@@ -88,11 +88,8 @@
 	
 	                    </div>
 	                    <ul class="nav nav-pills nav-stacked main-menu">
-	                        <li class="nav-header">Main</li>
-	                        <li><a class="ajax-link" href="adminGallery"><i class="glyphicon glyphicon-picture"></i><span> 图片整理</span></a>
-	                        </li>
-	                        <li class="nav-header hidden-md">Sample Section</li>
-							<li><a class="ajax-link" href="adminPage">
+	                        <li class="nav-header hidden-md">主要操作</li>
+	                        <li><a class="ajax-link" href="adminPage">
 		                        	<i class="glyphicon glyphicon-align-justify"></i>
 		                        	<span> 用户信息</span>
 	                        	</a>
@@ -110,6 +107,9 @@
 	                            </ul>
 	                        </li>
 	                        <li><a class="ajax-link" href="calendar.html"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
+	                        </li>
+	                        <li class="nav-header">辅助操作</li>
+	                        <li><a class="ajax-link" href="adminGallery"><i class="glyphicon glyphicon-picture"></i><span> 图片整理</span></a>
 	                        </li>
 	                    </ul>
 	                </div>
