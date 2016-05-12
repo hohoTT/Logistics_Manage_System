@@ -55,6 +55,11 @@
 			
 			<result name="exit">/index.jsp</result>
 			
+			<result name="ajax-success" type="stream">
+		        <param name="contentType">text/html</param>
+		        <param name="inputName">inputStream</param>
+		    </result>
+			
 		</action>
 		
 		<action name="order-*" class="orderAction"

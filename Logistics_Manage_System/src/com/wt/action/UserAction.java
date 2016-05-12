@@ -1,5 +1,8 @@
 package com.wt.action;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
@@ -24,8 +27,26 @@ ModelDriven<User>, Preparable{
 	
 	private UserService userService;
 	
+	private Integer id;
+	
+	private InputStream inputStream;
+	
+	private String userName;
+	
 	public void setUserService(UserService userService) {
 		this.userService = userService;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	public InputStream getInputStream() {
+		return inputStream;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
 	public String list() {
@@ -53,6 +74,24 @@ ModelDriven<User>, Preparable{
 		//System.out.println("111111");
 		
 		return "exit";
+	}
+	
+	// É¾³ýÓÃ»§
+	public String delete(){
+		
+		try {
+			userService.delete(id);
+			inputStream = new ByteArrayInputStream("1".getBytes("UTF-8"));
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				inputStream = new ByteArrayInputStream("0".getBytes("UTF-8"));
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			}
+		}
+
+		return "ajax-success";
 	}
 
 	@Override

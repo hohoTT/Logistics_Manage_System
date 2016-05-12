@@ -31,20 +31,16 @@ public class AdminAction extends ActionSupport{
 		
 		session = ActionContext.getContext().getSession();
 
-		List<User> userLists = (List<User>) session.get("userLists");
-		
-		if(userLists == null){
-			userLists = userService.getAll();
+		List<User> userLists = userService.getAll();
 			
-			// 以下为测试时使用
-			for (User user : userLists) {
-				
-				System.out.println("User_name --- " + user.getUser_name());
-				
-			}
-
-			session.put("userLists", userLists);
+		// 以下为测试时使用
+		for (User user : userLists) {
+			
+			System.out.println("User_name --- " + user.getUser_name());
+			
 		}
+
+		session.put("userLists", userLists);
 		
 		return "userList";
 	}

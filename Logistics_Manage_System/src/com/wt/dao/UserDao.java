@@ -72,4 +72,13 @@ public class UserDao extends BaseDao{
 		return user;
 	}
 	
+	// É¾³ýÓÃ»§
+	public void delete(Integer id){
+		
+		String hql = "DELETE FROM User u WHERE u.id = ?";
+		
+		getSession().createQuery(hql).setInteger(0, id).executeUpdate();
+		
+	}
+	
 }

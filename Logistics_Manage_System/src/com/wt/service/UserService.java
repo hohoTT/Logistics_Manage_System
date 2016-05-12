@@ -42,4 +42,9 @@ public class UserService {
 		return userDao.usernameCheck(username);
 	}
 	
+	// É¾³ıÓÃ»§
+	public void delete(Integer id){
+		userDao.delete(id);
+	}
+	
 }
