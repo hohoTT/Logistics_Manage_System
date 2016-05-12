@@ -79,14 +79,22 @@ public class LoginJsonHandle extends ActionSupport{
 //				System.out.println("error------验证码错误");
 			}
 			else{
-				session.put("username", user.getUser_name());
 				
-				// 测试时使用
-//				System.out.println("success------");
-//				System.out.println("session.put ---- " + user.getUser_name());
-				
-				dataMap.put("user", user);
-				dataMap.put("code", 0);
+				// 此时的用户评级为 3， 即为不良，因此禁止用户的登录操作
+				if(user.getUser_state() == 3){
+					dataMap.put("data", "存在不良记录禁止登录，如有意见可联系管理员或反馈意见   :  )");
+					dataMap.put("code", 1);
+				}
+				else{
+					session.put("username", user.getUser_name());
+					
+					// 测试时使用
+//					System.out.println("success------");
+//					System.out.println("session.put ---- " + user.getUser_name());
+					
+					dataMap.put("user", user);
+					dataMap.put("code", 0);
+				}
 			}
 			
 		}
