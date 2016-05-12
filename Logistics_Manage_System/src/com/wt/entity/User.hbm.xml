@@ -34,6 +34,10 @@
             <column name="CREATE_TIME" />
         </property>
         
+        <property name="user_state" type="java.lang.Integer">
+            <column name="USER_STATE"/>
+        </property>
+        
     </class>
     
 </hibernate-mapping>

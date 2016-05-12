@@ -191,7 +191,7 @@
 			        <th>手机</th>
 			        <th>地址</th>
 			        <th>注册时间</th>
-			        <th>状态</th>
+			        <th>用户评级</th>
 			        <th>操作</th>
 			    </tr>
 		    </thead>
@@ -207,7 +207,15 @@
 			        	<s:date name="createTime" format="yyyy-MM-dd"/>
 			        </td>
 			        <td class="center">
-			        	1
+			        	<s:if test="user_state == 1">
+			        		<span class="label-success label label-default">优秀</span>
+			        	</s:if>
+			        	<s:elseif test="user_state == 2">
+							<span class="label-warning label label-default">良好</span>
+			        	</s:elseif>
+			        	<s:else>
+            				<span class="label-default label label-danger">不良</span>
+			        	</s:else>
 			        </td>
 			        <td class="center">
 			            <a class="btn btn-info" href="#">

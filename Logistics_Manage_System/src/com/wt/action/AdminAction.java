@@ -36,7 +36,8 @@ public class AdminAction extends ActionSupport{
 		// 以下为测试时使用
 		for (User user : userLists) {
 			
-			System.out.println("User_name --- " + user.getUser_name());
+			System.out.println("User_name --- " + user.getUser_name() + 
+					"   user_state --- " + user.getUser_state());
 			
 		}
 

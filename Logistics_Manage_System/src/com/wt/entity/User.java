@@ -14,6 +14,10 @@ public class User implements Serializable{
 	
 	// 添加用户创建的时间，不能被修改
 	private Date createTime;
+	
+	// 添加用户的状态，此属性只能有管理员改变
+	// 1 为优秀； 2 为良好； 3 为不良 
+	private Integer user_state;
 
 	public Integer getUser_id() {
 		return user_id;
@@ -70,10 +74,22 @@ public class User implements Serializable{
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
+	
+	public Integer getUser_state() {
+		return user_state;
+	}
+
+	public void setUser_state(Integer user_state) {
+		this.user_state = user_state;
+	}
+
+	public User() {
+	}
 
 	public User(Integer user_id, String user_name, String user_email,
 			long user_phone, String user_address, String user_password,
-			Date createTime) {
+			Date createTime, Integer user_state) {
+		super();
 		this.user_id = user_id;
 		this.user_name = user_name;
 		this.user_email = user_email;
@@ -81,9 +97,7 @@ public class User implements Serializable{
 		this.user_address = user_address;
 		this.user_password = user_password;
 		this.createTime = createTime;
-	}
-
-	public User() {
+		this.user_state = user_state;
 	}
 
 	@Override
@@ -91,7 +105,8 @@ public class User implements Serializable{
 		return "User [user_id=" + user_id + ", user_name=" + user_name
 				+ ", user_email=" + user_email + ", user_phone=" + user_phone
 				+ ", user_address=" + user_address + ", user_password="
-				+ user_password + ", createTime=" + createTime + "]";
+				+ user_password + ", createTime=" + createTime
+				+ ", user_state=" + user_state + "]";
 	}
 	
 }

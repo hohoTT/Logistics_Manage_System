@@ -92,6 +92,9 @@ public class RegisterJsonHandle extends ActionSupport implements
 				Date createTime = new Date();
 				user.setCreateTime(createTime);
 				
+				// 添加用户状态，初始时用户的状态为 1 优秀
+				user.setUser_state(1);
+				
 				userService.saveOrUpdate(user);
 				
 				dataMap.put("user", model);
