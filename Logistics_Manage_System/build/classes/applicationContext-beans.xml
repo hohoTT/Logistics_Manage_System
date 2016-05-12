@@ -43,6 +43,7 @@
 	<bean id="adminAction" class="com.wt.action.AdminAction"
 		  scope="prototype">
 		  <property name="adminService" ref="adminService"></property>
+		  <property name="userService" ref="userService"></property>
 	</bean>
 	
 	<!-- json 数据管理的配置  -->

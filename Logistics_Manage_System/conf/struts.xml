@@ -128,8 +128,9 @@
 		</action>
 		
 		<!-- 跳转到管理员页面  -->
-		<action name="adminPage">
-			<result>/WEB-INF/admin/admin_index.jsp</result>
+		<action name="adminPage" class="com.wt.action.AdminAction"
+			    method="userList">
+			<result name="userList">/WEB-INF/admin/admin_index.jsp</result>
 			<!-- 使用自定义管理员需要登录的拦截器 -->  
             <interceptor-ref name="loginStack" />  
 		</action>

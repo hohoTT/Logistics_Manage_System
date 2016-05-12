@@ -77,39 +77,40 @@
         </div>
     </div>
     <!-- topbar ends -->
-<div class="ch-container">
-    <div class="row">
-        
-        <!-- left menu starts -->
-        <div class="col-sm-2 col-lg-2">
-            <div class="sidebar-nav">
-                <div class="nav-canvas">
-                    <div class="nav-sm nav nav-stacked">
-
-                    </div>
-                    <ul class="nav nav-pills nav-stacked main-menu">
-                        <li class="nav-header">Main</li>
-                        <li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span> Gallery</span></a>
-                        </li>
-                        <li class="nav-header hidden-md">Sample Section</li>
-                        <li><a class="ajax-link" href="adminPage"><i
-                                    class="glyphicon glyphicon-align-justify"></i><span> 用户信息</span></a></li>
-                        <li class="accordion">
-                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Child Menu 1</a></li>
-                                <li><a href="#">Child Menu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="ajax-link" href="calendar.html"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--/span-->
-        <!-- left menu ends -->
-
+    
+	<div class="ch-container">
+	    <div class="row">
+	        
+	        <!-- left menu starts -->
+	        <div class="col-sm-2 col-lg-2">
+	            <div class="sidebar-nav">
+	                <div class="nav-canvas">
+	                    <div class="nav-sm nav nav-stacked">
+	
+	                    </div>
+	                    <ul class="nav nav-pills nav-stacked main-menu">
+	                        <li class="nav-header">Main</li>
+	                        <li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span> Gallery</span></a>
+	                        </li>
+	                        <li class="nav-header hidden-md">Sample Section</li>
+	                        <li><a class="ajax-link" href="adminPage"><i
+	                                    class="glyphicon glyphicon-align-justify"></i><span> 用户信息</span></a></li>
+	                        <li class="accordion">
+	                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
+	                            <ul class="nav nav-pills nav-stacked">
+	                                <li><a href="#">Child Menu 1</a></li>
+	                                <li><a href="#">Child Menu 2</a></li>
+	                            </ul>
+	                        </li>
+	                        <li><a class="ajax-link" href="calendar.html"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	        <!--/span-->
+	        <!-- left menu ends -->
+	
         <noscript>
             <div class="alert alert-block col-md-12">
                 <h4 class="alert-heading">Warning!</h4>
@@ -118,115 +119,76 @@
                     enabled to use this site.</p>
             </div>
         </noscript>
-
-        <div id="content" class="col-lg-10 col-sm-10">
-
-    <div class="row">
-    <div class="box col-md-12">
-    <div class="box-inner">
-    <div class="box-header well" data-original-title="">
-        <h2><i class="glyphicon glyphicon-user"></i> 用户信息</h2>
-
-        <div class="box-icon">
-            <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                    class="glyphicon glyphicon-chevron-up"></i></a>
-            <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
-        </div>
-    </div>
-    <div class="box-content">
-    <div class="alert alert-info"></a></div>
-    <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
-    <thead>
-    <tr>
-        <th>Username</th>
-        <th>Date registered</th>
-        <th>Role</th>
-        <th>Status</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>David R</td>
-        <td class="center">2012/01/01</td>
-        <td class="center">Member</td>
-        <td class="center">
-            <span class="label-success label label-default">Active</span>
-        </td>
-        <td class="center">
-            <a class="btn btn-success" href="#">
-                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
-                View
-            </a>
-            <a class="btn btn-info" href="#">
-                <i class="glyphicon glyphicon-edit icon-white"></i>
-                Edit
-            </a>
-            <a class="btn btn-danger" href="#">
-                <i class="glyphicon glyphicon-trash icon-white"></i>
-                Delete
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>Chris Jack</td>
-        <td class="center">2012/01/01</td>
-        <td class="center">Member</td>
-        <td class="center">
-            <span class="label-success label label-default">Active</span>
-        </td>
-        <td class="center">
-            <a class="btn btn-success" href="#">
-                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
-                View
-            </a>
-            <a class="btn btn-info" href="#">
-                <i class="glyphicon glyphicon-edit icon-white"></i>
-                Edit
-            </a>
-            <a class="btn btn-danger" href="#">
-                <i class="glyphicon glyphicon-trash icon-white"></i>
-                Delete
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>Worth Name</td>
-        <td class="center">2012/03/01</td>
-        <td class="center">Member</td>
-        <td class="center">
-            <span class="label-warning label label-default">Pending</span>
-        </td>
-        <td class="center">
-            <a class="btn btn-success" href="#">
-                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
-                View
-            </a>
-            <a class="btn btn-info" href="#">
-                <i class="glyphicon glyphicon-edit icon-white"></i>
-                Edit
-            </a>
-            <a class="btn btn-danger" href="#">
-                <i class="glyphicon glyphicon-trash icon-white"></i>
-                Delete
-            </a>
-        </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
-    </div>
-    <!--/span-->
-
-    </div><!--/row-->
-
-    <!-- content ends -->
-    </div><!--/#content.col-md-0-->
-</div><!--/fluid-row-->
-    <hr>
 	
-</div><!--/.fluid-container-->
+        <div id="content" class="col-lg-10 col-sm-10">
+	
+	    <div class="row">
+	    <div class="box col-md-12">
+	    <div class="box-inner">
+	    <div class="box-header well" data-original-title="">
+	        <h2><i class="glyphicon glyphicon-user"></i> 用户信息</h2>
+	
+	        <div class="box-icon">
+	            <a href="#" class="btn btn-minimize btn-round btn-default"><i
+	                    class="glyphicon glyphicon-chevron-up"></i></a>
+	            <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+	        </div>
+	    </div>
+	    <div class="box-content">
+	    <div class="alert alert-info"></a></div>
+	    <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+		    <thead>
+			    <tr>
+			        <th>用户名</th>
+			        <th>邮箱</th>
+			        <th>手机</th>
+			        <th>地址</th>
+			        <th>注册时间</th>
+			        <th>状态</th>
+			        <th>操作</th>
+			    </tr>
+		    </thead>
+		    <tbody>
+		    <s:iterator value="#session.userLists">
+			    <tr>
+			        <td>${ user_name }</td>
+			        <td class="center">${ user_email }</td>
+			        <td class="center">${ user_phone }</td>
+			        <td class="center">${ user_address }</td>
+			        <td class="center">
+			        	<s:date name="createTime" format="yyyy-MM-dd"/>
+			        </td>
+			        <td class="center">
+			        	1
+			        </td>
+			        <td class="center">
+			            <a class="btn btn-info" href="#">
+			                <i class="glyphicon glyphicon-edit icon-white"></i>
+			                Edit
+			            </a>
+			            <a class="btn btn-danger" href="#">
+			                <i class="glyphicon glyphicon-trash icon-white"></i>
+			                Delete
+			            </a>
+			        </td>
+			    </tr>
+			</s:iterator>
+		    </tbody>
+	    </table>
+	    </div>
+	    </div>
+	    </div>
+	    <!--/span-->
+	
+	    </div><!--/row-->
+	
+	    <!-- content ends -->
+	    </div><!--/#content.col-md-0-->
+		</div><!--/fluid-row-->
+		
+	    <hr>
+		
+	</div><!--/.fluid-container-->
 
 <!-- external javascript -->
 
