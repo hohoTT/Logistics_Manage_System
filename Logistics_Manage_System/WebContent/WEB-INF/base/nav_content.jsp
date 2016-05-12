@@ -23,7 +23,7 @@
 	            <ul class="nav navbar-nav">
 	                <li><a href="/Logistics_Manage_System">物流中心</a></li>
 	                <li><a href="userShopping">书城</a></li>
-	                <li><a href="#">娱乐一下</a></li>
+	                <li><a href="userGame">娱乐一下</a></li>
 	                <li><a href="#">讨论区</a></li>
 	                <li><a href="#">关于</a></li>
 	                <li><a href="http://form.mikecrm.com/f.php?t=iELKEQ" target="_blank">反馈</a></li>

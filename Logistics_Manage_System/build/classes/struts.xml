@@ -122,6 +122,11 @@
 			<result>/WEB-INF/shopping/shopping.jsp</result>
 		</action>
 		
+		<!-- 跳转到购物页面  -->
+		<action name="userGame">
+			<result>/WEB-INF/game/game.jsp</result>
+		</action>
+		
 		<!-- 跳转到html介绍页面  -->
 		<action name="htmlMore">
 			<result>/WEB-INF/book_readMore/html_more.jsp</result>
