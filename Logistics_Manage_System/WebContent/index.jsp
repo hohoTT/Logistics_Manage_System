@@ -18,6 +18,8 @@ contentType="text/html; charset=utf-8"%>
 <script type="text/javascript" src="static/js/lib/jQuery/jquery.js"></script>
 <script type="text/javascript" src="static/js/carousel.js"></script>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body>
 	<div id="carousel-generic" class="carousel slide" data-ride="carousel"

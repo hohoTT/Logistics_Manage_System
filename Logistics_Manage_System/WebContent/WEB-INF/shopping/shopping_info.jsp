@@ -5,6 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>我的购物车</title>
+
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body>
 

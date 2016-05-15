@@ -74,6 +74,8 @@
 
 </script>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body>
 	
@@ -215,6 +217,9 @@
 	    <hr>
 		
 	</div><!--/.fluid-container-->
+	
+	
+	<jsp:include page="../base/footer.jsp"></jsp:include>
 
 <!-- external javascript -->
 

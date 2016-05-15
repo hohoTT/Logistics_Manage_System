@@ -20,6 +20,7 @@
 <script type="text/javascript" src="static/js/trolley/jquery.spinner.js"></script>
 <script type="text/javascript" src="static/js/trolley/jquery.imagezoom.min.js"></script>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
 
 </head>
 <body>

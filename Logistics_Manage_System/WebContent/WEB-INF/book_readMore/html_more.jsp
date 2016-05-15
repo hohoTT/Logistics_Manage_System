@@ -241,6 +241,8 @@ body{
 }
 </style>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body onload="init()">
 

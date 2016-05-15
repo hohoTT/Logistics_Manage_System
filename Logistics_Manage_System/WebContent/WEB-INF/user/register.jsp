@@ -76,6 +76,8 @@ input::-webkit-inner-spin-button {
 }
 </style>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 <body>
 	<a href="/Logistics_Manage_System/">
 		<p id="title">物流中心</p>

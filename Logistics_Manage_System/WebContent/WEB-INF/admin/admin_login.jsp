@@ -49,6 +49,8 @@ a{
 
 <script type="text/javascript" src="static/js/account/adminLogins.js"></script>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 
 <body>

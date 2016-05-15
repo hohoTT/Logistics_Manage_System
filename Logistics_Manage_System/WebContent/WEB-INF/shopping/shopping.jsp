@@ -25,6 +25,8 @@
 .actGotop a:hover{width:150px; height:195px; background:url(image/backToTop/blog7year_gotopd.gif) no-repeat; outline:none;}
 </style>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body>
 	

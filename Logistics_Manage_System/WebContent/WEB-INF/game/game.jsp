@@ -19,6 +19,8 @@
 
 <link rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css">
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body>
 
