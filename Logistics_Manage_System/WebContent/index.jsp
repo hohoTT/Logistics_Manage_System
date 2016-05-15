@@ -8,7 +8,7 @@ contentType="text/html; charset=utf-8"%>
 
 
 <!-- CSS 样式 -->
-<link rel="stylesheet" href="static/css/shopping/style2.css" media="all">
+<link rel="stylesheet" href="static/css/shopping/style3.css" media="all">
 
 <!-- CSS 样式部分引用 -->
 <link rel="stylesheet" href="static/css/global.css" media="all">
