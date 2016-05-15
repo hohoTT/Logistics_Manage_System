@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>购物</title>
 
 <!-- CSS 样式 -->
 <link rel="stylesheet" href="static/css/trolley/shopping_trolley.css">

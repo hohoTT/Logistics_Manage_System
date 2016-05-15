@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>HTML 更多介绍</title>
 
 <!-- CSS 样式 -->
 <link rel="stylesheet" href="static/css/shopping/style.css" media="all">
