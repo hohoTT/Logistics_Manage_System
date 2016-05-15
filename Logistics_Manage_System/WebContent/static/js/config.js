@@ -4,6 +4,7 @@ var require = {
     paths: {
         jquery: "lib/jQuery/jquery",
         bsAlert: "util/bsAlert",
+        user_delete_bsAlert: "util/user_delete_bsAlert",
         csrfToken: "util/csrfToken",
         bootstrap: "lib/bootstrap/bootstrap",
         validator: "lib/validator/validator",
