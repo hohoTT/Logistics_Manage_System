@@ -28,13 +28,13 @@
 <!-- jQuery -->
 <script src="bower_components/jquery/jquery.min.js"></script>
 
-<script type="text/javascript">
-
-	$(function(){
-
-	})
-
-</script>
+<style type="text/css">	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none !important;
+	    margin: 0;
+	}
+</style>
 
 <link rel="shortcut icon" href="image/favicon.ico" />
 
@@ -129,6 +129,7 @@
 	        <!--/span-->
 	        <!-- left menu ends -->
 	
+		<!-- 以下为用户信息的开始 -->
         <div id="content" class="col-lg-10 col-sm-10">
 	
 	    <div class="row">
@@ -203,7 +204,71 @@
 	    </div><!--/row-->
 	
 	    <!-- content ends -->
+	    
+	    <!-- 以下为用户信息部分的结尾 -->
 	    </div><!--/#content.col-md-0-->
+
+
+		<!-- 以下为用户信息的修改部分 -->
+		<div id="content" class="col-lg-10 col-sm-10" style="display: none;">
+		<div class="row">
+		<div class="box col-md-12">
+  			<div class="box-inner">
+   			<div class="box-header well" data-original-title="">
+		        <h2><i class="glyphicon glyphicon-user"></i> 用户编辑</h2>
+		
+		        <div class="box-icon">
+		            <a href="#" class="btn btn-minimize btn-round btn-default"><i
+		                    class="glyphicon glyphicon-chevron-up"></i></a>
+		            <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+		        </div>
+		    </div>
+		    <div class="box-content" style="text-align :center">
+		    	<div class="alert alert-info"></a></div>
+		    	<!-- 以下为编辑表单的部分 -->
+		    	<form id="register-form" method="post">
+            
+                <div class="form-group">
+                    <input type="text" class="form-control input-lg" id="username" name="username" placeholder="用户名" 
+                    data-remote="usernameCheck" data-remote-error="该用户名已被注册！" data-error="请填写用户名" required autofocus>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-control input-lg" id="email" name="email" placeholder="邮箱地址" 
+                    data-remote="emailCheck" data-remote-error="该邮箱已被注册！" data-error="请填写正确的邮箱地址" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" class="form-control input-lg" id="userphone" name="userphone" placeholder="手机号码" 
+                    data-error="请填写手机号码" data-minlength="11" data-minlength-error="请添加正确的手机号码" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control input-lg" id="useraddress" name="useraddress" placeholder="配送地址" 
+                    data-error="请填写配送地址" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-control input-lg" id="password" name="password" 
+                    data-error="请填写密码" placeholder="密码"required>
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </div>
+                
+            </form>
+		    </div>
+  			</div>
+   		</div>
+		</div>
+		</div>
+	    
 		</div><!--/fluid-row-->
 		
 	    <hr>
