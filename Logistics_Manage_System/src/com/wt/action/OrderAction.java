@@ -47,28 +47,15 @@ ModelDriven<Book>, Preparable{
 		
 		String userName = (String) session.getAttribute("username");
 
-		Order order = orderService.findOrder(userName);
+		Order order = new Order();
 		
-		if(order == null){
-			Order newOrder = new Order();
-			newOrder.setUser_name(userName);
-			newOrder.getBooks().add(book);
-			book.getOrders().add(order);
-			
-			orderService.saveOrUpdateOrder(newOrder);
-			orderService.saveOrUpdateBook(book);
-		}
-		else{
-			
-			System.out.println("order.getBooks() ---- " + order.getBooks());
-			
-			order.getBooks().add(book);
-			book.getOrders().add(order);
-			
-			orderService.saveOrUpdateOrder(order);
-			orderService.saveOrUpdateBook(book);
-		}
+		order.setUser_name(userName);
 		
+		order.getBooks().add(book);
+		book.getOrders().add(order);
+		
+		orderService.saveOrUpdateOrder(order);
+		orderService.saveOrUpdateBook(book);
 		
 		return "save";
 	}
