@@ -68,9 +68,6 @@
     	<!-- 以下是多对多的映射文件 -->
     	<mapping resource="com/wt/hibernate/n_to_n/Category.hbm.xml"/>
 		<mapping resource="com/wt/hibernate/n_to_n/Item.hbm.xml"/>
-		
-		<mapping resource="com/wt/hibernate/n_to_n/Book.hbm.xml"/>
-		<mapping resource="com/wt/hibernate/n_to_n/Order.hbm.xml"/>
 		 
 		<!-- 以下是 使用 Subclass 的映射文件 -->
 		<!-- 

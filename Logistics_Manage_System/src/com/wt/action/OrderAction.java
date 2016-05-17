@@ -2,8 +2,13 @@ package com.wt.action;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.RequestAware;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
@@ -33,13 +38,32 @@ ModelDriven<Book>, Preparable{
 		System.out.println("saveOrder");
 		
 		Book book = orderService.findBook("java");
+
+		ActionContext context = ActionContext.getContext();
 		
-		Order order = new Order();
+		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
 		
-		order.setUser_name("hoho");
-		order.getBooks().add(book);
+		HttpSession session = request.getSession();
 		
-		orderService.saveOrUpdate(order);
+		String userName = (String) session.getAttribute("username");
+
+		Order order = orderService.findOrder(userName);
+		
+		if(order == null){
+			Order newOrder = new Order();
+			newOrder.setUser_name(userName);
+			newOrder.getBooks().add(book);
+			
+			orderService.saveOrUpdateOrder(newOrder);
+		}
+		else{
+			order.getBooks().add(book);
+			book.getOrders().add(order);
+			
+			orderService.saveOrUpdateOrder(order);
+			orderService.saveOrUpdateBook(book);
+		}
+		
 		
 		return "save";
 	}

@@ -16,8 +16,16 @@ public class OrderService {
 		return orderDao.findBook(bookname);
 	}
 	
-	public void saveOrUpdate(Order order){
-		orderDao.saveOrUpdate(order);
+	public Order findOrder(String userName) {
+		return orderDao.findOrder(userName);
 	}
-
+	
+	public void saveOrUpdateOrder(Order order){
+		orderDao.saveOrUpdateOrder(order);
+	}
+	
+	public void saveOrUpdateBook(Book book){
+		orderDao.saveOrUpdateBook(book);
+	}
+	
 }

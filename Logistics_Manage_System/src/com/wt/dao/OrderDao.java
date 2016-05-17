@@ -7,6 +7,7 @@ import com.wt.entity.Order;
 
 public class OrderDao extends BaseDao{
 	
+	// 以下的操作为获取购买的书
 	public Book findBook(String bookname) {
 		Book book = null;
 		
@@ -21,8 +22,28 @@ public class OrderDao extends BaseDao{
 		return book;
 	}
 	
-	public void saveOrUpdate(Order order){
-		getSession().saveOrUpdate(order);
+	public Order findOrder(String userName) {
+		Order oreder = null;
+		
+		String hql = "FROM Order o WHERE o.user_name = ?";
+		
+		Query query = getSession().createQuery(hql);
+		
+		query.setString(0, userName);
+		
+		oreder = (Order) query.uniqueResult();
+		
+		return oreder;
+	}
+	
+	public void saveOrUpdateOrder(Order order){
+//		getSession().saveOrUpdate(order);
+		getSession().save(order);
+	}
+	
+	public void saveOrUpdateBook(Book book){
+//		getSession().saveOrUpdate(book);
+		getSession().save(book);
 	}
 	
 }

@@ -64,7 +64,7 @@
 		</ul>
 
 	</div>
-	<form id="shopping-form" action="#" method="post">
+	<form id="shopping-form" action="order-save" method="post">
 		<div class="wrapper" id="computer">
 			<h1
 				style="padding-bottom: .2em; line-height: 1;

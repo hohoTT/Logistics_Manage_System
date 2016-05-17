@@ -73,70 +73,39 @@ public class HibernateText {
 	
 	@Test
 	public void testSave(){
-//		Category category1 = new Category();
-//		category1.setCategoryName("category_AA");
-//
-//		Category category2 = new Category();
-//		category2.setCategoryName("category_BB");
-//		
-//		Item item1 = new Item();
-//		item1.setItemName("item_AA");
-//		
-//		Item item2 = new Item();
-//		item2.setItemName("item_BB");
-//		
-//		// 设定 category 中关联关系
-//		category1.getItems().add(item1);
-//		category1.getItems().add(item2);
-//		
-//		category2.getItems().add(item1);
-//		category2.getItems().add(item2);
-//		
-//		// 设定 item 中关联关系
-//		item1.getCategories().add(category1);
-//		item1.getCategories().add(category2);
-//		
-//		item2.getCategories().add(category1);
-//		item2.getCategories().add(category2);
-//		
-//		// 执行保存操作
-//		session.save(category1);
-//		session.save(category2);
-//		
-//		session.save(item1);
-//		session.save(item2);
+		Category category1 = new Category();
+		category1.setCategoryName("category_AA");
 
+		Category category2 = new Category();
+		category2.setCategoryName("category_BB");
 		
-		Order order1 = new Order();
-		order1.setUser_name("u1");
+		Item item1 = new Item();
+		item1.setItemName("item_AA");
 		
-		Order order2 = new Order();
-		order2.setUser_name("u2");
+		Item item2 = new Item();
+		item2.setItemName("item_BB");
 		
-		Book book1 = new Book();
-		Book book2 = new Book();
+		// 设定 category 中关联关系
+		category1.getItems().add(item1);
+		category1.getItems().add(item2);
 		
-		book1.setBook_name("java");
-		book1.setQuantity(10);
-		book1.setPrice(100);
+		category2.getItems().add(item1);
+		category2.getItems().add(item2);
 		
-		book2.setBook_name("SQL");
-		book2.setQuantity(20);
-		book2.setPrice(200);
+		// 设定 item 中关联关系
+		item1.getCategories().add(category1);
+		item1.getCategories().add(category2);
 		
-		order1.getBooks().add(book1);
-		order1.getBooks().add(book2);
+		item2.getCategories().add(category1);
+		item2.getCategories().add(category2);
 		
-		order2.getBooks().add(book1);
-		order2.getBooks().add(book2);
+		// 执行保存操作
+		session.save(category1);
+		session.save(category2);
 		
-		session.save(book1);
-		session.save(book2);
-		
-		session.save(order1);
-		session.save(order2);
-		
-		
+		session.save(item1);
+		session.save(item2);
+
 	}
 	
 }
