@@ -11,7 +11,7 @@ public class OrderDao extends BaseDao{
 	public Book findBook(String bookname) {
 		Book book = null;
 		
-		String hql = "FROM Book b WHERE b.book_name = ?";
+		String hql = "FROM Book b LEFT OUTER JOIN FETCH b.orders WHERE b.book_name = ?";
 		
 		Query query = getSession().createQuery(hql);
 		
@@ -25,7 +25,7 @@ public class OrderDao extends BaseDao{
 	public Order findOrder(String userName) {
 		Order oreder = null;
 		
-		String hql = "FROM Order o WHERE o.user_name = ?";
+		String hql = "FROM Order o LEFT OUTER JOIN FETCH o.books WHERE o.user_name = ?";
 		
 		Query query = getSession().createQuery(hql);
 		
@@ -37,13 +37,11 @@ public class OrderDao extends BaseDao{
 	}
 	
 	public void saveOrUpdateOrder(Order order){
-//		getSession().saveOrUpdate(order);
-		getSession().save(order);
+		getSession().saveOrUpdate(order);
 	}
 	
 	public void saveOrUpdateBook(Book book){
-//		getSession().saveOrUpdate(book);
-		getSession().save(book);
+		getSession().saveOrUpdate(book);
 	}
 	
 }

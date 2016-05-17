@@ -53,10 +53,15 @@ ModelDriven<Book>, Preparable{
 			Order newOrder = new Order();
 			newOrder.setUser_name(userName);
 			newOrder.getBooks().add(book);
+			book.getOrders().add(order);
 			
 			orderService.saveOrUpdateOrder(newOrder);
+			orderService.saveOrUpdateBook(book);
 		}
 		else{
+			
+			System.out.println("order.getBooks() ---- " + order.getBooks());
+			
 			order.getBooks().add(book);
 			book.getOrders().add(order);
 			
