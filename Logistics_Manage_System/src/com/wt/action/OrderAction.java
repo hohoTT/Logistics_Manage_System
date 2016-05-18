@@ -37,7 +37,7 @@ ModelDriven<Book>, Preparable{
 		
 		System.out.println("saveOrder");
 		
-		Book book = orderService.findBook("java");
+		//Book book = orderService.findBook("java");
 
 		ActionContext context = ActionContext.getContext();
 		
@@ -46,16 +46,39 @@ ModelDriven<Book>, Preparable{
 		HttpSession session = request.getSession();
 		
 		String userName = (String) session.getAttribute("username");
+		
+		String bookname = request.getParameter("bookname");
 
+		String StrQuantity = request.getParameter("quantity");
+		int quantity = Integer.parseInt(StrQuantity);
+		
+		String StrPrice = request.getParameter("price");
+		int unit_price = Integer.parseInt(StrPrice);
+		
+		int price = quantity * unit_price;
+		
 		Order order = new Order();
+		
+		Book book = new Book();
+		
+		book.setBook_name(bookname);
+		book.setQuantity(quantity);
+		book.setPrice(price);
 		
 		order.setUser_name(userName);
 		
 		order.getBooks().add(book);
 		book.getOrders().add(order);
-		
-		orderService.saveOrUpdateOrder(order);
+
 		orderService.saveOrUpdateBook(book);
+		orderService.saveOrUpdateOrder(order);
+		
+		
+//		Order order = orderService.findOrder(userName);
+//		
+//		if(order != null){
+//			
+//		}
 		
 		return "save";
 	}

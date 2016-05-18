@@ -1,5 +1,7 @@
 package com.wt.dao;
 
+import java.util.List;
+
 import org.hibernate.Query;
 
 import com.wt.entity.Book;
@@ -22,18 +24,33 @@ public class OrderDao extends BaseDao{
 		return book;
 	}
 	
-	public Order findOrder(String userName) {
-		Order oreder = null;
+	// 以下的操作为获取仓库中的书
+	public Book findWarehouseBook(String bookname) {
+		Book book = null;
+		
+		String hql = "FROM Warehouse w WHERE w.book_name = ?";
+		
+		Query query = getSession().createQuery(hql);
+		
+		query.setString(0, bookname);
+		
+		book = (Book) query.uniqueResult();
+		
+		return book;
+	}
+	
+	// 以下为查询某个用户的订单列表
+	@SuppressWarnings("unchecked")
+	public List<Order> findOrder(String userName) {
+		List<Order> orders = null;
 		
 		String hql = "FROM Order o LEFT OUTER JOIN FETCH o.books WHERE o.user_name = ?";
 		
 		Query query = getSession().createQuery(hql);
+
+		orders = query.setString(0, userName).list();
 		
-		query.setString(0, userName);
-		
-		oreder = (Order) query.uniqueResult();
-		
-		return oreder;
+		return orders;
 	}
 	
 	public void saveOrUpdateOrder(Order order){

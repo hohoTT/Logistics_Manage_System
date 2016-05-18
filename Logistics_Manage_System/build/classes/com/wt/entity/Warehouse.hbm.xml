@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-18 20:32:16 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+
+    <class name="com.wt.entity.Warehouse" table="WAREHOUSE">
+    
+        <id name="book_id" type="java.lang.Integer">
+            <column name="BOOK_ID" />
+            <generator class="native" />
+        </id>
+        
+        <property name="book_name" type="java.lang.String">
+            <column name="BOOK_NAME" />
+        </property>
+        
+        <property name="quantity" type="java.lang.Integer">
+            <column name="QUANTITY" />
+        </property>
+        
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+        
+    </class>
+    
+</hibernate-mapping>

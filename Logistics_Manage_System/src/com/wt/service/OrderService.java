@@ -1,5 +1,7 @@
 package com.wt.service;
 
+import java.util.List;
+
 import com.wt.dao.OrderDao;
 import com.wt.entity.Book;
 import com.wt.entity.Order;
@@ -16,7 +18,7 @@ public class OrderService {
 		return orderDao.findBook(bookname);
 	}
 	
-	public Order findOrder(String userName) {
+	public List<Order> findOrder(String userName) {
 		return orderDao.findOrder(userName);
 	}
 	
