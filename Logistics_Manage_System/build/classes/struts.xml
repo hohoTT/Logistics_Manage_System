@@ -53,7 +53,7 @@
         <global-results>  
             <!-- 当返回adminLogin视图名时，转入管理员登录页面 -->  
             <result name="adminLogin">/WEB-INF/admin/admin_login.jsp</result> 
-            <result name="userLogin">/WEB-INF/user/login.jsp</result> 
+            <result name="userLogin">/WEB-INF/user/buy_login.jsp</result> 
         </global-results>  
         
 		
@@ -131,6 +131,9 @@
 		<!-- 跳转到购物页面  -->
 		<action name="userShopping">
 			<result>/WEB-INF/shopping/shopping.jsp</result>
+			
+			<!-- 使用自定义管理员需要登录的拦截器 -->  
+            <interceptor-ref name="userLoginInterceptor" />  
 		</action>
 		
 		<!-- 跳转到购物页面  -->
