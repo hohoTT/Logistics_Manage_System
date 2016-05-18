@@ -63,9 +63,13 @@ ModelDriven<Book>, Preparable{
 		
 		int w_quantity = w_book.getQuantity();
 		
+		String w_q = Integer.toString(w_quantity);
+		
 		w_quantity = w_quantity - quantity;
 		
 		if(w_quantity < 0){
+			session.setAttribute("notEnough", "notEnough");
+			session.setAttribute("w_q", w_q);
 			System.out.println("¿â´æ²»×ã");
 		}
 		else{
@@ -90,13 +94,6 @@ ModelDriven<Book>, Preparable{
 			w_book.setQuantity(w_quantity);
 			orderService.saveOrUpdateWarehouseBook(w_book);
 		}
-		
-		
-//		Order order = orderService.findOrder(userName);
-//		
-//		if(order != null){
-//			
-//		}
 		
 		return "save";
 	}

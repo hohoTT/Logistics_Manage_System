@@ -22,7 +22,18 @@
 		String islogin = "none";
 		String info = "none";
 		String list = "none";
+		String enough = "none";
 		String username = (String) session.getAttribute("username");
+		
+		String notEnough = (String) session.getAttribute("notEnough");
+
+
+		String w_q = (String) session.getAttribute("w_q");
+		
+		if(notEnough != null){
+			enough = "block";
+		}
+		
 		if (username == null) {
 			islogin = "block";
 		} else {
@@ -30,6 +41,9 @@
 		}
 	%>
 	
+	<div class="info" class="wrap" style="display: <%=enough%>">
+		<h1>图书库存不足，目前仅为 <%=w_q%> 本，请重新核对购物车信息 ~~</h1>
+	</div>
 	<div class="info" class="wrap" style="display: <%=islogin%>">
 		<h1>你现在还未登录，请点击右上方的登录方可查看购物车信息 ~~</h1>
 	</div>
