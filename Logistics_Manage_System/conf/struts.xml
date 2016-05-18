@@ -32,8 +32,16 @@
 				class="com.wt.interceptor.AdminLoginInterceptor">
 			</interceptor>
 			
+			<!-- 自定义用户需要登录的拦截器 -->
+			<interceptor name="userLoginInterceptor" 
+				class="com.wt.interceptor.UserLoginInterceptor">
+			</interceptor>
+			
 			<interceptor-stack name="loginStack">
 				<interceptor-ref name="defaultStack" />
+				
+				<!-- 自定义用户需要登录的拦截器 -->
+				<interceptor-ref name="userLoginInterceptor" />
 				
 				<!-- 自定义管理员需要登录的拦截器 -->
 				<interceptor-ref name="adminLoginInterceptor" />
@@ -44,7 +52,8 @@
 		<!-- 定义全局Result -->  
         <global-results>  
             <!-- 当返回adminLogin视图名时，转入管理员登录页面 -->  
-            <result name="adminLogin">/WEB-INF/admin/admin_login.jsp</result>  
+            <result name="adminLogin">/WEB-INF/admin/admin_login.jsp</result> 
+            <result name="userLogin">/WEB-INF/user/login.jsp</result> 
         </global-results>  
         
 		
@@ -65,8 +74,10 @@
 		<action name="order-*" class="orderAction"
         	method="{1}">
         	
-			<result name="save">/index.jsp</result>
+			<result name="save">/WEB-INF/shopping/shopping_info.jsp</result>
 			
+			<!-- 使用自定义管理员需要登录的拦截器 -->  
+            <interceptor-ref name="userLoginInterceptor" />  
 		</action>
 		
 		<!-- 获取验证码 -->
@@ -142,7 +153,7 @@
 			    method="userList">
 			<result name="userList">/WEB-INF/admin/admin_index.jsp</result>
 			<!-- 使用自定义管理员需要登录的拦截器 -->  
-            <interceptor-ref name="loginStack" />  
+            <interceptor-ref name="adminLoginInterceptor" />  
 		</action>
 		
 		<!-- 跳转到管理员图片管理页面  -->

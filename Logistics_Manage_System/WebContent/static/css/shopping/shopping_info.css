@@ -1,0 +1,26 @@
+.info {
+	margin-top: 10%;
+	margin-left: 15%;
+}
+
+.isinfo {
+	margin-top: 5%;
+	margin-left: 15%;
+}
+
+#list {
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px; 
+	height: auto;
+}
+
+#result {
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+#price {
+	margin-left: 50%;
+}
