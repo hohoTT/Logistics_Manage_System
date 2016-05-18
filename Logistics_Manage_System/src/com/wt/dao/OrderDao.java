@@ -6,6 +6,7 @@ import org.hibernate.Query;
 
 import com.wt.entity.Book;
 import com.wt.entity.Order;
+import com.wt.entity.Warehouse;
 
 public class OrderDao extends BaseDao{
 	
@@ -25,8 +26,8 @@ public class OrderDao extends BaseDao{
 	}
 	
 	// 以下的操作为获取仓库中的书
-	public Book findWarehouseBook(String bookname) {
-		Book book = null;
+	public Warehouse findWarehouseBook(String bookname) {
+		Warehouse warehouse = null;
 		
 		String hql = "FROM Warehouse w WHERE w.book_name = ?";
 		
@@ -34,9 +35,9 @@ public class OrderDao extends BaseDao{
 		
 		query.setString(0, bookname);
 		
-		book = (Book) query.uniqueResult();
+		warehouse = (Warehouse) query.uniqueResult();
 		
-		return book;
+		return warehouse;
 	}
 	
 	// 以下为查询某个用户的订单列表
@@ -59,6 +60,10 @@ public class OrderDao extends BaseDao{
 	
 	public void saveOrUpdateBook(Book book){
 		getSession().saveOrUpdate(book);
+	}
+	
+	public void saveOrUpdateWarehouseBook(Warehouse warehouse){
+		getSession().saveOrUpdate(warehouse);
 	}
 	
 }

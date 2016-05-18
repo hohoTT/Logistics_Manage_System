@@ -5,6 +5,7 @@ import java.util.List;
 import com.wt.dao.OrderDao;
 import com.wt.entity.Book;
 import com.wt.entity.Order;
+import com.wt.entity.Warehouse;
 
 public class OrderService {
 	
@@ -18,6 +19,10 @@ public class OrderService {
 		return orderDao.findBook(bookname);
 	}
 	
+	public Warehouse findWarehouseBook(String bookname) {
+		return orderDao.findWarehouseBook(bookname);
+	}
+	
 	public List<Order> findOrder(String userName) {
 		return orderDao.findOrder(userName);
 	}
@@ -28,6 +33,10 @@ public class OrderService {
 	
 	public void saveOrUpdateBook(Book book){
 		orderDao.saveOrUpdateBook(book);
+	}
+	
+	public void saveOrUpdateWarehouseBook(Warehouse warehouse){
+		orderDao.saveOrUpdateWarehouseBook(warehouse);
 	}
 	
 }

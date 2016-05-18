@@ -14,6 +14,7 @@ import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 import com.wt.entity.Book;
 import com.wt.entity.Order;
+import com.wt.entity.Warehouse;
 import com.wt.service.OrderService;
 
 public class OrderAction extends ActionSupport implements RequestAware,
@@ -36,8 +37,6 @@ ModelDriven<Book>, Preparable{
 	public String save(){
 		
 		System.out.println("saveOrder");
-		
-		//Book book = orderService.findBook("java");
 
 		ActionContext context = ActionContext.getContext();
 		
@@ -45,6 +44,7 @@ ModelDriven<Book>, Preparable{
 		
 		HttpSession session = request.getSession();
 		
+		// 以下为获取参数
 		String userName = (String) session.getAttribute("username");
 		
 		String bookname = request.getParameter("bookname");
@@ -57,21 +57,39 @@ ModelDriven<Book>, Preparable{
 		
 		int price = quantity * unit_price;
 		
-		Order order = new Order();
 		
-		Book book = new Book();
+		// 获取仓库中的图书
+		Warehouse w_book = orderService.findWarehouseBook(bookname);
 		
-		book.setBook_name(bookname);
-		book.setQuantity(quantity);
-		book.setPrice(price);
+		int w_quantity = w_book.getQuantity();
 		
-		order.setUser_name(userName);
+		w_quantity = w_quantity - quantity;
 		
-		order.getBooks().add(book);
-		book.getOrders().add(order);
+		if(w_quantity < 0){
+			System.out.println("库存不足");
+		}
+		else{
+			// 新建订单
+			Order order = new Order();
+			
+			Book book = new Book();
+			
+			book.setBook_name(bookname);
+			book.setQuantity(quantity);
+			book.setPrice(price);
+			
+			order.setUser_name(userName);
+			
+			order.getBooks().add(book);
+			book.getOrders().add(order);
 
-		orderService.saveOrUpdateBook(book);
-		orderService.saveOrUpdateOrder(order);
+			orderService.saveOrUpdateBook(book);
+			orderService.saveOrUpdateOrder(order);
+			
+			// 更新仓库中的图书书目
+			w_book.setQuantity(w_quantity);
+			orderService.saveOrUpdateWarehouseBook(w_book);
+		}
 		
 		
 //		Order order = orderService.findOrder(userName);
