@@ -76,7 +76,7 @@
         	
 			<result name="save">/WEB-INF/shopping/shopping_info.jsp</result>
 			
-			<!-- 使用自定义管理员需要登录的拦截器 -->  
+			<!-- 使用自定义用户需要登录的拦截器 -->  
             <interceptor-ref name="userLoginInterceptor" />  
 		</action>
 		
@@ -150,6 +150,17 @@
 		<action name="javaBuy">
 			<result>/WEB-INF/trolley/java_trolley.jsp</result>
 		</action>
+		
+		<!-- 跳转到用户的购物车页面 -->		
+		<action name="userShoppingInfo" class="com.wt.action.OrderAction"
+				method="shoppingInfo">
+			<result name="shoppingInfo">/WEB-INF/shopping/shopping_info.jsp</result>
+			
+			<!-- 使用自定义用户需要登录的拦截器 -->  
+            <interceptor-ref name="userLoginInterceptor" />  
+		</action>
+		
+		<!-- 以下为管理员部分的链接配置 -->
 		
 		<!-- 跳转到管理员页面  -->
 		<action name="adminPage" class="com.wt.action.AdminAction"

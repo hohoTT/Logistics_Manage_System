@@ -103,7 +103,7 @@ contentType="text/html; charset=utf-8"%>
 			</div>
 		</a>
 		
-		<a href="#">
+		<a href="userShoppingInfo">
 			<div class="header-bottom-grid3">
 				<span class="glyphicon glyphicon-tree-deciduous"></span>
 				<h4>我的购物车</h4>

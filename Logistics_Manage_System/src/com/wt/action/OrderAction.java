@@ -121,11 +121,11 @@ ModelDriven<Book>, Preparable{
 		return "save";
 	}
 	
-	public String list(){
+	public String shoppingInfo(){
 		
 		query();
 		
-		return "list";
+		return "shoppingInfo";
 	}
 
 	@Override

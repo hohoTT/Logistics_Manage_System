@@ -36,6 +36,8 @@
 
  		List<Book> books = (List<Book>)session.getAttribute("books");
 		
+ 		System.out.println("books ---- " + books);
+ 		
 		if(notEnough != null){
 			enough = "block";
 		}
@@ -46,8 +48,11 @@
 			
 		}
 		
-		if(books != null){
+		if(books.size() != 0){
 			list = "block";
+		}
+		else{
+			info = "block";
 		}
 	%>
 	
@@ -58,11 +63,12 @@
 		<h1>你现在还未登录，请点击右上方的登录方可查看购物车信息 ~~</h1>
 	</div>
 	<div class="info" class="wrap" style="display: <%=info%>">
-		<h1>你现在还没有购物信息 ~~</h1>
+		<h1>购物车还是空空的 ~~</h1><br>
+		<a href="userShopping">立即购物</a>
 	</div>
 	
-	<div class="isinfo" class="wrap" style="display: <%=list%>">
-		<h1>购买信息如下 ~~</h1>
+	<div class="isinfo" class="wrap" style="display: <%=list%>;  margin-left: 60px; margin-right: 60px;">
+		<h1>订单信息如下 ~~</h1>
 		<table class="table table-striped">
 			<thead>
 			    <tr>
@@ -75,10 +81,10 @@
 		    <tbody>
 		    <s:iterator value="#session.books">
 			    <tr>
-			        <td>${ book_id }</td>
-			        <td>${ book_name }</td>
-			        <td class="center">${ quantity }</td>
-			        <td class="center">${ price }</td>
+			        <td class="info">${ book_id }</td>
+			        <td class="success">${ book_name }</td>
+			        <td class="warning">${ quantity }</td>
+			        <td class="danger">${ price }</td>
 			    </tr>
 			</s:iterator>
 		    </tbody>
