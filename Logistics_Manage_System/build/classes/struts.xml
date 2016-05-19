@@ -157,6 +157,11 @@
 			<result>/WEB-INF/trolley/java_trolley.jsp</result>
 		</action>
 		
+		<!-- 跳转到html购物页面  -->
+		<action name="htmlBuy">
+			<result>/WEB-INF/trolley/html_trolley.jsp</result>
+		</action>
+		
 		<!-- 跳转到用户的购物车页面 -->		
 		<action name="userShoppingInfo" class="com.wt.action.OrderAction"
 				method="shoppingInfo">

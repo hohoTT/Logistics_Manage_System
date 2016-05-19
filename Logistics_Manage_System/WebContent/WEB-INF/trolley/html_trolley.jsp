@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>java 书籍</title>
+<title>html 书籍</title>
 
 <!-- CSS 样式 -->
 <link rel="stylesheet" href="static/css/trolley/shopping_trolley.css">
@@ -34,31 +34,31 @@
 	<div class="box">
 
 		<div class="tb-booth tb-pic tb-s310">
-			<a href="image/book/big/java/1.jpg"><img
-				src="image/book/mid/java/1.jpg" alt="java"
-				rel="image/book/big/java/1.jpg" class="jqzoom" /> </a>
+			<a href="image/book/big/html/1.jpg"><img
+				src="image/book/mid/html/1.jpg" alt="java"
+				rel="image/book/big/html/1.jpg" class="jqzoom" /> </a>
 		</div>
 
 		<ul class="tb-thumb" id="thumblist">
 			<li class="tb-selected">
 				<div class="tb-pic tb-s40">
 					<a href="javascript:void(0)"> <img
-						src="image/book/small/java/1.jpg" mid="image/book/mid/java/1.jpg"
-						big="image/book/big/java/1.jpg"> </a>
+						src="image/book/small/html/1.jpg" mid="image/book/mid/html/1.jpg"
+						big="image/book/big/html/1.jpg"> </a>
 				</div></li>
 
 			<li><div class="tb-pic tb-s40">
 					<a href="javascript:void(0)"><img
-						src="image/book/small/java/01.jpg"
-						mid="image/book/mid/java/01.jpg" big="image/book/big/java/01.jpg">
+						src="image/book/small/html/01.jpg"
+						mid="image/book/mid/html/01.jpg" big="image/book/big/html/01.jpg">
 					</a>
 				</div></li>
 
 			<li><div class="tb-pic tb-s40">
 					<a href="javascript:void(0)"><img
-						src="image/book/small/java/001.jpg"
-						mid="image/book/mid/java/001.jpg"
-						big="image/book/big/java/001.jpg"> </a>
+						src="image/book/small/html/001.jpg"
+						mid="image/book/mid/html/001.jpg"
+						big="image/book/big/html/001.jpg"> </a>
 				</div></li>
 
 		</ul>
@@ -66,12 +66,11 @@
 	</div>
 	<form id="shopping-form" action="order-save" method="post">
 		<div class="wrapper" id="computer">
-			<h1
-				style="padding-bottom: .2em; line-height: 1;
-          		font-size: 16px; font-weight: 700;
-          		color: #000; font-family: "microsoftyahei";">
-          		Java编程思想第4版/第四版中文版/thinkinginjava中文版/java编程/java语言/计算机教材/java书
-          	</h1>
+			<h1 style="padding-bottom: .2em; line-height: 1;
+          		font-size: 16px; font-weight: 700; color: #000;
+          		font-family: "microsoftyahei";">计算机书籍软件开发视频大讲堂：
+          		HTML5从入门到精通（附光盘1张） 基础经典高级模板源码开发CSS3教程教材响应式
+			</h1>
 			<a href="shopping_info.jsp"> <span class="car"><i
 					class="shopping-cart"></i> </span> </a>
 
@@ -90,9 +89,10 @@
 					<h3>请核对购物信息 ：</h3>
 					<hr>
 					<p>
-						价格 ： RMB : 99 <input name="price" value="99" type="hidden" /> <input
-							name="action" value="trolley" type="hidden" /> <input
-							name="bookname" value="java" type="hidden" />
+						价格 ： RMB : 75
+						<input name="price" value="75" type="hidden" />
+						<input name="action" value="trolley" type="hidden" />
+						<input name="bookname" value="html" type="hidden" />
 					</p>
 					<button id="buy">购买</button>
 					<button class="add-to-cart" type="button">加入购物车</button>
