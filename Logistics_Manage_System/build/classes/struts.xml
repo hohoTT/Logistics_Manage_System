@@ -37,6 +37,11 @@
 				class="com.wt.interceptor.UserLoginInterceptor">
 			</interceptor>
 			
+			<!-- 自定义用户查看购物车时需要登录的拦截器 -->
+			<interceptor name="userShoppingInfoLoginInterceptor" 
+				class="com.wt.interceptor.UserLoginShoppingInfoInterceptor">
+			</interceptor>
+			
 			<interceptor-stack name="loginStack">
 				<interceptor-ref name="defaultStack" />
 				
@@ -53,7 +58,8 @@
         <global-results>  
             <!-- 当返回adminLogin视图名时，转入管理员登录页面 -->  
             <result name="adminLogin">/WEB-INF/admin/admin_login.jsp</result> 
-            <result name="userLogin">/WEB-INF/user/buy_login.jsp</result> 
+            <result name="userLogin">/WEB-INF/user/buy_login.jsp</result>
+            <result name="userShoppingInfoLogin">/WEB-INF/user/shopping_login.jsp</result>
         </global-results>  
         
 		
@@ -157,7 +163,7 @@
 			<result name="shoppingInfo">/WEB-INF/shopping/shopping_info.jsp</result>
 			
 			<!-- 使用自定义用户需要登录的拦截器 -->  
-            <interceptor-ref name="userLoginInterceptor" />  
+            <interceptor-ref name="userShoppingInfoLoginInterceptor" />  
 		</action>
 		
 		<!-- 以下为管理员部分的链接配置 -->
