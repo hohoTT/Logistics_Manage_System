@@ -70,9 +70,14 @@ ModelDriven<Book>, Preparable{
 		if(w_quantity < 0){
 			session.setAttribute("notEnough", "notEnough");
 			session.setAttribute("w_q", w_q);
+			session.setAttribute("bookname", bookname);
 			System.out.println("库存不足");
 		}
 		else{
+			session.removeAttribute("notEnough");
+			session.removeAttribute(w_q);
+			session.removeAttribute(bookname);
+			
 			// 新建订单
 			Order order = new Order();
 			

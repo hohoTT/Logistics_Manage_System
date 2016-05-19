@@ -29,6 +29,7 @@
 
 
 		String w_q = (String) session.getAttribute("w_q");
+		String bookname = (String) session.getAttribute("bookname");
 		
 		if(notEnough != null){
 			enough = "block";
@@ -42,7 +43,7 @@
 	%>
 	
 	<div class="info" class="wrap" style="display: <%=enough%>">
-		<h1>图书库存不足，目前仅为 <%=w_q%> 本，请重新核对购物车信息 ~~</h1>
+		<h1><%= bookname %> 库存不足，目前仅为 <%= w_q %> 本，请重新核对购物车信息 ~~</h1>
 	</div>
 	<div class="info" class="wrap" style="display: <%=islogin%>">
 		<h1>你现在还未登录，请点击右上方的登录方可查看购物车信息 ~~</h1>
