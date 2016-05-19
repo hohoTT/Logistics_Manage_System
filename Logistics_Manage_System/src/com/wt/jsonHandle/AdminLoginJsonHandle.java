@@ -51,6 +51,8 @@ public class AdminLoginJsonHandle extends ActionSupport{
 			dataMap.put("code", 1);
 		}
 		else{
+
+			session.clear();
 			
 			// 向 session 中添加管理员名称
 			session.put("adminName", adminName);

@@ -86,6 +86,7 @@ public class LoginJsonHandle extends ActionSupport{
 					dataMap.put("code", 1);
 				}
 				else{
+					session.clear();
 					session.put("username", user.getUser_name());
 					
 					// ≤‚ ‘ ± π”√
