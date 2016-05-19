@@ -28,13 +28,6 @@ public class Book {
 	public Book() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	@Override
-	public String toString() {
-		return "Book [book_id=" + book_id + ", book_name=" + book_name
-				+ ", quantity=" + quantity + ", price=" + price + ", order="
-				+ order + "]";
-	}
 
 	public Integer getBook_id() {
 		return book_id;

@@ -1,3 +1,6 @@
+<%@page import="com.wt.entity.Book"%>
+<%@page import="java.util.List"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -30,6 +33,8 @@
 
 		String w_q = (String) session.getAttribute("w_q");
 		String bookname = (String) session.getAttribute("bookname");
+
+ 		List<Book> books = (List<Book>)session.getAttribute("books");
 		
 		if(notEnough != null){
 			enough = "block";
@@ -39,6 +44,10 @@
 			islogin = "block";
 		} else {
 			
+		}
+		
+		if(books != null){
+			list = "block";
 		}
 	%>
 	
@@ -54,6 +63,26 @@
 	
 	<div class="isinfo" class="wrap" style="display: <%=list%>">
 		<h1>购买信息如下 ~~</h1>
+		<table class="table table-striped">
+			<thead>
+			    <tr>
+			        <th>ID</th>
+			        <th>书名</th>
+			        <th>数量</th>
+			        <th>价格</th>
+			    </tr>
+		    </thead>
+		    <tbody>
+		    <s:iterator value="#session.books">
+			    <tr>
+			        <td>${ book_id }</td>
+			        <td>${ book_name }</td>
+			        <td class="center">${ quantity }</td>
+			        <td class="center">${ price }</td>
+			    </tr>
+			</s:iterator>
+		    </tbody>
+		</table>
 	</div>
 
 </body>

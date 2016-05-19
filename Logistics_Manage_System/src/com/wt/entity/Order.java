@@ -48,12 +48,6 @@ public class Order {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String toString() {
-		return "Order [order_id=" + order_id + ", user_name=" + user_name
-				+ ", book=" + book + "]";
-	}
-
 //	public Set<Book> getBooks() {
 //		return books;
 //	}

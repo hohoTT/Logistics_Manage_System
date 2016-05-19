@@ -57,6 +57,11 @@ ModelDriven<Book>, Preparable{
 			System.out.println("book.getPrice() --- " + book.getPrice());
 		}
 		
+		
+		if(books != null){
+			Map<String, Object> mapSession = ActionContext.getContext().getSession();
+			mapSession.put("books", books);
+		}
 	}
 	
 	public String save(){
