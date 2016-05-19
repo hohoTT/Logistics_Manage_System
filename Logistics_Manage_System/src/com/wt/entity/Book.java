@@ -10,7 +10,31 @@ public class Book {
 	private Integer quantity;
 	private double price;
 	
-	Set<Order> orders = new HashSet<>();
+	// 之前的处理，多对多的映射
+	//Set<Order> orders = new HashSet<>();
+
+	private Order order;
+	
+	public Book(Integer book_id, String book_name, Integer quantity,
+			double price, Order order) {
+		super();
+		this.book_id = book_id;
+		this.book_name = book_name;
+		this.quantity = quantity;
+		this.price = price;
+		this.order = order;
+	}
+
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public String toString() {
+		return "Book [book_id=" + book_id + ", book_name=" + book_name
+				+ ", quantity=" + quantity + ", price=" + price + ", order="
+				+ order + "]";
+	}
 
 	public Integer getBook_id() {
 		return book_id;
@@ -44,11 +68,20 @@ public class Book {
 		this.price = price;
 	}
 
-	public Set<Order> getOrders() {
-		return orders;
+	public Order getOrder() {
+		return order;
 	}
 
-	public void setOrders(Set<Order> orders) {
-		this.orders = orders;
+	public void setOrder(Order order) {
+		this.order = order;
 	}
+
+//	public Set<Order> getOrders() {
+//		return orders;
+//	}
+//
+//	public void setOrders(Set<Order> orders) {
+//		this.orders = orders;
+//	}
+	
 }

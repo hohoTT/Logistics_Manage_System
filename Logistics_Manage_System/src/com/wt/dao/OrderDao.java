@@ -45,7 +45,7 @@ public class OrderDao extends BaseDao{
 	public List<Order> findOrder(String userName) {
 		List<Order> orders = null;
 		
-		String hql = "FROM Order o LEFT OUTER JOIN FETCH o.books WHERE o.user_name = ?";
+		String hql = "FROM Order o LEFT OUTER JOIN FETCH o.book WHERE o.user_name = ?";
 		
 		Query query = getSession().createQuery(hql);
 
@@ -54,16 +54,21 @@ public class OrderDao extends BaseDao{
 		return orders;
 	}
 	
+	// 以下为添加新的订单
 	public void saveOrUpdateOrder(Order order){
 		getSession().saveOrUpdate(order);
 	}
 	
+	// 以下为用户购买图书，向图书购买表中添加数据
 	public void saveOrUpdateBook(Book book){
 		getSession().saveOrUpdate(book);
 	}
 	
+	// 以下为添加或更新仓库中的图书信息
 	public void saveOrUpdateWarehouseBook(Warehouse warehouse){
 		getSession().saveOrUpdate(warehouse);
 	}
+	
+	
 	
 }

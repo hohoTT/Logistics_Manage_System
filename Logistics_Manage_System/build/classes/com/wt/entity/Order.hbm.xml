@@ -8,23 +8,36 @@
     
         <id name="order_id" type="java.lang.Integer">
             <column name="ORDER_ID" />
-            <generator class="native" />
+            <!-- 使用外键的方式生成当前主键 -->
+			<generator class="foreign">
+				<!-- property 属性指定使用当前持久化类的哪一个属性的主键作为外键 -->
+				<param name="property">book</param>			
+			</generator>
         </id>
         
         <property name="user_name" type="java.lang.String">
             <column name="USER_NAME" />
         </property>
         
+        <!-- 采用 foreign 主键生成器策略的一端添加 one-to-one 元素映射关联属性 -->
+		<!-- 其 one-to-one 节点还应增加 constrained="true" 属性，以使当前的主键上添加外键约束 -->
+		<one-to-one name="book" class="Book" constrained="true"></one-to-one>
+        
+        
+        <!-- 以前的处理 -->
         <!-- table: 指定中间表 -->
+        <!-- 
         <set name="books" table="ORDERS_BOOKS">
             <key>
                 <column name="O_ID" />
             </key>
+         -->
             <!-- 使用 many-to-many 指定多对多的关联关系 -->
             <!-- column 执行 Set 集合中的持久化类在中间表的外建列的名称 -->
+        <!-- 
 			<many-to-many class="Book" column="B_ID"></many-to-many>
         </set>
-        
+         -->
         
     </class>
 </hibernate-mapping>

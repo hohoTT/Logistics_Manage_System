@@ -1,5 +1,7 @@
 package com.wt.action;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,30 +26,42 @@ ModelDriven<Book>, Preparable{
 	
 	private OrderService orderService;
 	
+	ActionContext context = ActionContext.getContext();
+	
+	HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
+	
+	HttpSession session = request.getSession();
+	
+	// 以下为获取参数
+	String userName = (String) session.getAttribute("username");
+	
+	String bookname = request.getParameter("bookname");
+	
 	public void setOrderService(OrderService orderService) {
 		this.orderService = orderService;
 	}
+	
+	// 以下为查询用户的购买记录
+	public void query() {
+		
+		// 以下为查询用户的订单列表
+		List<Order> orders = orderService.findOrder(userName);
+		List<Book> books = new ArrayList<>();
+		for (Order order : orders) {
+			books.add(order.getBook());
+		}
 
-	@Override
-	public void prepare() throws Exception {
-		// TODO Auto-generated method stub
+		// 以下为图书列表
+		for (Book book : books) {
+			System.out.println("book.getBook_name() --- " + book.getBook_name());
+			System.out.println("book.getPrice() --- " + book.getPrice());
+		}
 		
 	}
 	
 	public String save(){
 		
 		System.out.println("saveOrder");
-
-		ActionContext context = ActionContext.getContext();
-		
-		HttpServletRequest request = (HttpServletRequest)context.get(ServletActionContext.HTTP_REQUEST);
-		
-		HttpSession session = request.getSession();
-		
-		// 以下为获取参数
-		String userName = (String) session.getAttribute("username");
-		
-		String bookname = request.getParameter("bookname");
 
 		String StrQuantity = request.getParameter("quantity");
 		int quantity = Integer.parseInt(StrQuantity);
@@ -56,7 +70,6 @@ ModelDriven<Book>, Preparable{
 		int unit_price = Integer.parseInt(StrPrice);
 		
 		int price = quantity * unit_price;
-		
 		
 		// 获取仓库中的图书
 		Warehouse w_book = orderService.findWarehouseBook(bookname);
@@ -89,10 +102,8 @@ ModelDriven<Book>, Preparable{
 			
 			order.setUser_name(userName);
 			
-			order.getBooks().add(book);
-			book.getOrders().add(order);
-
 			orderService.saveOrUpdateBook(book);
+			order.setBook(book);
 			orderService.saveOrUpdateOrder(order);
 			
 			// 更新仓库中的图书书目
@@ -100,9 +111,17 @@ ModelDriven<Book>, Preparable{
 			orderService.saveOrUpdateWarehouseBook(w_book);
 		}
 		
+		query();
+		
 		return "save";
 	}
-
+	
+	public String list(){
+		
+		query();
+		
+		return "list";
+	}
 
 	@Override
 	public void setRequest(Map<String, Object> arg0) {
@@ -110,6 +129,12 @@ ModelDriven<Book>, Preparable{
 		
 	}
 
+	@Override
+	public void prepare() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	@Override
 	public Book getModel() {
 		// TODO Auto-generated method stub

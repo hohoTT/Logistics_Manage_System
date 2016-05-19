@@ -23,16 +23,24 @@
             <column name="PRICE" />
         </property>
         
+        <one-to-one name="order" class="Order">
+		</one-to-one>
+        
+        <!-- 以前的处理 -->
         <!-- table: 指定中间表 -->
+        <!-- 
         <set name="orders" table="ORDERS_BOOKS" inverse="true">
         	<key>
         		<column name="B_ID"></column>
         	</key>
+        --> 
             <!-- 使用 many-to-many 指定多对多的关联关系 -->
             <!-- column 执行 Set 集合中的持久化类在中间表的外建列的名称 -->
+        <!--  
         	<many-to-many class="Order" column="O_ID"></many-to-many>
         </set>
-        
+         -->
+         
     </class>
     
 </hibernate-mapping>
