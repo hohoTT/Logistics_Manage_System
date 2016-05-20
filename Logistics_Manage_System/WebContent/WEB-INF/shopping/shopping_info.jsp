@@ -91,5 +91,6 @@
 		</table>
 	</div>
 
+	<jsp:include page="../base/footer.jsp"></jsp:include>
 </body>
 </html>
