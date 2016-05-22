@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>找回登录信息</title>
 
 <script type="text/javascript" src="static/js/config.js"></script>
 <script type="text/javascript" src="static/js/require.js"></script>
@@ -52,6 +52,10 @@ a{
 	color: #428bca;
 }
 </style>
+
+<script type="text/javascript" src="static/js/account/applyResetPassword.js"></script>
+
+<link rel="shortcut icon" href="image/favicon.ico" />
 
 </head>
 <body>
