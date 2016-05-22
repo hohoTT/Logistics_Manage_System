@@ -59,21 +59,21 @@ public class ResetPasswordJsonHandle extends ActionSupport{
 		captcha = captcha.toUpperCase();
 		
 		String randomNum = (String) httpSession.getAttribute("randomNum");
-		System.out.println("randomNum ----" + randomNum);
+//		System.out.println("randomNum ----" + randomNum);
 		
 		if(!reset_captcha.equals(randomNum)){
-			System.out.println("!reset_captcha.equals(randomNum) ----");
+//			System.out.println("!reset_captcha.equals(randomNum) ----");
 			dataMap.put("data", "重置密钥有误, 请重新检查系统所发邮件！");
 			dataMap.put("code", 1);
 		}
 		else{
 			if(!captcha.equals(validateCode)){
-				System.out.println("!captcha.equals(validateCode) ----");
+//				System.out.println("!captcha.equals(validateCode) ----");
 				dataMap.put("data", "验证码错误");
 				dataMap.put("code", 1);
 			}
 			else{
-				System.out.println("captcha.equals(validateCode) ----");
+//				System.out.println("captcha.equals(validateCode) ----");
 				
 				// 重新保存用户信息
 				user.setUser_password(new_password);

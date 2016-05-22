@@ -66,7 +66,7 @@ a{
 	<%
 		Thread.sleep(1500);
 	
-		String username = (String) session.getAttribute("username");
+		String new_username = (String) session.getAttribute("new_username");
 		String email = (String) session.getAttribute("email");
 	%>
 
@@ -90,7 +90,7 @@ a{
                 
                 <div class="form-group">
                     <label for="username">用户名</label>
-                    <input type="text" class="form-control input-lg" name="username" value="<%= username %>" disabled="true" readonly>
+                    <input type="text" class="form-control input-lg" name="username" value="<%= new_username %>" disabled="true" readonly>
                 </div>
                 
                 <div class="form-group">
@@ -114,7 +114,7 @@ a{
                 <div class="form-group">
                     <label for="new_password">重置密钥</label>
                     <input type="text" class="form-control input-lg" id="reset_captcha" name="reset_captcha" 
-                    	   placeholder="重置密钥" required>
+                    	   placeholder="重置密钥" maxlength="6" required>
 
                     <div class="help-block with-errors"></div>
                 </div>
