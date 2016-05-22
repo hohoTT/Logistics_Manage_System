@@ -109,6 +109,11 @@
 			<result>/WEB-INF/user/register.jsp</result>
 		</action>
 		
+		<!-- 用户更改密码跳转链接 -->
+		<action name="applyResetPassword">
+			<result>/WEB-INF/user/apply_reset_password.jsp</result>
+		</action>
+		
 		<!-- 用户名验证 -->
 		<action name="usernameCheck" class="userValidate"
 				method="usernameCheck">
