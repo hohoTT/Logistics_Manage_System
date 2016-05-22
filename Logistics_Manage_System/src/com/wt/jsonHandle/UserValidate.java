@@ -59,4 +59,21 @@ public class UserValidate extends ActionSupport{
 		}
 	}
 	
+	// 发送邮件修改密码时的邮箱验证
+	public String resetPasswordEmailCheck(){
+		
+		String email = request.getParameter("email");
+		
+		// 验证邮箱是否被注册使用
+		User emailCheckUser = userService.emailCheck(email);
+				
+		// 如果用户名已被注册，返回该用户名已被注册！的错误消息
+		if(emailCheckUser != null){
+			return "emailSuccess";
+		}
+		else{
+			return "emailError";
+		}
+	}
+	
 }

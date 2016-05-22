@@ -5,6 +5,7 @@ var require = {
         jquery: "lib/jQuery/jquery",
         bsAlert: "util/bsAlert",
         user_delete_bsAlert: "util/user_delete_bsAlert",
+        reset_password_bsAlert : "util/reset_password_bsAlert",
         csrfToken: "util/csrfToken",
         bootstrap: "lib/bootstrap/bootstrap",
         validator: "lib/validator/validator",

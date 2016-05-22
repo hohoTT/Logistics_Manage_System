@@ -109,9 +109,14 @@
 			<result>/WEB-INF/user/register.jsp</result>
 		</action>
 		
-		<!-- 用户更改密码跳转链接 -->
+		<!-- 用户更改密码跳转到发送验证邮件的链接 -->
 		<action name="applyResetPassword">
 			<result>/WEB-INF/user/apply_reset_password.jsp</result>
+		</action>
+		
+		<!-- 用户更改密码跳转链接 -->
+		<action name="resetPassword">
+			<result>/WEB-INF/user/reset_password.jsp</result>
 		</action>
 		
 		<!-- 用户名验证 -->
@@ -138,6 +143,17 @@
 		    </result>
         </action>
         
+        <!-- 发送邮件修改密码时的邮箱验证 -->
+        <action name="resetPasswordEmailCheck" class="userValidate"
+				method="resetPasswordEmailCheck">
+	    	<result name="emailSuccess" type="httpheader">  
+		    	<param name="status">200</param>
+		    </result>
+		    
+		    <result name="emailError" type="httpheader">  
+		    	<param name="status">400</param>
+		    </result>
+        </action>
         
 		<!-- 跳转到购物页面  -->
 		<action name="userShopping">
@@ -249,6 +265,26 @@
     	<!-- 以下为管理员登录时的json数据的配置 -->
     	<action name="jsonAdminLogin" class="com.wt.jsonHandle.AdminLoginJsonHandle"
 				method="jsonAdminLogin">
+            <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                                                   注意：root为固定写法，否则不会把result的值返回给客户端 -->
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		
+		<!-- 以下为用户修改密码时的json数据的配置 -->
+    	<action name="jsonApplyResetPassword" class="com.wt.jsonHandle.ApplyResetPasswordJsonHandle"
+				method="jsonApplyResetPassword">
+            <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                                                   注意：root为固定写法，否则不会把result的值返回给客户端 -->
+			<result type="json">
+				<param name="root">dataMap</param>
+			</result>
+		</action>
+		
+		<!-- 以下为用户修改密码时的json数据的配置 -->
+    	<action name="jsonResetPassword" class="com.wt.jsonHandle.ResetPasswordJsonHandle"
+				method="jsonResetPassword">
             <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
                                                    注意：root为固定写法，否则不会把result的值返回给客户端 -->
 			<result type="json">

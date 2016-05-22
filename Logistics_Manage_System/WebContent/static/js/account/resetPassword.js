@@ -1,26 +1,27 @@
-require(["jquery", "reset_password_bsAlert", "csrfToken", "validator"], function ($, reset_password_bsAlert, csrfTokenHeader) {
+require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, csrfTokenHeader) {
     var applied_captcha = false;
     $('form').validator().on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
-            var email = $("#email").val();
+            var new_password = $("#new_password").val();
+            var reset_captcha = $("#reset_captcha").val();
             var captcha = $("#captcha").val();
 
             $.ajax({
                 beforeSend: csrfTokenHeader,
-                url: "jsonApplyResetPassword",
-                data: {email: email, captcha: captcha},
+                url: "jsonResetPassword",
+                data: {new_password: new_password, captcha: captcha, reset_captcha: reset_captcha},
                 dataType: "json",
                 method: "post",
                 success: function (data) {
                     if (!data.code) {
                         refresh_captcha();
-                        reset_password_bsAlert(data.data);
+                        bsAlert(data.data);
                         
-                        location.href = "resetPassword";
+                        location.href = "/Logistics_Manage_System";
                     }
                     else {
                         refresh_captcha();
-                        reset_password_bsAlert(data.data);
+                        bsAlert(data.data);
                     }
                 },
                 error: function(){

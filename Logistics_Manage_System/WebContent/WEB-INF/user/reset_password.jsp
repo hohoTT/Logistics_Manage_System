@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>找回登录信息</title>
+<title>重置密码</title>
 
 <script type="text/javascript" src="static/js/config.js"></script>
 <script type="text/javascript" src="static/js/require.js"></script>
@@ -53,12 +56,19 @@ a{
 }
 </style>
 
-<script type="text/javascript" src="static/js/account/applyResetPassword.js"></script>
+<script type="text/javascript" src="static/js/account/resetPassword.js"></script>
 
 <link rel="shortcut icon" href="image/favicon.ico" />
 
 </head>
 <body>
+
+	<%
+		Thread.sleep(1500);
+	
+		String username = (String) session.getAttribute("username");
+		String email = (String) session.getAttribute("email");
+	%>
 
 	<a href="/Logistics_Manage_System/">
 		<p id="title">物流中心</p>
@@ -68,23 +78,43 @@ a{
 	<div id="reset-div" class="container main">
 
         <div class="col-md-6 col-md-offset-3">
-            <h2 class="text-center">找回登录信息</h2><br>
-            
-            <div>
-                <p>请输入你注册时使用的邮箱地址，系统将自动向你的邮箱发送一封含有您登录信息的电子邮件，
-                                                         你可以看到你的用户名，并可以选择重新设置登录密码，注意为了你的账户安全，重置密码链接仅在30分钟内有效
-                </p>
-            </div>
-            
+            <h2 class="text-center">重置密码</h2><br>
             <br>
-            
+
             <form id="login-form">
             
                 <div class="form-group">
                     <label for="email">注册电子邮件地址</label>
-                    <input type="email" class="form-control input-lg" id="email" name="email" placeholder="邮箱地址"
-                           data-remote="resetPasswordEmailCheck" data-remote-error="该邮箱未被注册！" data-error="请填写正确的邮箱地址"
+                    <input type="text" class="form-control input-lg" name="email" value="<%= email %>" disabled="true" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" class="form-control input-lg" name="username" value="<%= username %>" disabled="true" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="new_password">新密码</label>
+                    <input type="password" class="form-control input-lg" id="new_password" name="new_password"
+                           placeholder="新密码" maxlength="30" data-minlength="6" data-error="密码不得少于6位" required>
+
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm_password">确认密码</label>
+                    <input type="password" class="form-control input-lg" id="confirm_password" name="confirm_password"
+                           placeholder="确认密码" maxlength="30" data-match="#new_password" data-error="请输入确认密码"
+                           data-match-error="两次密码不一致"
                            required>
+
+                    <div class="help-block with-errors"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="new_password">重置密钥</label>
+                    <input type="text" class="form-control input-lg" id="reset_captcha" name="reset_captcha" 
+                    	   placeholder="重置密钥" required>
 
                     <div class="help-block with-errors"></div>
                 </div>
@@ -97,13 +127,13 @@ a{
 	                      placeholder="验证码" maxlength="4" data-error="请填写验证码" required>
 	                <div class="help-block with-errors"></div>
 	            </div>
-	            
+                
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">提交</button>
                 </div>
                 
 	            <a href="userLogin">点击这里/返回登录</a>
-                
+	            
             </form>
         </div>
     </div>
