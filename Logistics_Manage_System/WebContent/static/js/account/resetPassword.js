@@ -17,7 +17,7 @@ require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, c
                         refresh_captcha();
                         bsAlert(data.data);
                         
-                        location.href = "/Logistics_Manage_System";
+                        location.href = "userResetLogin";
                     }
                     else {
                         refresh_captcha();
