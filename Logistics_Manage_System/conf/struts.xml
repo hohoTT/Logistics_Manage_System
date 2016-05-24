@@ -241,6 +241,11 @@
 			<result>/WEB-INF/admin/admin_login.jsp</result>
 		</action>
 		
+		<!-- 跳转到订单配送中心页面 -->
+		<action name="logistics">
+			<result>/WEB-INF/logistics/logistics.jsp</result>
+		</action>
+		
     </package>
     
     
