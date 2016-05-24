@@ -54,6 +54,9 @@
                     <li>
                         <a class="page-scroll" href="#sign">签收</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="/Logistics_Manage_System/">物流中心</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
