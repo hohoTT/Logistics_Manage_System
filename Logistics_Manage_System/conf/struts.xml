@@ -246,9 +246,14 @@
 			<result>/WEB-INF/logistics/logistics.jsp</result>
 		</action>
 		
+		<!-- 配置错误页面 -->
+		<!-- 通过通配方式跳转，防止页面地址乱请求 -->
+	    <!-- 只要找不到对应的action都自动跳转到404 errorPage页面中 -->
+	    <action name="*">
+	        <result type="redirect">/errorPage.jsp</result>
+	    </action>
+		
     </package>
-    
-    
     
     <package name="json" extends="json-default" namespace="/">
     
