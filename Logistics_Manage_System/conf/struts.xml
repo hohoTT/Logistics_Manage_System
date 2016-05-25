@@ -246,10 +246,11 @@
 		<action name="adminLogin">
 			<result>/WEB-INF/admin/admin_login.jsp</result>
 		</action>
-		
+
 		<!-- 跳转到订单配送中心页面 -->
-		<action name="logistics">
-			<result>/WEB-INF/logistics/logistics.jsp</result>
+		<action name="userLogisticsInfo" class="com.wt.action.OrderAction"
+				method="logisticsInfo">
+			<result name="logisticsInfo">/WEB-INF/logistics/logistics.jsp</result>
 			
 			<!-- 使用自定义用户需要登录的拦截器 -->  
             <interceptor-ref name="userLogisticsInfoLoginInterceptor" />  

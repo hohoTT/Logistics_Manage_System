@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.wt.entity.Book"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -22,6 +25,31 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+	<%
+		// 获取用户购买的图书
+		List<Book> books = (List<Book>)session.getAttribute("books");
+ 		
+ 		System.out.println("logistics books ---- " + books);
+
+		List<Book> pendingBooks = (List<Book>)session.getAttribute("pendingBooks");
+
+ 		System.out.println("pendingBooks ---- " + pendingBooks);
+
+		List<Book> transportBooks = (List<Book>)session.getAttribute("transportBooks");
+
+ 		System.out.println("transportBooks ---- " + transportBooks);
+ 		
+		List<Book> sendBooks = (List<Book>)session.getAttribute("sendBooks");
+
+ 		System.out.println("sendBooks ---- " + sendBooks);
+ 		
+		List<Book> signBooks = (List<Book>)session.getAttribute("signBooks");
+
+ 		System.out.println("signBooks ---- " + signBooks);
+ 		
+ 		
+	%>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">

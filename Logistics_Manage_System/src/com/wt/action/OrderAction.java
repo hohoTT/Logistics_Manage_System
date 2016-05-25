@@ -64,6 +64,71 @@ ModelDriven<Book>, Preparable{
 		}
 	}
 	
+	// 以下为查询用户的购买记录
+	public void logisticsQuery() {
+		
+		// 以下为查询用户的订单列表
+		List<Order> orders = orderService.findOrder(userName);
+		List<Book> books = new ArrayList<>();
+		for (Order order : orders) {
+			books.add(order.getBook());
+		}
+
+		// 以下为图书列表
+		for (Book book : books) {
+			System.out.println("book.getBook_name() --- " + book.getBook_name());
+			System.out.println("book.getPrice() --- " + book.getPrice());
+		}
+		
+		// 0 为待揽件、1为运输、2为派送、3为签收
+ 		
+ 		// 0 为待揽件
+ 		List<Book> pendingBooks = new ArrayList<>();
+ 	
+ 		for (Book book : books) {
+			if(book.getBook_state() == 0){
+				pendingBooks.add(book);
+			}
+		}
+ 		
+ 		// 1为运输
+ 		List<Book> transportBooks = new ArrayList<>();
+ 	 	
+ 		for (Book book : books) {
+			if(book.getBook_state() == 1){
+				transportBooks.add(book);
+			}
+		}
+ 		
+ 		// 2为派送
+ 		List<Book> sendBooks = new ArrayList<>();
+ 	 	
+ 		for (Book book : books) {
+			if(book.getBook_state() == 2){
+				sendBooks.add(book);
+			}
+		}
+ 		
+ 		// 3为签收
+ 		List<Book> signBooks = new ArrayList<>();
+ 	 	
+ 		for (Book book : books) {
+			if(book.getBook_state() == 3){
+				signBooks.add(book);
+			}
+		}
+		
+		if(books != null){
+			Map<String, Object> mapSession = ActionContext.getContext().getSession();
+			mapSession.put("books", books);
+			mapSession.put("pendingBooks", pendingBooks);
+			mapSession.put("transportBooks", transportBooks);
+			mapSession.put("sendBooks", sendBooks);
+			mapSession.put("signBooks", signBooks);
+		}
+		
+	}
+	
 	public String save(){
 		
 		System.out.println("saveOrder");
@@ -128,6 +193,15 @@ ModelDriven<Book>, Preparable{
 		
 		return "shoppingInfo";
 	}
+	
+	public String logisticsInfo(){
+		
+		logisticsQuery();
+		
+		return "logisticsInfo";
+	}
+	
+	
 
 	@Override
 	public void setRequest(Map<String, Object> arg0) {

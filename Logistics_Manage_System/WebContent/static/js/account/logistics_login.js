@@ -29,7 +29,7 @@ require(["jquery", "bsAlert", "csrfToken", "validator"], function ($, bsAlert, c
                             window.location.href = from;
                         }
                         else{
-                            location.href = "logistics";
+                            location.href = "userLogisticsInfo";
                         }
                     }
                     else {

@@ -110,7 +110,7 @@ contentType="text/html; charset=utf-8"%>
 			</div>
 		</a>
 		
-		<a href="logistics">
+		<a href="userLogisticsInfo">
 			<div class="header-bottom-grid4">
 				<span class="glyphicon glyphicon-screenshot"></span>
 				<h4>订单配送中心</h4>
