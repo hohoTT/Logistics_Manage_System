@@ -64,8 +64,6 @@ a{
 <body>
 
 	<%
-		Thread.sleep(1500);
-	
 		String new_username = (String) session.getAttribute("new_username");
 		String email = (String) session.getAttribute("email");
 	%>

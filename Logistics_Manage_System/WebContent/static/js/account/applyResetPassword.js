@@ -15,8 +15,9 @@ require(["jquery", "reset_password_bsAlert", "csrfToken", "validator"], function
                     if (!data.code) {
                         refresh_captcha();
                         reset_password_bsAlert(data.data);
-                        
-                        location.href = "resetPassword";
+                        setTimeout(function(){
+                            location.href = "resetPassword";
+                        }, 2000);
                     }
                     else {
                         refresh_captcha();
