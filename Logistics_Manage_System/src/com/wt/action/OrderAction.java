@@ -104,6 +104,7 @@ ModelDriven<Book>, Preparable{
 			book.setBook_name(bookname);
 			book.setQuantity(quantity);
 			book.setPrice(price);
+			book.setBook_state(0);
 			
 			order.setUser_name(userName);
 			

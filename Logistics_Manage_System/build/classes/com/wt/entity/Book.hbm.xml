@@ -23,6 +23,10 @@
             <column name="PRICE" />
         </property>
         
+        <property name="book_state" type="java.lang.Integer">
+            <column name="BOOK_STATE" />
+        </property>
+        
         <one-to-one name="order" class="Order">
 		</one-to-one>
         

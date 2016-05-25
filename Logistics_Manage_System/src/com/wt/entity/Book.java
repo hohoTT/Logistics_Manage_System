@@ -10,6 +10,11 @@ public class Book {
 	private Integer quantity;
 	private double price;
 	
+	// 添加订单中书的状态
+	// 0 为待揽件、1为运输、2为派送、3为签收
+	// 初始的默认值为0，即为待揽件的状态
+	private Integer book_state;
+	
 	// 之前的处理，多对多的映射
 	//Set<Order> orders = new HashSet<>();
 
@@ -69,6 +74,14 @@ public class Book {
 		this.order = order;
 	}
 
+	public Integer getBook_state() {
+		return book_state;
+	}
+
+	public void setBook_state(Integer book_state) {
+		this.book_state = book_state;
+	}
+	
 //	public Set<Order> getOrders() {
 //		return orders;
 //	}
