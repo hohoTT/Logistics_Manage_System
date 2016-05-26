@@ -174,7 +174,7 @@
             <interceptor-ref name="userLoginInterceptor" />  
 		</action>
 		
-		<!-- 跳转到购物页面  -->
+		<!-- 跳转到游戏部分的页面  -->
 		<action name="userGame">
 			<result>/WEB-INF/game/game.jsp</result>
 		</action>
