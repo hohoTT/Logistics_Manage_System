@@ -12,8 +12,9 @@
 <script type="text/javascript" src="static/js/game/showanimation2048.js"></script>
 <script type="text/javascript" src="static/js/game/support2048.js"></script>
 
+<script type="text/javascript" src="static/js/lib/bootstrap/bootstrap.min.js"></script>
+
 <!-- CSS 引入部分 -->
-<link rel="stylesheet" href="static/css/shopping/style.css" media="all">
 <link rel="stylesheet" href="static/css/shopping/lightbox.css" media="screen">
 <link rel="stylesheet" href="static/css/shopping/responsiveslides.css">
 

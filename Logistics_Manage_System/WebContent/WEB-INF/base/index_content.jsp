@@ -67,7 +67,7 @@
 	</div>
 	
 	<div id="login" style="display: <%=is_online%>">
-		<a href="index.jsp">
+		<a href="userInfoSetting">
 			<button class="btn btn-success btn-lg">
 				<%=username%>
 			</button> 

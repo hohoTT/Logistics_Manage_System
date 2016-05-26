@@ -16,8 +16,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     display: none;
 }
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, section {display: block;}
 ol,ul{list-style:none;margin:0;padding:0;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
@@ -35,8 +35,6 @@ a{text-decoration:none;}
 .vertical-base{	vertical-align:baseline;}/* vertical align baseline */
 .vertical-top{	vertical-align:top;}/* vertical align top */
 .underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
-nav.vertical ul li{	display:block;}/* vertical menu */
-nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset**/
 body{
@@ -117,65 +115,6 @@ body{
     padding: 10px 15px;
     width: 100%;
     color: #fff;
-}
-.top-nav{
-	 background: #014279;
-}
-.nav {
-    list-style: none;
-     *zoom: 1;
-    width:79%;
-     float:left;
-}
-.nav:before,
-.nav:after {
-    content: " "; 
-    display: table; 
-}
-.nav:after {
-    clear: both;
-}
-.nav ul {
-    list-style: none;
-    width: 5em;
-}
-.nav a {
-    color: #FFF;
-	font-size: 17px;	
-}
-.nav li.active> a, .nav li> a:hover {
-	color:#FA6210; 
-}
-
-.nav li {
-    position: relative;
-   padding: 5px 30px;
-   	font-family: 'Open Sans', sans-serif;
-}
-.nav > li {
-    float: left;
-}
-.nav > li > a {
-    display: block;
-}
-.nav li  ul {
-    position: absolute;
-    left: -9999px;
-}
-
- 
- 
-.nav > li.hover > ul {
-    left: 0;
-}
-.nav li li.hover ul {
-    left: 100%;
-    top: 0;
-    -webkit-transition: background .2s linear;
-	-moz-transition: background .2s linear;
-	-ms-transition: background .2s linear;
-	-o-transition:  background .2s linear;
-	transition: background .2s linear;
 }
 .search{
 	float:left;
@@ -872,20 +811,11 @@ span.zoom{
 	.wrap{
 		width:90%;
 	}	
-	.nav li {
-		padding: 10px 64.5px;
-	}
 }
 @media (max-width:1024px){
 	.wrap{
 		width:90%;
 	}	
-	.nav li {
-		padding: 10px 41.5px;
-	}
-	.nav {
-		width: 74%;
-	}
 	.text20 {
 		font-size: 13px;
 	}
@@ -903,12 +833,6 @@ span.zoom{
 	.wrap{
 		width:90%;
 	}	
-	.nav li {
-		padding:10px 22.5px;
-	}
-	.nav {
-		width:68%;
-	}
 	.text20 {
 		font-size: 13px;
 	}
@@ -920,21 +844,12 @@ span.zoom{
 	}
 	.da-thumbs li article h3 {
 		padding-top:5px;
-	}
-	.nav a {
-		font-size: 15px;		
 	}
 }
 @media (max-width:640px){
 	.wrap{
 		width:90%;
 	}	
-	.nav li {
-		padding:10px 11.5px;
-	}
-	.nav {
-		width:61%;
-	}
 	.text20 {
 		font-size: 13px;
 	}
@@ -946,9 +861,6 @@ span.zoom{
 	}
 	.da-thumbs li article h3 {
 		padding-top:5px;
-	}
-	.nav a {
-		font-size: 15px;		
 	}
 	.logo {
 		width: 26%;
@@ -1008,12 +920,6 @@ span.zoom{
 @media (max-width:480px){
 	.wrap{
 		width:90%;
-	}	
-	.nav li {
-		padding:10px 9.5px;
-	}
-	.nav {
-		width:72%;
 	}
 	.text20 {
 		font-size: 13px;
@@ -1026,9 +932,6 @@ span.zoom{
 	}
 	.da-thumbs li article h3 {
 		padding-top:5px;
-	}
-	.nav a {
-		font-size: 13px;		
 	}
 	.logo {
 		width: 32%;
@@ -1099,13 +1002,6 @@ span.zoom{
 @media (max-width:320px){
 	.wrap{
 		width:90%;
-	}	
-	.nav li {
-		padding:10px 7.5px;
-	}
-	.nav {
-		width:100%;
-		float:none;
 	}
 	.text20 {
 		font-size: 13px;
@@ -1118,9 +1014,6 @@ span.zoom{
 	}
 	.da-thumbs li article h3 {
 		padding-top:27px;
-	}
-	.nav a {
-		font-size: 13px;		
 	}
 	.logo {
 		width:60%;

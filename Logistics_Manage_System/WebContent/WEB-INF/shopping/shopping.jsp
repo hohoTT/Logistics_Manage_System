@@ -15,6 +15,9 @@
 
 <!-- JS 部分引用 -->
 <script type="text/javascript" src="static/js/lib/jQuery/jquery.js"></script>
+
+<script type="text/javascript" src="static/js/lib/bootstrap/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="static/js/shopping/responsiveslides.min.js"></script>
 <script type="text/javascript" src="static/js/shopping/jquery.lightbox.js"></script>
 <script type="text/javascript" src="static/js/shopping/shopping.js"></script>

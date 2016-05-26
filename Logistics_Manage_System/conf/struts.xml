@@ -256,6 +256,14 @@
             <interceptor-ref name="userLogisticsInfoLoginInterceptor" />  
 		</action>
 		
+		<!-- 跳转到用户信息修改设置的页面 -->
+		<action name="userInfoSetting">
+			<result >/WEB-INF/user/userInfo_setting.jsp</result>
+			
+			<!-- 使用自定义用户需要登录的拦截器 -->  
+            <interceptor-ref name="userLoginInterceptor" />  
+		</action>
+		
 		<!-- 配置错误页面 -->
 		<!-- 通过通配方式跳转，防止页面地址乱请求 -->
 	    <!-- 只要找不到对应的action都自动跳转到404 errorPage页面中 -->
