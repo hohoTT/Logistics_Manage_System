@@ -3,6 +3,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,34 +23,15 @@
 <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+<style type="text/css">
+	td {
+		color: black;
+	}
+</style>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-	<%
-		// 获取用户购买的图书
-		List<Book> books = (List<Book>)session.getAttribute("books");
- 		
- 		System.out.println("logistics books ---- " + books);
-
-		List<Book> pendingBooks = (List<Book>)session.getAttribute("pendingBooks");
-
- 		System.out.println("pendingBooks ---- " + pendingBooks);
-
-		List<Book> transportBooks = (List<Book>)session.getAttribute("transportBooks");
-
- 		System.out.println("transportBooks ---- " + transportBooks);
- 		
-		List<Book> sendBooks = (List<Book>)session.getAttribute("sendBooks");
-
- 		System.out.println("sendBooks ---- " + sendBooks);
- 		
-		List<Book> signBooks = (List<Book>)session.getAttribute("signBooks");
-
- 		System.out.println("signBooks ---- " + signBooks);
- 		
- 		
-	%>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -114,9 +96,32 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>container</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2>待揽件</h2>
+                    <s:if test="#session.pendingBooks.size() != 0">
+						<table class="table table-striped">
+							<thead>
+							    <tr>
+							        <th>ID</th>
+							        <th>书名</th>
+							        <th>数量</th>
+							        <th>价格</th>
+							    </tr>
+						    </thead>
+						    <tbody>
+						    <s:iterator value="#session.pendingBooks">
+							    <tr>
+							        <td class="info">${ book_id }</td>
+							        <td class="success">${ book_name }</td>
+							        <td class="warning">${ quantity }</td>
+							        <td class="danger">${ price }</td>
+							    </tr>
+							</s:iterator>
+						    </tbody>
+						</table>
+					</s:if>
+					<s:else>
+						目前还没有待揽件的货物 ~~
+					</s:else>
                 </div>
             </div>
         </div>
@@ -127,9 +132,32 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>transport</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2>运输</h2>
+                    <s:if test="#session.transportBooks.size() != 0">
+                    	<table class="table table-striped">
+						<thead>
+						    <tr>
+						        <th>ID</th>
+						        <th>书名</th>
+						        <th>数量</th>
+						        <th>价格</th>
+						    </tr>
+					    </thead>
+					    <tbody>
+					    <s:iterator value="#session.transportBooks">
+						    <tr>
+						        <td class="info">${ book_id }</td>
+						        <td class="success">${ book_name }</td>
+						        <td class="warning">${ quantity }</td>
+						        <td class="danger">${ price }</td>
+						    </tr>
+						</s:iterator>
+					    </tbody>
+					</table>
+					</s:if>
+					<s:else>
+						目前还没有正在运输的货物 ~~
+					</s:else>
                 </div>
             </div>
         </div>
@@ -140,9 +168,32 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Send</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2>正在派送中</h2>
+                    <s:if test="#session.sendBooks.size() != 0">
+                    	<table class="table table-striped">
+						<thead>
+						    <tr>
+						        <th>ID</th>
+						        <th>书名</th>
+						        <th>数量</th>
+						        <th>价格</th>
+						    </tr>
+					    </thead>
+					    <tbody>
+					    <s:iterator value="#session.sendBooks">
+						    <tr>
+						        <td class="info">${ book_id }</td>
+						        <td class="success">${ book_name }</td>
+						        <td class="warning">${ quantity }</td>
+						        <td class="danger">${ price }</td>
+						    </tr>
+						</s:iterator>
+					    </tbody>
+					</table>
+					</s:if>
+					<s:else>
+						目前还没有正在派送中的货物 ~~
+					</s:else>
                 </div>
             </div>
         </div>
@@ -153,9 +204,32 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Sign</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2>已签收的货物 </h2>
+                    <s:if test="#session.signBooks.size() != 0">
+                    	<table class="table table-striped">
+						<thead>
+						    <tr>
+						        <th>ID</th>
+						        <th>书名</th>
+						        <th>数量</th>
+						        <th>价格</th>
+						    </tr>
+					    </thead>
+					    <tbody>
+					    <s:iterator value="#session.signBooks">
+						    <tr>
+						        <td class="info">${ book_id }</td>
+						        <td class="success">${ book_name }</td>
+						        <td class="warning">${ quantity }</td>
+						        <td class="danger">${ price }</td>
+						    </tr>
+						</s:iterator>
+					    </tbody>
+					</table>
+					</s:if>
+					<s:else>
+						目前还没有已签收的货物 ~~
+					</s:else>
                 </div>
             </div>
         </div>

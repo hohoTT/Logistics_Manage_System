@@ -75,10 +75,10 @@ ModelDriven<Book>, Preparable{
 		}
 
 		// 以下为图书列表
-		for (Book book : books) {
-			System.out.println("book.getBook_name() --- " + book.getBook_name());
-			System.out.println("book.getPrice() --- " + book.getPrice());
-		}
+//		for (Book book : books) {
+//			System.out.println("book.getBook_name() --- " + book.getBook_name());
+//			System.out.println("book.getPrice() --- " + book.getPrice());
+//		}
 		
 		// 0 为待揽件、1为运输、2为派送、3为签收
  		
