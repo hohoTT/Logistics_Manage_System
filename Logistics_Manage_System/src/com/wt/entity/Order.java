@@ -1,9 +1,10 @@
 package com.wt.entity;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Order {
+public class Order implements Serializable{
 	
 	private Integer order_id;
 	private String user_name;

@@ -1,6 +1,8 @@
 package com.wt.entity;
 
-public class Warehouse {
+import java.io.Serializable;
+
+public class Warehouse implements Serializable{
 
 	private Integer book_id;
 	private String book_name;

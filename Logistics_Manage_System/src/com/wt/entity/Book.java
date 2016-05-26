@@ -1,9 +1,10 @@
 package com.wt.entity;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Book {
+public class Book implements Serializable{
 
 	private Integer book_id;
 	private String book_name;
