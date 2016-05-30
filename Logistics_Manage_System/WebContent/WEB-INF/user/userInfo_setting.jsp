@@ -12,6 +12,8 @@
 
 <script type="text/javascript" src="static/js/lib/bootstrap/bootstrap.min.js"></script>
 
+<link rel="shortcut icon" href="image/favicon.ico" />
+
 </head>
 <body>
 	
