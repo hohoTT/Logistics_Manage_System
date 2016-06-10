@@ -217,7 +217,7 @@
 		<action name="adminGallery">
 			<result>/WEB-INF/admin/admin_gallery.jsp</result>
 			<!-- 使用自定义管理员需要登录的拦截器 -->  
-            <interceptor-ref name="loginStack" />  
+            <interceptor-ref name="adminLoginInterceptor" />  
 		</action>
 		
 		<!-- 跳转到管理员文件管理页面  -->
@@ -228,7 +228,7 @@
 			<result name="fileList">/WEB-INF/admin/admin_file.jsp</result>
 			
 			<!-- 使用自定义管理员需要登录的拦截器 -->  
-            <interceptor-ref name="loginStack" />  
+            <interceptor-ref name="adminLoginInterceptor" />  
 		</action>
 		
 		<!-- 跳转到管理员文件管理页面  -->
@@ -239,7 +239,7 @@
 			<result>/WEB-INF/admin/admin_file.jsp</result>
 			
 			<!-- 使用自定义管理员需要登录的拦截器 -->  
-            <interceptor-ref name="loginStack" />  
+            <interceptor-ref name="adminLoginInterceptor" />  
 		</action>
 		
 		<!-- 跳转到管理员登录页面  -->
