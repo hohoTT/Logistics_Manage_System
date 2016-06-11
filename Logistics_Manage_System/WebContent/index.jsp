@@ -30,9 +30,9 @@ contentType="text/html; charset=utf-8"%>
 				<img src="image/bg1.jpg" alt="...">
 				<div class="carousel-caption">
 					<jsp:include page="WEB-INF/base/index_content.jsp"></jsp:include>
-					<h1>Head to blow up</h1>
+					<h1>物流配送管理系统</h1>
 					<p>
-						<button class="btn btn-success btn-lg">WANG_TT</button>
+						<button class="btn btn-success btn-lg">WANG</button>
 					</p>
 				</div>
 			</div>
@@ -40,11 +40,9 @@ contentType="text/html; charset=utf-8"%>
 				<img src="image/bg2.jpg" alt="...">
 				<div class="carousel-caption">
 					<jsp:include page="WEB-INF/base/index_content.jsp"></jsp:include>
-					<h1>Enterprises are adopting Cloud computing fast</h1>
+					<h1>物流配送管理系统</h1>
 					<p>
-						<button class="btn btn-success btn-lg">Try 30 day trial
-							now
-						</button>
+						<button class="btn btn-success btn-lg">WANG</button>
 					</p>
 				</div>
 			</div>
@@ -52,11 +50,9 @@ contentType="text/html; charset=utf-8"%>
 				<img src="image/bg3.jpg" alt="...">
 				<div class="carousel-caption">
 					<jsp:include page="WEB-INF/base/index_content.jsp"></jsp:include>
-					<h1>Enterprises are adopting Cloud computing fast</h1>
+					<h1>物流配送管理系统</h1>
 					<p>
-						<button class="btn btn-success btn-lg">Try 30 day trial
-							now
-						</button>
+						<button class="btn btn-success btn-lg">WANG</button>
 					</p>
 				</div>
 			</div>
@@ -64,11 +60,9 @@ contentType="text/html; charset=utf-8"%>
 				<img src="image/bg4.jpg" alt="...">
 				<div class="carousel-caption">
 					<jsp:include page="WEB-INF/base/index_content.jsp"></jsp:include>
-					<h1>Enterprises are adopting Cloud computing fast</h1>
+					<h1>物流配送管理系统</h1>
 					<p>
-						<button class="btn btn-success btn-lg">Try 30 day trial
-							now
-						</button>
+						<button class="btn btn-success btn-lg">WANG</button>
 					</p>
 				</div>
 			</div>
@@ -76,11 +70,9 @@ contentType="text/html; charset=utf-8"%>
 				<img src="image/bg5.jpg" alt="...">
 				<div class="carousel-caption">
 					<jsp:include page="WEB-INF/base/index_content.jsp"></jsp:include>
-					<h1>Enterprises are adopting Cloud computing fast</h1>
+					<h1>物流配送管理系统</h1>
 					<p>
-						<button class="btn btn-success btn-lg">Try 30 day trial
-							now
-						</button>
+						<button class="btn btn-success btn-lg">WANG</button>
 					</p>
 				</div>
 			</div>
