@@ -16,14 +16,14 @@
 
 ## 目录结构介绍 ##
 
-	|-- build                                                 // 配置文件无需考虑
-	|-- conf                                                  // 项目有关的配置文件
-	|   |-- applicationContext.xml                            // 应用上下文配置文件
-	|   |-- applicationContext-beans.xml                      // JavaBean配置文件
-	|   |-- db.properties                                     // 数据库配置文件
-	|   |-- hibernate.cfg.xml                                 // hibernate配置文件
-	|   |-- struts.xml                                        // 与Struts有关的配置
-	|-- src                                                   // 源码目录
+	|-- build                                                      // 配置文件无需考虑
+	|-- conf                                                       // 项目有关的配置文件
+	|   |-- applicationContext.xml                                 // 应用上下文配置文件
+	|   |-- applicationContext-beans.xml                           // JavaBean配置文件
+	|   |-- db.properties                                          // 数据库配置文件
+	|   |-- hibernate.cfg.xml                              	       // hibernate配置文件
+	|   |-- struts.xml                                             // 与Struts有关的配置
+	|-- src                                                        // 源码目录
 	|   |-- com
 	|       |-- wt
 	|           |-- action
@@ -74,10 +74,10 @@
 	|               |-- Test.java                                  // 邮件发送测试类，可单独运行进行邮件发送测试
 	|           |-- template
 	|               |-- emailTemplate.vm
-	|   |-- WebContent                      // 页面入口文件由于其中涉及的都是前端页面以及js、css部分这里不做过多介绍，根据命名也能很好的推测出
+	|   |-- WebContent 	// 页面入口文件由于其中涉及的都是前端页面以及js、css部分这里不做过多介绍，根据命名也能很好的推测出
 	|       |-- WEB-INF 
-	|           | -- lib                 // jar 包存放位置
-	|           | -- web.xml             项目及工具的依赖配置文件
-	|-- README.md                        // 说明
+	|           | -- lib                 			       // jar 包存放位置
+	|           | -- web.xml             			       // 项目及工具的依赖配置文件
+	|-- README.md                        			       // 说明
 
 
