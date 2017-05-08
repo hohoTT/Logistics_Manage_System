@@ -75,6 +75,13 @@
 	|           |-- template
 	|               |-- emailTemplate.vm			       // 发送邮件的模板
 	|   |-- WebContent    // 页面入口文件由于其中涉及的都是前端页面以及js、css部分这里不做过多介绍，根据命名也能很好的推测出
+	|   	|-- css						       // 第三方提供的css
+	|   	|-- js 						       // 第三方提供的js
+	|   	|-- template
+	|   	    |-- template.ftl			               // 下载word文档的模板
+	|   	|-- static					       // 特定页面使用的手写js以及css
+	|           |-- css
+	|   	    |-- js
 	|       |-- WEB-INF 
 	|           | -- lib                 			       // jar 包存放位置
 	|           | -- web.xml             			       // 项目及工具的依赖配置文件
