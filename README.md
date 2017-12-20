@@ -105,9 +105,6 @@
 用户注册页面
 ![用户注册页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg3.png)
 
-管理员注册页面
-![管理员注册页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg4.png)
-
 验证校验失败页面
 ![验证校验失败页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg5.png)
 
@@ -120,20 +117,23 @@
 购物页面
 ![购物页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg9.png)
 
+我的购物车页面
+![我的购物车页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg14.png)
+
 娱乐游戏页面
 ![娱乐游戏页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg10.png)
 
 反馈页面
 ![反馈页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg11.png)
 
+管理员登录页面
+![管理员登录页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg4.png)
+
 管理员管理用户信息页面
 ![管理员管理用户信息页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg12.png)
 
 管理员管理用户文件信息页面
 ![管理员管理用户文件信息页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg13.png)
-
-我的购物车页面
-![我的购物车页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg14.png)
 
 订单配送中心页面
 ![订单配送中心页面](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/impressionImg15.png)
