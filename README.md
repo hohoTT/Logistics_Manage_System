@@ -94,6 +94,9 @@
 事先声明，本项目中邮件发送使用的为我的网易邮箱，未经我的同意不可向第三方发送任何内容，除了对项目测试时的邮件发送，如需使用，最好换为自己的邮箱。
 这里的邮箱需要你获取邮箱设置中的授权码，并不是你的邮箱密码，细节部分可以到我的博文 http://www.hohott.wang/2016/05/10/Java-Mail/ 下阅读查看使用规则。
 
+邮箱收到的找回密码的样式展示
+![邮箱收到的找回密码的样式展示](https://raw.githubusercontent.com/hohoTT/Logistics_Manage_System/master/img/emailMessage.png)
+
 ## 效果图展示 ##
 
 首页展示
